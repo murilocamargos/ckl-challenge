@@ -1,6 +1,5 @@
 from django.db import models
 from django.template.defaultfilters import slugify
-from django.utils import timezone
 
 class NameSlug(models.Model):
     """This class is an abstraction for every model that needs a name and
@@ -37,10 +36,28 @@ class Category(NameSlug):
 
 class Author(NameSlug):
     """This class represents an author."""
-    profile = models.CharField(max_length=255, unique=True, default='')
-    twitter = models.CharField(max_length=255, unique=True, default='')
-    linkedin = models.CharField(max_length=255, unique=True, default='')
-    facebook = models.CharField(max_length=255, unique=True, default='')
+    profile = models.CharField(max_length=255, default='')
+    twitter = models.CharField(max_length=255, default='')
+    linkedin = models.CharField(max_length=255, default='')
+    facebook = models.CharField(max_length=255, default='')
     website = models.CharField(max_length=255, default='')
     avatar = models.CharField(max_length=255, default='')
     about = models.TextField()
+
+class Article(models.Model):
+    title = models.CharField(max_length=255, blank=False)
+    date = models.DateTimeField(blank=False)
+    url = models.CharField(max_length=255, blank=False, unique=True)
+    thumb = models.CharField(max_length=255, default='')
+    content = models.TextField(blank=False)
+
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    outlet = models.ForeignKey(Outlet, on_delete=models.CASCADE)
+    categories = models.ManyToManyField(Category)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        """Return a human readable representation of the model instance."""
+        return "{}".format(self.title)
