@@ -1,2 +1,3 @@
 *.sublime*
 *.sqlite3
+*.pyc
