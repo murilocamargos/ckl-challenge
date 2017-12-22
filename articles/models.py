@@ -5,9 +5,12 @@ class Author(models.Model):
     """This class represents an author."""
     name = models.CharField(max_length=255, blank=False, unique=True)
     slug = models.SlugField(max_length=255, unique=True)
-    twitter = models.CharField(max_length=255, unique=True)
-    linkedin = models.CharField(max_length=255, unique=True)
-    facebook = models.CharField(max_length=255, unique=True)
+    profile = models.CharField(max_length=255, unique=True, default='')
+    twitter = models.CharField(max_length=255, unique=True, default='')
+    linkedin = models.CharField(max_length=255, unique=True, default='')
+    facebook = models.CharField(max_length=255, unique=True, default='')
+    website = models.CharField(max_length=255, default='')
+    avatar = models.CharField(max_length=255, default='')
     about = models.TextField()
 
     created_at = models.DateTimeField(auto_now_add=True)
