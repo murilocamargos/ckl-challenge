@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2full.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:media="http://search.yahoo.com/mrss/" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" version="2.0">
+
+<channel>
+	<title>TechCrunch</title>
+	
+	<link>https://techcrunch.com</link>
+	<description>TechCrunch is a group-edited blog that profiles the companies, products and events defining and transforming the new web.</description>
+	<lastBuildDate>Fri, 22 Dec 2017 17:22:44 +0000</lastBuildDate>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.com/</generator>
+<cloud domain="techcrunch.com" port="80" path="/?rsscloud=notify" registerProcedure="" protocol="http-post" />
+<image><link>http://www.techcrunch.com</link><url>http://www.techcrunch.com/wp-content/themes/techcrunchmu/images/techcrunch_logo.png</url><title>TechCrunch</title></image>
+	<atom:link rel="search" type="application/opensearchdescription+xml" href="https://techcrunch.com/osd.xml" title="TechCrunch" />
+	
+	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/Techcrunch" /><feedburner:info uri="techcrunch" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://techcrunch.com/?pushpress=hub" /><feedburner:feedFlare href="https://add.my.yahoo.com/rss?url=http%3A%2F%2Ffeeds.feedburner.com%2FTechcrunch" src="http://us.i1.yimg.com/us.yimg.com/i/us/my/addtomyyahoo4.gif">Subscribe with My Yahoo!</feedburner:feedFlare><feedburner:feedFlare href="http://www.newsgator.com/ngs/subscriber/subext.aspx?url=http%3A%2F%2Ffeeds.feedburner.com%2FTechcrunch" src="http://www.newsgator.com/images/ngsub1.gif">Subscribe with NewsGator</feedburner:feedFlare><feedburner:feedFlare href="http://feeds.my.aol.com/add.jsp?url=http%3A%2F%2Ffeeds.feedburner.com%2FTechcrunch" src="http://o.aolcdn.com/favorites.my.aol.com/webmaster/ffclient/webroot/locale/en-US/images/myAOLButtonSmall.gif">Subscribe with My AOL</feedburner:feedFlare><feedburner:feedFlare href="http://www.bloglines.com/sub/http://feeds.feedburner.com/Techcrunch" src="http://www.bloglines.com/images/sub_modern11.gif">Subscribe with Bloglines</feedburner:feedFlare><feedburner:feedFlare href="http://www.netvibes.com/subscribe.php?url=http%3A%2F%2Ffeeds.feedburner.com%2FTechcrunch" src="//www.netvibes.com/img/add2netvibes.gif">Subscribe with Netvibes</feedburner:feedFlare><feedburner:feedFlare href="http://fusion.google.com/add?feedurl=http%3A%2F%2Ffeeds.feedburner.com%2FTechcrunch" src="http://buttons.googlesyndication.com/fusion/add.gif">Subscribe with Google</feedburner:feedFlare><feedburner:feedFlare href="http://www.pageflakes.com/subscribe.aspx?url=http%3A%2F%2Ffeeds.feedburner.com%2FTechcrunch" src="http://www.pageflakes.com/ImageFile.ashx?instanceId=Static_4&amp;fileName=ATP_blu_91x17.gif">Subscribe with Pageflakes</feedburner:feedFlare><feedburner:browserFriendly>This is an XML content feed. It is intended to be viewed in a newsreader or syndicated to another site.</feedburner:browserFriendly><item>
+		<title>That time I got locked out of my Google account for a month</title>
+		<link>http://feedproxy.google.com/~r/Techcrunch/~3/FK4flAkgbms/</link>
+		<comments>https://techcrunch.com/2017/12/22/that-time-i-got-locked-out-of-my-google-account-for-a-month/#respond</comments>
+		<pubDate>Fri, 22 Dec 2017 17:21:29 +0000</pubDate>
+		<dc:creator><![CDATA[Ron Miller]]></dc:creator>
+				<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[Drama]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[TC]]></category>
+		<category><![CDATA[Google]]></category>
+		<category><![CDATA[gmail]]></category>
+
+		<guid isPermaLink="false">http://techcrunch.com/?p=1580971</guid>
+		<description>&lt;img width="680" height="478" src="https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg?w=680" class="attachment-large size-large wp-post-image" alt="" srcset="https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg?w=680 680w, https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg?w=1360 1360w, https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg?w=150 150w, https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg?w=300 300w, https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg?w=768 768w" sizes="(max-width: 680px) 100vw, 680px" /&gt;&amp;nbsp;How much of your digital life would you lose if you lost a single password? Without it, you are locked out and the cold reality of using free cloud services like Google is that you don&amp;#8217;t have a human arbiter to help you. If you think back to earlier times where, say you lost your bank book, your local banker probably knew who you were and could help you navigate the process of getting&amp;hellip; &lt;a href="https://techcrunch.com/2017/12/22/that-time-i-got-locked-out-of-my-google-account-for-a-month/?ncid=rss"&gt;Read More&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=FK4flAkgbms:MqAERX0eJ_o:2mJPEYqXBVI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=2mJPEYqXBVI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=FK4flAkgbms:MqAERX0eJ_o:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=FK4flAkgbms:MqAERX0eJ_o:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=FK4flAkgbms:MqAERX0eJ_o:-BTjWOF_DHI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=FK4flAkgbms:MqAERX0eJ_o:-BTjWOF_DHI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=FK4flAkgbms:MqAERX0eJ_o:D7DqB2pKExk"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=FK4flAkgbms:MqAERX0eJ_o:D7DqB2pKExk" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=FK4flAkgbms:MqAERX0eJ_o:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/Techcrunch/~4/FK4flAkgbms" height="1" width="1" alt=""/&gt;</description>
+		<wfw:commentRss>https://techcrunch.com/2017/12/22/that-time-i-got-locked-out-of-my-google-account-for-a-month/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg?w=210&amp;h=158&amp;crop=1" />
+<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg" type="image/jpeg" medium="image"><media:title type="html">That%20time%20I%20got%20locked%20out%20of%20my%20Google%20account%20for%20a%26nbsp%3Bmonth</media:title></media:content><twitter> <![CDATA[ ron_miller ]]> </twitter>
+		<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg" />
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg" medium="image">
+			<media:title type="html">Wi-fi and mobile phone network connections</media:title>
+		</media:content>
+
+		<media:content url="http://0.gravatar.com/avatar/0b82cfe9f0e15c08c5816481c9f383d9?s=96&amp;d=identicon&amp;r=G" medium="image">
+			<media:title type="html">ronjourn</media:title>
+		</media:content>
+	<feedburner:origLink>https://techcrunch.com/2017/12/22/that-time-i-got-locked-out-of-my-google-account-for-a-month/?ncid=rss</feedburner:origLink></item>
+		<item>
+		<title>Coinbase suspends trading amid cryptocurrency rout</title>
+		<link>http://feedproxy.google.com/~r/Techcrunch/~3/heMTCIi0074/</link>
+		<comments>https://techcrunch.com/2017/12/22/coinbase-suspends-trading-amid-cryptocurrency-rout/#respond</comments>
+		<pubDate>Fri, 22 Dec 2017 17:17:19 +0000</pubDate>
+		<dc:creator><![CDATA[Jonathan Shieber]]></dc:creator>
+				<category><![CDATA[TC]]></category>
+
+		<guid isPermaLink="false">http://techcrunch.com/?p=1580983</guid>
+		<description>&lt;img width="680" height="453" src="https://tctechcrunch2011.files.wordpress.com/2014/10/brian-armstrong-coinbase-2.jpg?w=680" class="attachment-large size-large wp-post-image" alt="" srcset="https://tctechcrunch2011.files.wordpress.com/2014/10/brian-armstrong-coinbase-2.jpg?w=680 680w, https://tctechcrunch2011.files.wordpress.com/2014/10/brian-armstrong-coinbase-2.jpg?w=1360 1360w, https://tctechcrunch2011.files.wordpress.com/2014/10/brian-armstrong-coinbase-2.jpg?w=150 150w, https://tctechcrunch2011.files.wordpress.com/2014/10/brian-armstrong-coinbase-2.jpg?w=300 300w, https://tctechcrunch2011.files.wordpress.com/2014/10/brian-armstrong-coinbase-2.jpg?w=768 768w" sizes="(max-width: 680px) 100vw, 680px" /&gt;&amp;nbsp;Coinbase, the most popular site for cryptocurrency transactions in the U.S., has suspended all trading activity today amid a crash in cryptocurrency prices. A statement on the company&amp;#8217;s website this morning read, &amp;#8220;Due to today&amp;#8217;s high traffic, buys and sells may be temporarily offline. We&amp;#8217;re working on restoring full availability as soon as possible.&amp;#8221; That follows&amp;hellip; &lt;a href="https://techcrunch.com/2017/12/22/coinbase-suspends-trading-amid-cryptocurrency-rout/?ncid=rss"&gt;Read More&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=heMTCIi0074:7t7ZvNzl6Xg:2mJPEYqXBVI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=2mJPEYqXBVI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=heMTCIi0074:7t7ZvNzl6Xg:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=heMTCIi0074:7t7ZvNzl6Xg:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=heMTCIi0074:7t7ZvNzl6Xg:-BTjWOF_DHI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=heMTCIi0074:7t7ZvNzl6Xg:-BTjWOF_DHI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=heMTCIi0074:7t7ZvNzl6Xg:D7DqB2pKExk"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=heMTCIi0074:7t7ZvNzl6Xg:D7DqB2pKExk" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=heMTCIi0074:7t7ZvNzl6Xg:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/Techcrunch/~4/heMTCIi0074" height="1" width="1" alt=""/&gt;</description>
+		<wfw:commentRss>https://techcrunch.com/2017/12/22/coinbase-suspends-trading-amid-cryptocurrency-rout/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2014/10/brian-armstrong-coinbase-2.jpg?w=210&amp;h=158&amp;crop=1" />
+<media:content url="http://tctechcrunch2011.files.wordpress.com/2014/10/brian-armstrong-coinbase-2.jpg" type="image/jpeg" medium="image"><media:title type="html">Coinbase%20suspends%20trading%20amid%20cryptocurrency%26nbsp%3Brout</media:title></media:content>
+		<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2014/10/brian-armstrong-coinbase-2.jpg" />
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2014/10/brian-armstrong-coinbase-2.jpg" medium="image">
+			<media:title type="html">Brian Armstrong (Coinbase),-2</media:title>
+		</media:content>
+
+		<media:content url="http://2.gravatar.com/avatar/5633afc3b452c34446afd2ae0174cf86?s=96&amp;d=identicon&amp;r=G" medium="image">
+			<media:title type="html">shieberj</media:title>
+		</media:content>
+
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/screen-shot-2017-12-22-at-8-56-35-am.png" medium="image" />
+
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/bitcoin-nov-22.jpg" medium="image" />
+	<feedburner:origLink>https://techcrunch.com/2017/12/22/coinbase-suspends-trading-amid-cryptocurrency-rout/?ncid=rss</feedburner:origLink></item>
+		<item>
+		<title>Inside “Fin”, the elite human/AI assistant</title>
+		<link>http://feedproxy.google.com/~r/Techcrunch/~3/COOoP72ceHg/</link>
+		<comments>https://techcrunch.com/2017/12/22/fin-assistant/#respond</comments>
+		<pubDate>Fri, 22 Dec 2017 17:01:22 +0000</pubDate>
+		<dc:creator><![CDATA[Josh Constine]]></dc:creator>
+				<category><![CDATA[Apps]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Fundings & Exits]]></category>
+		<category><![CDATA[Mobile]]></category>
+		<category><![CDATA[Startups]]></category>
+		<category><![CDATA[TC]]></category>
+		<category><![CDATA[Sam Lessin]]></category>
+		<category><![CDATA[Andrew Kortina]]></category>
+		<category><![CDATA[Fin]]></category>
+		<category><![CDATA[AI assistant]]></category>
+		<category><![CDATA[personal assistant]]></category>
+
+		<guid isPermaLink="false">http://techcrunch.com/?p=1580222</guid>
+		<description>&lt;img width="680" height="383" src="https://tctechcrunch2011.files.wordpress.com/2017/12/fin-hybrid-assistant.png?w=680" class="attachment-large size-large wp-post-image" alt="" srcset="https://tctechcrunch2011.files.wordpress.com/2017/12/fin-hybrid-assistant.png?w=680 680w, https://tctechcrunch2011.files.wordpress.com/2017/12/fin-hybrid-assistant.png?w=1360 1360w, https://tctechcrunch2011.files.wordpress.com/2017/12/fin-hybrid-assistant.png?w=150 150w, https://tctechcrunch2011.files.wordpress.com/2017/12/fin-hybrid-assistant.png?w=300 300w, https://tctechcrunch2011.files.wordpress.com/2017/12/fin-hybrid-assistant.png?w=768 768w" sizes="(max-width: 680px) 100vw, 680px" /&gt;&amp;nbsp;&amp;#8220;I have FOMO for the future&amp;#8221;, says Sam Lessin. That&amp;#8217;s why his startup Fin is working backwards from a far-off tech utopia. One day, computers with some human help will answer our every beck and call. Today, Lessin is teaming them up. Every day, Fin gets smarter. For $1 a minute, 24/7, Fin gets your digital chores done. Message, email, or speak a request and a real person&amp;hellip; &lt;a href="https://techcrunch.com/2017/12/22/fin-assistant/?ncid=rss"&gt;Read More&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=COOoP72ceHg:8I1_ovz2xzg:2mJPEYqXBVI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=2mJPEYqXBVI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=COOoP72ceHg:8I1_ovz2xzg:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=COOoP72ceHg:8I1_ovz2xzg:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=COOoP72ceHg:8I1_ovz2xzg:-BTjWOF_DHI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=COOoP72ceHg:8I1_ovz2xzg:-BTjWOF_DHI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=COOoP72ceHg:8I1_ovz2xzg:D7DqB2pKExk"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=COOoP72ceHg:8I1_ovz2xzg:D7DqB2pKExk" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=COOoP72ceHg:8I1_ovz2xzg:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/Techcrunch/~4/COOoP72ceHg" height="1" width="1" alt=""/&gt;</description>
+		<wfw:commentRss>https://techcrunch.com/2017/12/22/fin-assistant/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/12/fin-hybrid-assistant.png?w=210&amp;h=158&amp;crop=1" />
+<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/fin-hybrid-assistant.png" type="image/png" medium="image"><media:title type="html">Inside%20%26%238220%3BFin%26%238221%3B%2C%20the%20elite%20human%2FAI%26nbsp%3Bassistant</media:title></media:content>
+		<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/12/fin-hybrid-assistant.png" />
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/fin-hybrid-assistant.png" medium="image">
+			<media:title type="html">Fin hybrid assistant</media:title>
+		</media:content>
+
+		<media:content url="http://0.gravatar.com/avatar/fd3b857e7f0024396cdbd36c4c102a5d?s=96&amp;d=identicon&amp;r=G" medium="image">
+			<media:title type="html">joshsc</media:title>
+		</media:content>
+
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/fin-screenshots.png" medium="image" />
+
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/fin-founders1.jpg?w=680" medium="image" />
+
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/fin-logo.jpg?w=680" medium="image" />
+
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/fin-team1.jpg?w=680" medium="image" />
+	<feedburner:origLink>https://techcrunch.com/2017/12/22/fin-assistant/?ncid=rss</feedburner:origLink></item>
+		<item>
+		<title>Original Content podcast: Confronting the light and dark side of ‘The Last Jedi’</title>
+		<link>http://feedproxy.google.com/~r/Techcrunch/~3/skcB8WbEeBk/</link>
+		<comments>https://techcrunch.com/2017/12/22/original-content-star-wars-the-last-jedi/#respond</comments>
+		<pubDate>Fri, 22 Dec 2017 16:35:04 +0000</pubDate>
+		<dc:creator><![CDATA[Anthony Ha,Darrell Etherington]]></dc:creator>
+				<category><![CDATA[TC]]></category>
+		<category><![CDATA[original content podcast]]></category>
+		<category><![CDATA[star wars]]></category>
+		<category><![CDATA[star wars: the last jedi]]></category>
+
+		<guid isPermaLink="false">http://techcrunch.com/?p=1580930</guid>
+		<description>&lt;img width="680" height="357" src="https://tctechcrunch2011.files.wordpress.com/2017/04/sw-the-last-jedi-tall-1200x630.jpg?w=680" class="attachment-large size-large wp-post-image" alt="The Last Jedi" srcset="https://tctechcrunch2011.files.wordpress.com/2017/04/sw-the-last-jedi-tall-1200x630.jpg?w=680 680w, https://tctechcrunch2011.files.wordpress.com/2017/04/sw-the-last-jedi-tall-1200x630.jpg?w=150 150w, https://tctechcrunch2011.files.wordpress.com/2017/04/sw-the-last-jedi-tall-1200x630.jpg?w=300 300w, https://tctechcrunch2011.files.wordpress.com/2017/04/sw-the-last-jedi-tall-1200x630.jpg?w=768 768w, https://tctechcrunch2011.files.wordpress.com/2017/04/sw-the-last-jedi-tall-1200x630.jpg 1200w" sizes="(max-width: 680px) 100vw, 680px" /&gt;&amp;nbsp;This week, TechCrunch&amp;#8217;s Original Content podcast takes a break from reviewing the latest streaming titles to tackle the big movie of the week (and arguably the year) &amp;#8212; Star Wars: The Last Jedi. One of your hosts (that&amp;#8217;s Anthony) laid out his initial reaction in a post, while the other (that&amp;#8217;s Darrell) has already seen The Last Jedi twice, and formed very different&amp;hellip; &lt;a href="https://techcrunch.com/2017/12/22/original-content-star-wars-the-last-jedi/?ncid=rss"&gt;Read More&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=skcB8WbEeBk:SsE5WgvcxOg:2mJPEYqXBVI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=2mJPEYqXBVI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=skcB8WbEeBk:SsE5WgvcxOg:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=skcB8WbEeBk:SsE5WgvcxOg:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=skcB8WbEeBk:SsE5WgvcxOg:-BTjWOF_DHI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=skcB8WbEeBk:SsE5WgvcxOg:-BTjWOF_DHI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=skcB8WbEeBk:SsE5WgvcxOg:D7DqB2pKExk"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=skcB8WbEeBk:SsE5WgvcxOg:D7DqB2pKExk" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=skcB8WbEeBk:SsE5WgvcxOg:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/Techcrunch/~4/skcB8WbEeBk" height="1" width="1" alt=""/&gt;</description>
+		<wfw:commentRss>https://techcrunch.com/2017/12/22/original-content-star-wars-the-last-jedi/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/04/sw-the-last-jedi-tall-1200x630.jpg?w=210&amp;h=158&amp;crop=1" />
+
+		<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/04/sw-the-last-jedi-tall-1200x630.jpg" />
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/04/sw-the-last-jedi-tall-1200x630.jpg" medium="image">
+			<media:title type="html">sw-the-last-jedi-tall-1200x630</media:title>
+		</media:content>
+
+		<media:content url="http://1.gravatar.com/avatar/72b358648f4587cc2a11895c32b8e979?s=96&amp;d=identicon&amp;r=G" medium="image">
+			<media:title type="html">anthha</media:title>
+		</media:content>
+	<feedburner:origLink>https://techcrunch.com/2017/12/22/original-content-star-wars-the-last-jedi/?ncid=rss</feedburner:origLink></item>
+		<item>
+		<title>CNN is killing its Snapchat news show only four months after its debut</title>
+		<link>http://feedproxy.google.com/~r/Techcrunch/~3/v0iW8RAYIN8/</link>
+		<comments>https://techcrunch.com/2017/12/22/cnn-is-killing-its-snapchat-news-show-only-four-months-after-its-debut/#respond</comments>
+		<pubDate>Fri, 22 Dec 2017 16:30:38 +0000</pubDate>
+		<dc:creator><![CDATA[Sarah Perez]]></dc:creator>
+				<category><![CDATA[Media]]></category>
+		<category><![CDATA[Mobile]]></category>
+		<category><![CDATA[Social]]></category>
+		<category><![CDATA[TC]]></category>
+		<category><![CDATA[Snapchat]]></category>
+		<category><![CDATA[CNN]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Snapchat Discover]]></category>
+
+		<guid isPermaLink="false">http://techcrunch.com/?p=1580954</guid>
+		<description>&lt;img width="680" height="382" src="https://tctechcrunch2011.files.wordpress.com/2017/08/cnn-snapchat-news.jpg?w=680" class="attachment-large size-large wp-post-image" alt="" srcset="https://tctechcrunch2011.files.wordpress.com/2017/08/cnn-snapchat-news.jpg?w=680 680w, https://tctechcrunch2011.files.wordpress.com/2017/08/cnn-snapchat-news.jpg?w=1360 1360w, https://tctechcrunch2011.files.wordpress.com/2017/08/cnn-snapchat-news.jpg?w=150 150w, https://tctechcrunch2011.files.wordpress.com/2017/08/cnn-snapchat-news.jpg?w=300 300w, https://tctechcrunch2011.files.wordpress.com/2017/08/cnn-snapchat-news.jpg?w=768 768w" sizes="(max-width: 680px) 100vw, 680px" /&gt;&amp;nbsp;CNN is giving up on its Snapchat news show, which launch only four months ago. &amp;#8220;The Update,&amp;#8221; as the program was called, had been designed for Snapchat&amp;#8217;s vertical video format, but didn&amp;#8217;t feature video produced only for Snapchat, nor did it have dedicated anchors. Instead, the news featured on &amp;#8220;The Update&amp;#8221; was a curated selection of CNN&amp;#8217;s reporting from&amp;hellip; &lt;a href="https://techcrunch.com/2017/12/22/cnn-is-killing-its-snapchat-news-show-only-four-months-after-its-debut/?ncid=rss"&gt;Read More&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=v0iW8RAYIN8:HdPCdlFsIhg:2mJPEYqXBVI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=2mJPEYqXBVI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=v0iW8RAYIN8:HdPCdlFsIhg:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=v0iW8RAYIN8:HdPCdlFsIhg:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=v0iW8RAYIN8:HdPCdlFsIhg:-BTjWOF_DHI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=v0iW8RAYIN8:HdPCdlFsIhg:-BTjWOF_DHI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=v0iW8RAYIN8:HdPCdlFsIhg:D7DqB2pKExk"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=v0iW8RAYIN8:HdPCdlFsIhg:D7DqB2pKExk" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=v0iW8RAYIN8:HdPCdlFsIhg:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/Techcrunch/~4/v0iW8RAYIN8" height="1" width="1" alt=""/&gt;</description>
+		<wfw:commentRss>https://techcrunch.com/2017/12/22/cnn-is-killing-its-snapchat-news-show-only-four-months-after-its-debut/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/08/cnn-snapchat-news.jpg?w=210&amp;h=158&amp;crop=1" />
+<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/08/cnn-snapchat-news.jpg" type="image/jpeg" medium="image"><media:title type="html">CNN%20is%20killing%20its%20Snapchat%20news%20show%20only%20four%20months%20after%20its%26nbsp%3Bdebut</media:title></media:content>
+		<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/08/cnn-snapchat-news.jpg" />
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/08/cnn-snapchat-news.jpg" medium="image">
+			<media:title type="html">cnn snapchat news</media:title>
+		</media:content>
+
+		<media:content url="http://2.gravatar.com/avatar/5225bb627e112543aa03bf3b2958be3f?s=96&amp;d=identicon&amp;r=G" medium="image">
+			<media:title type="html">sarahintampa</media:title>
+		</media:content>
+
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/08/screen-shot-2017-08-21-at-3-40-54-pm.png?w=395" medium="image" />
+	<feedburner:origLink>https://techcrunch.com/2017/12/22/cnn-is-killing-its-snapchat-news-show-only-four-months-after-its-debut/?ncid=rss</feedburner:origLink></item>
+		<item>
+		<title>A look at 42 women in tech who crushed it in 2017</title>
+		<link>http://feedproxy.google.com/~r/Techcrunch/~3/iCDhOtfSkAM/</link>
+		<comments>https://techcrunch.com/gallery/a-look-at-42-women-in-tech-who-crushed-it-in-2017/#respond</comments>
+		<pubDate>Fri, 22 Dec 2017 16:29:16 +0000</pubDate>
+		<dc:creator><![CDATA[Connie Loizos]]></dc:creator>
+				<category><![CDATA[Biotech]]></category>
+		<category><![CDATA[Cryptocurrency]]></category>
+		<category><![CDATA[Drama]]></category>
+		<category><![CDATA[eCommerce]]></category>
+		<category><![CDATA[Europe]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Health]]></category>
+		<category><![CDATA[Hiring]]></category>
+		<category><![CDATA[Online lending]]></category>
+		<category><![CDATA[Personnel]]></category>
+		<category><![CDATA[Podcasts]]></category>
+		<category><![CDATA[Robotics]]></category>
+		<category><![CDATA[Science]]></category>
+		<category><![CDATA[Social]]></category>
+		<category><![CDATA[Startups]]></category>
+		<category><![CDATA[TC]]></category>
+		<category><![CDATA[Venture Capital]]></category>
+		<category><![CDATA[Stacy Epstein]]></category>
+		<category><![CDATA[Zinc]]></category>
+		<category><![CDATA[Jini Kim]]></category>
+		<category><![CDATA[Nuna]]></category>
+		<category><![CDATA[Steph Korey]]></category>
+		<category><![CDATA[away]]></category>
+		<category><![CDATA[Marissa Alden Evans]]></category>
+		<category><![CDATA[sawyer]]></category>
+		<category><![CDATA[Rashmi Melgiri]]></category>
+		<category><![CDATA[CoverWallet]]></category>
+		<category><![CDATA[elizabeth iorns]]></category>
+		<category><![CDATA[science-exchange]]></category>
+		<category><![CDATA[Leslie Trigg]]></category>
+		<category><![CDATA[Outset Medical]]></category>
+		<category><![CDATA[Julie Schoenfeld]]></category>
+		<category><![CDATA[strobe]]></category>
+		<category><![CDATA[Laura Behrens Wu]]></category>
+		<category><![CDATA[Shippo]]></category>
+		<category><![CDATA[Julie Wainwright]]></category>
+		<category><![CDATA[the realreal]]></category>
+		<category><![CDATA[sallie krawcheck]]></category>
+		<category><![CDATA[ellevest]]></category>
+		<category><![CDATA[Maria Bennett]]></category>
+		<category><![CDATA[SPR Therapeutics]]></category>
+		<category><![CDATA[Julia Collins]]></category>
+		<category><![CDATA[Zume Pizza]]></category>
+		<category><![CDATA[Tyler Haney]]></category>
+		<category><![CDATA[outdoor voices]]></category>
+		<category><![CDATA[Kathryn Petralia]]></category>
+		<category><![CDATA[Kabbage]]></category>
+		<category><![CDATA[amy errett]]></category>
+		<category><![CDATA[madison reed]]></category>
+		<category><![CDATA[jennifer hyman]]></category>
+		<category><![CDATA[Rent the Runway]]></category>
+		<category><![CDATA[Whitney Wolfe Herd]]></category>
+		<category><![CDATA[bumble]]></category>
+		<category><![CDATA[Melonee Wise]]></category>
+		<category><![CDATA[Fetch Robotics]]></category>
+		<category><![CDATA[Edith Harbaugh]]></category>
+		<category><![CDATA[LaunchDarkly]]></category>
+		<category><![CDATA[shanna tellerman]]></category>
+		<category><![CDATA[modsy]]></category>
+		<category><![CDATA[Cindy Mi]]></category>
+		<category><![CDATA[vipkid]]></category>
+		<category><![CDATA[laura weidman powers]]></category>
+		<category><![CDATA[code2040]]></category>
+		<category><![CDATA[joyce kim]]></category>
+		<category><![CDATA[SparkChain Capital]]></category>
+		<category><![CDATA[katrina lake]]></category>
+		<category><![CDATA[stitch fix]]></category>
+		<category><![CDATA[Susan Fowler]]></category>
+
+		<guid isPermaLink="false">http://techcrunch.com/?post_type=tc-media-gallery&amp;p=1580899</guid>
+		<description>&lt;img width="680" height="383" src="https://tctechcrunch2011.files.wordpress.com/2017/10/susan-j-fowler.jpg?w=680" class="attachment-large size-large wp-post-image" alt="" srcset="https://tctechcrunch2011.files.wordpress.com/2017/10/susan-j-fowler.jpg?w=680 680w, https://tctechcrunch2011.files.wordpress.com/2017/10/susan-j-fowler.jpg?w=150 150w, https://tctechcrunch2011.files.wordpress.com/2017/10/susan-j-fowler.jpg?w=300 300w, https://tctechcrunch2011.files.wordpress.com/2017/10/susan-j-fowler.jpg?w=768 768w, https://tctechcrunch2011.files.wordpress.com/2017/10/susan-j-fowler.jpg 1000w" sizes="(max-width: 680px) 100vw, 680px" /&gt;&amp;nbsp;What a challenging, exhilarating year it has been for women everywhere, starting from the women&amp;#8217;s March on Washington to former Uber engineer Susan Fowler&amp;#8217;s eye-opening and now famous blog post to the #metoo movement that has swept the country, washing dozens of sexual predators out of their powerful roles in the process. All the while, women in tech have been driving their&amp;hellip; &lt;a href="https://techcrunch.com/gallery/a-look-at-42-women-in-tech-who-crushed-it-in-2017/?ncid=rss"&gt;Read More&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=iCDhOtfSkAM:YXTPJzU-O5A:2mJPEYqXBVI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=2mJPEYqXBVI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=iCDhOtfSkAM:YXTPJzU-O5A:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=iCDhOtfSkAM:YXTPJzU-O5A:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=iCDhOtfSkAM:YXTPJzU-O5A:-BTjWOF_DHI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=iCDhOtfSkAM:YXTPJzU-O5A:-BTjWOF_DHI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=iCDhOtfSkAM:YXTPJzU-O5A:D7DqB2pKExk"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=iCDhOtfSkAM:YXTPJzU-O5A:D7DqB2pKExk" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=iCDhOtfSkAM:YXTPJzU-O5A:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/Techcrunch/~4/iCDhOtfSkAM" height="1" width="1" alt=""/&gt;</description>
+		<wfw:commentRss>https://techcrunch.com/gallery/a-look-at-42-women-in-tech-who-crushed-it-in-2017/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/10/susan-j-fowler.jpg?w=210&amp;h=158&amp;crop=1" />
+<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/10/susan-j-fowler.jpg" type="image/jpeg" medium="image"><media:title type="html">A%20look%20at%2042%20women%20in%20tech%20who%20crushed%20it%20in%26nbsp%3B2017</media:title></media:content>
+		<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/10/susan-j-fowler.jpg" />
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/10/susan-j-fowler.jpg" medium="image">
+			<media:title type="html">susan-j-fowler</media:title>
+		</media:content>
+
+		<media:content url="http://2.gravatar.com/avatar/52bc07c5a4dde8dabe873328ca360e36?s=96&amp;d=identicon&amp;r=G" medium="image">
+			<media:title type="html">connieloizos</media:title>
+		</media:content>
+	<feedburner:origLink>https://techcrunch.com/gallery/a-look-at-42-women-in-tech-who-crushed-it-in-2017/?ncid=rss</feedburner:origLink></item>
+		<item>
+		<title>Amazon acquires connected camera and doorbell startup Blink</title>
+		<link>http://feedproxy.google.com/~r/Techcrunch/~3/iWTrczi5NOM/</link>
+		<comments>https://techcrunch.com/2017/12/22/amazon-acquires-connected-camera-and-doorbell-startup-blink/#respond</comments>
+		<pubDate>Fri, 22 Dec 2017 15:58:13 +0000</pubDate>
+		<dc:creator><![CDATA[Darrell Etherington]]></dc:creator>
+				<category><![CDATA[Fundings & Exits]]></category>
+		<category><![CDATA[Gadgets]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[TC]]></category>
+		<category><![CDATA[Home Automation]]></category>
+		<category><![CDATA[technology]]></category>
+		<category><![CDATA[economy]]></category>
+		<category><![CDATA[computing]]></category>
+		<category><![CDATA[ring]]></category>
+		<category><![CDATA[wi-fi]]></category>
+		<category><![CDATA[Crowdfunding]]></category>
+		<category><![CDATA[wireless]]></category>
+		<category><![CDATA[Blink]]></category>
+		<category><![CDATA[Amazon]]></category>
+
+		<guid isPermaLink="false">http://techcrunch.com/?p=1580949</guid>
+		<description>&lt;img width="680" height="373" src="https://tctechcrunch2011.files.wordpress.com/2017/12/blink_doorbell.jpg?w=680" class="attachment-large size-large wp-post-image" alt="" srcset="https://tctechcrunch2011.files.wordpress.com/2017/12/blink_doorbell.jpg?w=680 680w, https://tctechcrunch2011.files.wordpress.com/2017/12/blink_doorbell.jpg?w=1360 1360w, https://tctechcrunch2011.files.wordpress.com/2017/12/blink_doorbell.jpg?w=150 150w, https://tctechcrunch2011.files.wordpress.com/2017/12/blink_doorbell.jpg?w=300 300w, https://tctechcrunch2011.files.wordpress.com/2017/12/blink_doorbell.jpg?w=768 768w" sizes="(max-width: 680px) 100vw, 680px" /&gt;&amp;nbsp;Amazon has acquired Blink (via Slashgear), a startup founded in 2014 that builds connected Wi-Fi home security cameras, as well as a new video doorbell introduced earlier this week. The company got its start via a crowdfunding campaign that raised over $1 million for its totally wireless home monitoring system. Amazon has already made forays into connected home video cameras and even home&amp;hellip; &lt;a href="https://techcrunch.com/2017/12/22/amazon-acquires-connected-camera-and-doorbell-startup-blink/?ncid=rss"&gt;Read More&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=iWTrczi5NOM:w78-7j9N4qc:2mJPEYqXBVI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=2mJPEYqXBVI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=iWTrczi5NOM:w78-7j9N4qc:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=iWTrczi5NOM:w78-7j9N4qc:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=iWTrczi5NOM:w78-7j9N4qc:-BTjWOF_DHI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=iWTrczi5NOM:w78-7j9N4qc:-BTjWOF_DHI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=iWTrczi5NOM:w78-7j9N4qc:D7DqB2pKExk"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=iWTrczi5NOM:w78-7j9N4qc:D7DqB2pKExk" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=iWTrczi5NOM:w78-7j9N4qc:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/Techcrunch/~4/iWTrczi5NOM" height="1" width="1" alt=""/&gt;</description>
+		<wfw:commentRss>https://techcrunch.com/2017/12/22/amazon-acquires-connected-camera-and-doorbell-startup-blink/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/12/blink_doorbell.jpg?w=210&amp;h=158&amp;crop=1" />
+<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/blink_doorbell.jpg" type="image/jpeg" medium="image"><media:title type="html">Amazon%20acquires%20connected%20camera%20and%20doorbell%20startup%26nbsp%3BBlink</media:title></media:content>
+		<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/12/blink_doorbell.jpg" />
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/blink_doorbell.jpg" medium="image">
+			<media:title type="html">Blink_Doorbell</media:title>
+		</media:content>
+
+		<media:content url="http://1.gravatar.com/avatar/188039e12983eb749171a75cfd01378d?s=96&amp;d=identicon&amp;r=G" medium="image">
+			<media:title type="html">etherin</media:title>
+		</media:content>
+	<feedburner:origLink>https://techcrunch.com/2017/12/22/amazon-acquires-connected-camera-and-doorbell-startup-blink/?ncid=rss</feedburner:origLink></item>
+		<item>
+		<title>Watch SpaceX’s last Falcon 9 rocket launch for 2017</title>
+		<link>http://feedproxy.google.com/~r/Techcrunch/~3/WmxgoFRpKL8/</link>
+		<comments>https://techcrunch.com/2017/12/22/watch-spacexs-last-falcon-9-rocket-launch-for-2017/#respond</comments>
+		<pubDate>Fri, 22 Dec 2017 15:30:39 +0000</pubDate>
+		<dc:creator><![CDATA[Darrell Etherington]]></dc:creator>
+				<category><![CDATA[Science]]></category>
+		<category><![CDATA[Space]]></category>
+		<category><![CDATA[TC]]></category>
+		<category><![CDATA[Transportation]]></category>
+		<category><![CDATA[space tourism]]></category>
+		<category><![CDATA[falcon]]></category>
+		<category><![CDATA[spaceflight]]></category>
+		<category><![CDATA[outer space]]></category>
+		<category><![CDATA[Falcon 9]]></category>
+		<category><![CDATA[SpaceX]]></category>
+		<category><![CDATA[Iridium]]></category>
+
+		<guid isPermaLink="false">http://techcrunch.com/?p=1580933</guid>
+		<description>&lt;img width="680" height="382" src="https://tctechcrunch2011.files.wordpress.com/2017/12/iridium4vertical.jpg?w=680" class="attachment-large size-large wp-post-image" alt="" srcset="https://tctechcrunch2011.files.wordpress.com/2017/12/iridium4vertical.jpg?w=680 680w, https://tctechcrunch2011.files.wordpress.com/2017/12/iridium4vertical.jpg?w=1360 1360w, https://tctechcrunch2011.files.wordpress.com/2017/12/iridium4vertical.jpg?w=150 150w, https://tctechcrunch2011.files.wordpress.com/2017/12/iridium4vertical.jpg?w=300 300w, https://tctechcrunch2011.files.wordpress.com/2017/12/iridium4vertical.jpg?w=768 768w" sizes="(max-width: 680px) 100vw, 680px" /&gt;&amp;nbsp;SpaceX is launching its last mission of 2017 later today, with a planned launch window of 5:27 PM PST (8:27 PM EST). The mission is for client Iridium, and will send a fourth set of 10 satellites into low Earth orbit for Iridium&amp;#8217;s NEXT constellation, which will eventually consist of 75 satellites launched by SpaceX in total.
+SpaceX is launching the Falcon 9 for Iridium-4 from&amp;#8230; &lt;a href="https://techcrunch.com/2017/12/22/watch-spacexs-last-falcon-9-rocket-launch-for-2017/?ncid=rss"&gt;Read More&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=WmxgoFRpKL8:dxsynJbnFOc:2mJPEYqXBVI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=2mJPEYqXBVI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=WmxgoFRpKL8:dxsynJbnFOc:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=WmxgoFRpKL8:dxsynJbnFOc:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=WmxgoFRpKL8:dxsynJbnFOc:-BTjWOF_DHI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=WmxgoFRpKL8:dxsynJbnFOc:-BTjWOF_DHI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=WmxgoFRpKL8:dxsynJbnFOc:D7DqB2pKExk"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=WmxgoFRpKL8:dxsynJbnFOc:D7DqB2pKExk" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=WmxgoFRpKL8:dxsynJbnFOc:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/Techcrunch/~4/WmxgoFRpKL8" height="1" width="1" alt=""/&gt;</description>
+		<wfw:commentRss>https://techcrunch.com/2017/12/22/watch-spacexs-last-falcon-9-rocket-launch-for-2017/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/12/iridium4vertical.jpg?w=210&amp;h=158&amp;crop=1" />
+
+		<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/12/iridium4vertical.jpg" />
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/iridium4vertical.jpg" medium="image">
+			<media:title type="html">iridium4vertical</media:title>
+		</media:content>
+
+		<media:content url="http://1.gravatar.com/avatar/188039e12983eb749171a75cfd01378d?s=96&amp;d=identicon&amp;r=G" medium="image">
+			<media:title type="html">etherin</media:title>
+		</media:content>
+	<feedburner:origLink>https://techcrunch.com/2017/12/22/watch-spacexs-last-falcon-9-rocket-launch-for-2017/?ncid=rss</feedburner:origLink></item>
+		<item>
+		<title>Equity podcast: Stitch Fix tumbles, stocks go crypto and VCs still love unicorns</title>
+		<link>http://feedproxy.google.com/~r/Techcrunch/~3/SpP9izObnwk/</link>
+		<comments>https://techcrunch.com/2017/12/22/equity-podcast-stitch-fix-tumbles-stocks-go-crypto-and-vcs-still-love-unicorns/#respond</comments>
+		<pubDate>Fri, 22 Dec 2017 14:10:15 +0000</pubDate>
+		<dc:creator><![CDATA[Alex Wilhelm]]></dc:creator>
+				<category><![CDATA[Finance]]></category>
+		<category><![CDATA[TC]]></category>
+		<category><![CDATA[Venture Capital]]></category>
+		<category><![CDATA[Equity podcast]]></category>
+		<category><![CDATA[stitch fix]]></category>
+
+		<guid isPermaLink="false">http://techcrunch.com/?p=1580401</guid>
+		<description>&lt;img width="680" height="383" src="https://tctechcrunch2011.files.wordpress.com/2017/03/tc-equity-podcast-ios.jpg?w=680" class="attachment-large size-large wp-post-image" alt="" srcset="https://tctechcrunch2011.files.wordpress.com/2017/03/tc-equity-podcast-ios.jpg?w=680 680w, https://tctechcrunch2011.files.wordpress.com/2017/03/tc-equity-podcast-ios.jpg?w=1360 1360w, https://tctechcrunch2011.files.wordpress.com/2017/03/tc-equity-podcast-ios.jpg?w=150 150w, https://tctechcrunch2011.files.wordpress.com/2017/03/tc-equity-podcast-ios.jpg?w=300 300w, https://tctechcrunch2011.files.wordpress.com/2017/03/tc-equity-podcast-ios.jpg?w=768 768w" sizes="(max-width: 680px) 100vw, 680px" /&gt;&amp;nbsp;Hello and welcome back to Equity, TechCrunch&amp;#8217;s venture capital-focused podcast where we unpack the numbers behind the headlines. This week the crew &amp;#8212; Katie Roof, Matthew Lynley, Alex Wilhelm &amp;#8212; were joined Jeff Richards, a managing partner at GGV. (GGV has raised nearly $4 billion to invest, according to Crunchbase.) This week we turned our eyes to Stitch Fix&amp;#8217;s&amp;hellip; &lt;a href="https://techcrunch.com/2017/12/22/equity-podcast-stitch-fix-tumbles-stocks-go-crypto-and-vcs-still-love-unicorns/?ncid=rss"&gt;Read More&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=SpP9izObnwk:ccf8d29YWoo:2mJPEYqXBVI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=2mJPEYqXBVI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=SpP9izObnwk:ccf8d29YWoo:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=SpP9izObnwk:ccf8d29YWoo:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=SpP9izObnwk:ccf8d29YWoo:-BTjWOF_DHI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=SpP9izObnwk:ccf8d29YWoo:-BTjWOF_DHI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=SpP9izObnwk:ccf8d29YWoo:D7DqB2pKExk"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=SpP9izObnwk:ccf8d29YWoo:D7DqB2pKExk" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=SpP9izObnwk:ccf8d29YWoo:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/Techcrunch/~4/SpP9izObnwk" height="1" width="1" alt=""/&gt;</description>
+		<wfw:commentRss>https://techcrunch.com/2017/12/22/equity-podcast-stitch-fix-tumbles-stocks-go-crypto-and-vcs-still-love-unicorns/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/03/tc-equity-podcast-ios.jpg?w=210&amp;h=158&amp;crop=1" />
+<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/03/tc-equity-podcast-ios.jpg" type="image/jpeg" medium="image"><media:title type="html">Equity%20podcast%3A%20Stitch%20Fix%20tumbles%2C%20stocks%20go%20crypto%20and%20VCs%20still%20love%26nbsp%3Bunicorns</media:title></media:content>
+		<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/03/tc-equity-podcast-ios.jpg" />
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/03/tc-equity-podcast-ios.jpg" medium="image">
+			<media:title type="html">tc-equity-podcast-ios</media:title>
+		</media:content>
+
+		<media:content url="http://0.gravatar.com/avatar/06614e83d41d4440a4ab242c1d069ea4?s=96&amp;d=identicon&amp;r=G" medium="image">
+			<media:title type="html">alexjameswilhelm</media:title>
+		</media:content>
+	<feedburner:origLink>https://techcrunch.com/2017/12/22/equity-podcast-stitch-fix-tumbles-stocks-go-crypto-and-vcs-still-love-unicorns/?ncid=rss</feedburner:origLink></item>
+		<item>
+		<title>Bitcoin and almost every other cryptocurrency crashed hard today</title>
+		<link>http://feedproxy.google.com/~r/Techcrunch/~3/I14O0TIJyVw/</link>
+		<comments>https://techcrunch.com/2017/12/22/bitcoin-crypto-crashed-hard/#respond</comments>
+		<pubDate>Fri, 22 Dec 2017 10:25:17 +0000</pubDate>
+		<dc:creator><![CDATA[Jon Russell]]></dc:creator>
+				<category><![CDATA[TC]]></category>
+		<category><![CDATA[Bitcoin]]></category>
+
+		<guid isPermaLink="false">http://techcrunch.com/?p=1580893</guid>
+		<description>&lt;img width="680" height="383" src="https://tctechcrunch2011.files.wordpress.com/2016/07/bitcoin-split.png?w=680" class="attachment-large size-large wp-post-image" alt="" srcset="https://tctechcrunch2011.files.wordpress.com/2016/07/bitcoin-split.png?w=680 680w, https://tctechcrunch2011.files.wordpress.com/2016/07/bitcoin-split.png?w=1360 1360w, https://tctechcrunch2011.files.wordpress.com/2016/07/bitcoin-split.png?w=150 150w, https://tctechcrunch2011.files.wordpress.com/2016/07/bitcoin-split.png?w=300 300w, https://tctechcrunch2011.files.wordpress.com/2016/07/bitcoin-split.png?w=768 768w" sizes="(max-width: 680px) 100vw, 680px" /&gt;&amp;nbsp;Bitcoin has been on a tear this past with the value of the cryptocurrency jumping from $8,000 to nearly $20,000. Well that run hit an abrupt end today as the price crashed as much as 23 percent on Coinbase. The price briefly dipped below $12,000 on some exchanges at around 7:30 am London time. The drop &amp;#8212; which wiped more than $4,000 from the value of bitcoin at one point &amp;#8212; was&amp;hellip; &lt;a href="https://techcrunch.com/2017/12/22/bitcoin-crypto-crashed-hard/?ncid=rss"&gt;Read More&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=I14O0TIJyVw:HAD0vBeoaRM:2mJPEYqXBVI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=2mJPEYqXBVI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=I14O0TIJyVw:HAD0vBeoaRM:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=I14O0TIJyVw:HAD0vBeoaRM:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=I14O0TIJyVw:HAD0vBeoaRM:-BTjWOF_DHI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=I14O0TIJyVw:HAD0vBeoaRM:-BTjWOF_DHI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=I14O0TIJyVw:HAD0vBeoaRM:D7DqB2pKExk"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=I14O0TIJyVw:HAD0vBeoaRM:D7DqB2pKExk" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=I14O0TIJyVw:HAD0vBeoaRM:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/Techcrunch/~4/I14O0TIJyVw" height="1" width="1" alt=""/&gt;</description>
+		<wfw:commentRss>https://techcrunch.com/2017/12/22/bitcoin-crypto-crashed-hard/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2016/07/bitcoin-split.png?w=210&amp;h=158&amp;crop=1" />
+<media:content url="http://tctechcrunch2011.files.wordpress.com/2016/07/bitcoin-split.png" type="image/png" medium="image"><media:title type="html">Bitcoin%20and%20almost%20every%20other%20cryptocurrency%20crashed%20hard%26nbsp%3Btoday</media:title></media:content>
+		<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2016/07/bitcoin-split.png" />
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2016/07/bitcoin-split.png" medium="image">
+			<media:title type="html">bitcoin-split</media:title>
+		</media:content>
+
+		<media:content url="http://2.gravatar.com/avatar/5f5876ccfd72ee5c2620b86429e8caf5?s=96&amp;d=identicon&amp;r=G" medium="image">
+			<media:title type="html">Jon</media:title>
+		</media:content>
+
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/bitcoin-nov-22.jpg" medium="image" />
+	<feedburner:origLink>https://techcrunch.com/2017/12/22/bitcoin-crypto-crashed-hard/?ncid=rss</feedburner:origLink></item>
+		<item>
+		<title>Mumbrella, a media startup focused on APAC’s marketing industry, gets acquired</title>
+		<link>http://feedproxy.google.com/~r/Techcrunch/~3/bQAB0NUA4W8/</link>
+		<comments>https://techcrunch.com/2017/12/21/mumbrella-gets-aquired/#respond</comments>
+		<pubDate>Fri, 22 Dec 2017 06:52:48 +0000</pubDate>
+		<dc:creator><![CDATA[Jon Russell]]></dc:creator>
+				<category><![CDATA[Asia]]></category>
+		<category><![CDATA[Fundings & Exits]]></category>
+		<category><![CDATA[Media]]></category>
+		<category><![CDATA[TC]]></category>
+		<category><![CDATA[mumbrella]]></category>
+		<category><![CDATA[media]]></category>
+
+		<guid isPermaLink="false">http://techcrunch.com/?p=1580886</guid>
+		<description>&lt;img width="680" height="379" src="https://tctechcrunch2011.files.wordpress.com/2017/12/screenshot-2017-12-22-13-44-21.png?w=680" class="attachment-large size-large wp-post-image" alt="" srcset="https://tctechcrunch2011.files.wordpress.com/2017/12/screenshot-2017-12-22-13-44-21.png?w=680 680w, https://tctechcrunch2011.files.wordpress.com/2017/12/screenshot-2017-12-22-13-44-21.png?w=1360 1360w, https://tctechcrunch2011.files.wordpress.com/2017/12/screenshot-2017-12-22-13-44-21.png?w=150 150w, https://tctechcrunch2011.files.wordpress.com/2017/12/screenshot-2017-12-22-13-44-21.png?w=300 300w, https://tctechcrunch2011.files.wordpress.com/2017/12/screenshot-2017-12-22-13-44-21.png?w=768 768w" sizes="(max-width: 680px) 100vw, 680px" /&gt;&amp;nbsp;Inside baseball klaxon: media writing about media story incoming:: Mumbrella, the Australia-based media company, has been sold by its founders to U.S./APAC events company Diversified Communications.
+Mumbrella operates media and marketing industry-focused websites for Australia and Asia, an events business and a database service called The Source. It has 33 staff across four offices. The&amp;#8230; &lt;a href="https://techcrunch.com/2017/12/21/mumbrella-gets-aquired/?ncid=rss"&gt;Read More&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=bQAB0NUA4W8:zUEbfCtOEFI:2mJPEYqXBVI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=2mJPEYqXBVI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=bQAB0NUA4W8:zUEbfCtOEFI:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=bQAB0NUA4W8:zUEbfCtOEFI:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=bQAB0NUA4W8:zUEbfCtOEFI:-BTjWOF_DHI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=bQAB0NUA4W8:zUEbfCtOEFI:-BTjWOF_DHI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=bQAB0NUA4W8:zUEbfCtOEFI:D7DqB2pKExk"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=bQAB0NUA4W8:zUEbfCtOEFI:D7DqB2pKExk" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=bQAB0NUA4W8:zUEbfCtOEFI:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/Techcrunch/~4/bQAB0NUA4W8" height="1" width="1" alt=""/&gt;</description>
+		<wfw:commentRss>https://techcrunch.com/2017/12/21/mumbrella-gets-aquired/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/12/screenshot-2017-12-22-13-44-21.png?w=210&amp;h=158&amp;crop=1" />
+<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/screenshot-2017-12-22-13-44-21.png" type="image/png" medium="image"><media:title type="html">Mumbrella%2C%20a%20media%20startup%20focused%20on%20APAC%26%238217%3Bs%20marketing%20industry%2C%20gets%26nbsp%3Bacquired</media:title></media:content>
+		<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/12/screenshot-2017-12-22-13-44-21.png" />
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/screenshot-2017-12-22-13-44-21.png" medium="image">
+			<media:title type="html">Screenshot 2017-12-22 13.44.21</media:title>
+		</media:content>
+
+		<media:content url="http://2.gravatar.com/avatar/5f5876ccfd72ee5c2620b86429e8caf5?s=96&amp;d=identicon&amp;r=G" medium="image">
+			<media:title type="html">Jon</media:title>
+		</media:content>
+	<feedburner:origLink>https://techcrunch.com/2017/12/21/mumbrella-gets-aquired/?ncid=rss</feedburner:origLink></item>
+		<item>
+		<title>Goldman is reportedly getting into bitcoin and crypto trading</title>
+		<link>http://feedproxy.google.com/~r/Techcrunch/~3/qMQ2jgZ4njg/</link>
+		<comments>https://techcrunch.com/2017/12/21/goldman-bitcoin-crypto-trading/#respond</comments>
+		<pubDate>Fri, 22 Dec 2017 06:00:46 +0000</pubDate>
+		<dc:creator><![CDATA[Jon Russell]]></dc:creator>
+				<category><![CDATA[TC]]></category>
+		<category><![CDATA[Bitcoin]]></category>
+		<category><![CDATA[goldman]]></category>
+		<category><![CDATA[crypto]]></category>
+
+		<guid isPermaLink="false">http://techcrunch.com/?p=1580878</guid>
+		<description>&lt;img width="680" height="383" src="https://tctechcrunch2011.files.wordpress.com/2017/09/ico-coin-sale.png?w=680" class="attachment-large size-large wp-post-image" alt="" srcset="https://tctechcrunch2011.files.wordpress.com/2017/09/ico-coin-sale.png?w=680 680w, https://tctechcrunch2011.files.wordpress.com/2017/09/ico-coin-sale.png?w=1360 1360w, https://tctechcrunch2011.files.wordpress.com/2017/09/ico-coin-sale.png?w=150 150w, https://tctechcrunch2011.files.wordpress.com/2017/09/ico-coin-sale.png?w=300 300w, https://tctechcrunch2011.files.wordpress.com/2017/09/ico-coin-sale.png?w=768 768w" sizes="(max-width: 680px) 100vw, 680px" /&gt;&amp;nbsp;Global banking giant Goldman is setting up up a trading desk focused on bitcoin and other cryptocurrencies, according to a report from Bloomberg. The bank is said to be in the early stages of setup, which means hiring and figuring out the logistics, including how the bank will hold the assets and keep them secure. The ultimate goal, Bloomberg claimed, is to begin trading by June 2018.&amp;hellip; &lt;a href="https://techcrunch.com/2017/12/21/goldman-bitcoin-crypto-trading/?ncid=rss"&gt;Read More&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=qMQ2jgZ4njg:bdxkCzgVZdM:2mJPEYqXBVI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=2mJPEYqXBVI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=qMQ2jgZ4njg:bdxkCzgVZdM:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=qMQ2jgZ4njg:bdxkCzgVZdM:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=qMQ2jgZ4njg:bdxkCzgVZdM:-BTjWOF_DHI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=qMQ2jgZ4njg:bdxkCzgVZdM:-BTjWOF_DHI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=qMQ2jgZ4njg:bdxkCzgVZdM:D7DqB2pKExk"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=qMQ2jgZ4njg:bdxkCzgVZdM:D7DqB2pKExk" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=qMQ2jgZ4njg:bdxkCzgVZdM:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/Techcrunch/~4/qMQ2jgZ4njg" height="1" width="1" alt=""/&gt;</description>
+		<wfw:commentRss>https://techcrunch.com/2017/12/21/goldman-bitcoin-crypto-trading/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/09/ico-coin-sale.png?w=210&amp;h=158&amp;crop=1" />
+<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/09/ico-coin-sale.png" type="image/png" medium="image"><media:title type="html">Goldman%20is%20reportedly%20getting%20into%20bitcoin%20and%20crypto%26nbsp%3Btrading</media:title></media:content>
+		<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/09/ico-coin-sale.png" />
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/09/ico-coin-sale.png" medium="image">
+			<media:title type="html">ico-coin-sale</media:title>
+		</media:content>
+
+		<media:content url="http://2.gravatar.com/avatar/5f5876ccfd72ee5c2620b86429e8caf5?s=96&amp;d=identicon&amp;r=G" medium="image">
+			<media:title type="html">Jon</media:title>
+		</media:content>
+
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/bitcoin-end-of-year-rollercoaster.jpg" medium="image" />
+	<feedburner:origLink>https://techcrunch.com/2017/12/21/goldman-bitcoin-crypto-trading/?ncid=rss</feedburner:origLink></item>
+		<item>
+		<title>Crunch Report | Sequoia Capital’s Next Fund Could Be $5 Billion</title>
+		<link>http://feedproxy.google.com/~r/Techcrunch/~3/LkmPrl3_KWM/</link>
+		<comments>https://techcrunch.com/2017/12/21/crunch-report-sequoia-capitals-next-fund-could-be-5-billion/#respond</comments>
+		<pubDate>Fri, 22 Dec 2017 04:00:27 +0000</pubDate>
+		<dc:creator><![CDATA[Khaled &quot;Tito&quot; Hamze]]></dc:creator>
+				<category><![CDATA[TC]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[5 Billion]]></category>
+		<category><![CDATA[Daimler]]></category>
+		<category><![CDATA[long blockchain]]></category>
+		<category><![CDATA[hamze]]></category>
+		<category><![CDATA[chauffur prive]]></category>
+		<category><![CDATA[TechCrunch]]></category>
+		<category><![CDATA[Silicon Valley]]></category>
+		<category><![CDATA[daily]]></category>
+		<category><![CDATA[ride sharin]]></category>
+		<category><![CDATA[blockchain]]></category>
+		<category><![CDATA[iced tea]]></category>
+		<category><![CDATA[tito]]></category>
+		<category><![CDATA[Disrupt]]></category>
+		<category><![CDATA[sequoia capital]]></category>
+		<category><![CDATA[review]]></category>
+		<category><![CDATA[Hands On]]></category>
+		<category><![CDATA[VC]]></category>
+		<category><![CDATA[tito hamze]]></category>
+		<category><![CDATA[crypto]]></category>
+		<category><![CDATA[crunch]]></category>
+		<category><![CDATA[France]]></category>
+		<category><![CDATA[lemonade]]></category>
+		<category><![CDATA[crunch report]]></category>
+		<category><![CDATA[technology]]></category>
+		<category><![CDATA[recap]]></category>
+		<category><![CDATA[Tech]]></category>
+		<category><![CDATA[NASDAQ]]></category>
+		<category><![CDATA[report]]></category>
+
+		<guid isPermaLink="false">http://techcrunch.com/?p=1580814</guid>
+		<description>Daimler acquires a majority stake in an Uber competitor in France, Sequoia Capital&amp;#8217;s next fund could be a $5 billion one and an iced tea company changes its name to Long Blockchain and its value skyrockets. All this on Crunch Report. &lt;a href="https://techcrunch.com/2017/12/21/crunch-report-sequoia-capitals-next-fund-could-be-5-billion/?ncid=rss"&gt;Read More&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=LkmPrl3_KWM:W-vdTjmFVTg:2mJPEYqXBVI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=2mJPEYqXBVI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=LkmPrl3_KWM:W-vdTjmFVTg:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=LkmPrl3_KWM:W-vdTjmFVTg:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=LkmPrl3_KWM:W-vdTjmFVTg:-BTjWOF_DHI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=LkmPrl3_KWM:W-vdTjmFVTg:-BTjWOF_DHI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=LkmPrl3_KWM:W-vdTjmFVTg:D7DqB2pKExk"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=LkmPrl3_KWM:W-vdTjmFVTg:D7DqB2pKExk" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=LkmPrl3_KWM:W-vdTjmFVTg:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/Techcrunch/~4/LkmPrl3_KWM" height="1" width="1" alt=""/&gt;</description>
+		<wfw:commentRss>https://techcrunch.com/2017/12/21/crunch-report-sequoia-capitals-next-fund-could-be-5-billion/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<media:content url="http://img.vidible.tv/prod/2017-12/21/5a3c3b609efa8971f3bed9de/5a3c3d0928fd9060140255a6_o_U_v1.jpg?w=1279&amp;h=727" type="image/jpeg" medium="image"><media:title type="html">Crunch%20Report%20%7C%20Sequoia%20Capital%26%238217%3Bs%20Next%20Fund%20Could%20Be%20%245%26nbsp%3BBillion</media:title></media:content>
+		<media:content url="http://2.gravatar.com/avatar/ebbd42535d88ec24fe14734e8abedc20?s=96&amp;d=identicon&amp;r=G" medium="image">
+			<media:title type="html">titohamze</media:title>
+		</media:content>
+	<feedburner:origLink>https://techcrunch.com/2017/12/21/crunch-report-sequoia-capitals-next-fund-could-be-5-billion/?ncid=rss</feedburner:origLink></item>
+		<item>
+		<title>Mattermark to shut down after selling to FullContact</title>
+		<link>http://feedproxy.google.com/~r/Techcrunch/~3/BPh5tTteMAM/</link>
+		<comments>https://techcrunch.com/2017/12/21/mattermark-to-shut-down-after-selling-to-full-contact/#respond</comments>
+		<pubDate>Fri, 22 Dec 2017 01:38:08 +0000</pubDate>
+		<dc:creator><![CDATA[Katie Roof]]></dc:creator>
+				<category><![CDATA[Startups]]></category>
+		<category><![CDATA[TC]]></category>
+		<category><![CDATA[Venture Capital]]></category>
+		<category><![CDATA[Mattermark]]></category>
+
+		<guid isPermaLink="false">http://techcrunch.com/?p=1580843</guid>
+		<description>&lt;img width="680" height="457" src="https://tctechcrunch2011.files.wordpress.com/2015/09/screen-shot-2015-09-02-at-10-22-01-am.png?w=680" class="attachment-large size-large wp-post-image" alt="" srcset="https://tctechcrunch2011.files.wordpress.com/2015/09/screen-shot-2015-09-02-at-10-22-01-am.png?w=680 680w, https://tctechcrunch2011.files.wordpress.com/2015/09/screen-shot-2015-09-02-at-10-22-01-am.png?w=150 150w, https://tctechcrunch2011.files.wordpress.com/2015/09/screen-shot-2015-09-02-at-10-22-01-am.png?w=300 300w, https://tctechcrunch2011.files.wordpress.com/2015/09/screen-shot-2015-09-02-at-10-22-01-am.png?w=768 768w, https://tctechcrunch2011.files.wordpress.com/2015/09/screen-shot-2015-09-02-at-10-22-01-am.png 883w" sizes="(max-width: 680px) 100vw, 680px" /&gt;&amp;nbsp;Mattermark, the site for startup and company data, is shutting down its own business after selling in a disappointing outcome to FullContact.
+In a document obtained by TechCrunch, co-founder and CEO Danielle Morrill wrote that &amp;#8220;common stockholders will not be receiving anything in this deal.&amp;#8221; In other words, Mattermark employee shares are worthless.
+It was just last year that&amp;#8230; &lt;a href="https://techcrunch.com/2017/12/21/mattermark-to-shut-down-after-selling-to-full-contact/?ncid=rss"&gt;Read More&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=BPh5tTteMAM:b-KUqC_vGWY:2mJPEYqXBVI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=2mJPEYqXBVI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=BPh5tTteMAM:b-KUqC_vGWY:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=BPh5tTteMAM:b-KUqC_vGWY:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=BPh5tTteMAM:b-KUqC_vGWY:-BTjWOF_DHI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=BPh5tTteMAM:b-KUqC_vGWY:-BTjWOF_DHI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=BPh5tTteMAM:b-KUqC_vGWY:D7DqB2pKExk"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=BPh5tTteMAM:b-KUqC_vGWY:D7DqB2pKExk" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=BPh5tTteMAM:b-KUqC_vGWY:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/Techcrunch/~4/BPh5tTteMAM" height="1" width="1" alt=""/&gt;</description>
+		<wfw:commentRss>https://techcrunch.com/2017/12/21/mattermark-to-shut-down-after-selling-to-full-contact/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2015/09/screen-shot-2015-09-02-at-10-22-01-am.png?w=210&amp;h=158&amp;crop=1" />
+<media:content url="http://tctechcrunch2011.files.wordpress.com/2015/09/screen-shot-2015-09-02-at-10-22-01-am.png" type="image/png" medium="image"><media:title type="html">Mattermark%20to%20shut%20down%20after%20selling%20to%26nbsp%3BFullContact</media:title></media:content>
+		<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2015/09/screen-shot-2015-09-02-at-10-22-01-am.png" />
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2015/09/screen-shot-2015-09-02-at-10-22-01-am.png" medium="image">
+			<media:title type="html">FullContact</media:title>
+		</media:content>
+
+		<media:content url="http://2.gravatar.com/avatar/824c7b4138c815864132412acba8a0ef?s=96&amp;d=identicon&amp;r=G" medium="image">
+			<media:title type="html">roofkatie</media:title>
+		</media:content>
+	<feedburner:origLink>https://techcrunch.com/2017/12/21/mattermark-to-shut-down-after-selling-to-full-contact/?ncid=rss</feedburner:origLink></item>
+		<item>
+		<title>Laser-equipped shoes help Parkinson’s patients take the next step</title>
+		<link>http://feedproxy.google.com/~r/Techcrunch/~3/kqZDgA-5RAo/</link>
+		<comments>https://techcrunch.com/2017/12/21/laser-equipped-shoes-help-parkinsons-patients-take-the-next-step/#respond</comments>
+		<pubDate>Fri, 22 Dec 2017 00:53:18 +0000</pubDate>
+		<dc:creator><![CDATA[Devin Coldewey]]></dc:creator>
+				<category><![CDATA[Gadgets]]></category>
+		<category><![CDATA[Health]]></category>
+		<category><![CDATA[Science]]></category>
+		<category><![CDATA[TC]]></category>
+		<category><![CDATA[Wearables]]></category>
+		<category><![CDATA[Parkinson's Disease]]></category>
+		<category><![CDATA[lasers]]></category>
+		<category><![CDATA[medtech]]></category>
+
+		<guid isPermaLink="false">http://techcrunch.com/?p=1580839</guid>
+		<description>&lt;img width="680" height="290" src="https://tctechcrunch2011.files.wordpress.com/2017/12/lasershoes.jpg?w=680" class="attachment-large size-large wp-post-image" alt="" srcset="https://tctechcrunch2011.files.wordpress.com/2017/12/lasershoes.jpg?w=680 680w, https://tctechcrunch2011.files.wordpress.com/2017/12/lasershoes.jpg?w=150 150w, https://tctechcrunch2011.files.wordpress.com/2017/12/lasershoes.jpg?w=300 300w, https://tctechcrunch2011.files.wordpress.com/2017/12/lasershoes.jpg 750w" sizes="(max-width: 680px) 100vw, 680px" /&gt;&amp;nbsp;Here&amp;#8217;s an unexpected but pleasant little way tech might be able to improve a few lives: laser shoes. Yes, seriously. Shoes equipped with small laser emitters were shown in recent tests to help sufferers of Parkinson&amp;#8217;s disease to walk normally. &lt;a href="https://techcrunch.com/2017/12/21/laser-equipped-shoes-help-parkinsons-patients-take-the-next-step/?ncid=rss"&gt;Read More&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=kqZDgA-5RAo:uMvvi4ajrPI:2mJPEYqXBVI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=2mJPEYqXBVI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=kqZDgA-5RAo:uMvvi4ajrPI:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=kqZDgA-5RAo:uMvvi4ajrPI:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=kqZDgA-5RAo:uMvvi4ajrPI:-BTjWOF_DHI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=kqZDgA-5RAo:uMvvi4ajrPI:-BTjWOF_DHI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=kqZDgA-5RAo:uMvvi4ajrPI:D7DqB2pKExk"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=kqZDgA-5RAo:uMvvi4ajrPI:D7DqB2pKExk" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=kqZDgA-5RAo:uMvvi4ajrPI:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/Techcrunch/~4/kqZDgA-5RAo" height="1" width="1" alt=""/&gt;</description>
+		<wfw:commentRss>https://techcrunch.com/2017/12/21/laser-equipped-shoes-help-parkinsons-patients-take-the-next-step/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/12/lasershoes.jpg?w=210&amp;h=158&amp;crop=1" />
+<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/lasershoes.jpg" type="image/jpeg" medium="image"><media:title type="html">Laser-equipped%20shoes%20help%20Parkinson%26%238217%3Bs%20patients%20take%20the%20next%26nbsp%3Bstep</media:title></media:content>
+		<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/12/lasershoes.jpg" />
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/lasershoes.jpg" medium="image">
+			<media:title type="html">lasershoes</media:title>
+		</media:content>
+
+		<media:content url="http://0.gravatar.com/avatar/69fae9a8a3933fa91e81c086b8eee14a?s=96&amp;d=identicon&amp;r=G" medium="image">
+			<media:title type="html">devin</media:title>
+		</media:content>
+	<feedburner:origLink>https://techcrunch.com/2017/12/21/laser-equipped-shoes-help-parkinsons-patients-take-the-next-step/?ncid=rss</feedburner:origLink></item>
+		<item>
+		<title>Google Home Max review</title>
+		<link>http://feedproxy.google.com/~r/Techcrunch/~3/vpA1_wb_Sg4/</link>
+		<comments>https://techcrunch.com/2017/12/21/google-home-max-review/#respond</comments>
+		<pubDate>Fri, 22 Dec 2017 00:18:33 +0000</pubDate>
+		<dc:creator><![CDATA[Brian Heater]]></dc:creator>
+				<category><![CDATA[Gadgets]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Reviews]]></category>
+		<category><![CDATA[TC]]></category>
+		<category><![CDATA[Google]]></category>
+		<category><![CDATA[google home]]></category>
+		<category><![CDATA[Assistant]]></category>
+		<category><![CDATA[Google Assistant]]></category>
+		<category><![CDATA[google home max]]></category>
+		<category><![CDATA[smart speakers]]></category>
+
+		<guid isPermaLink="false">http://techcrunch.com/?p=1580828</guid>
+		<description>&lt;img width="680" height="454" src="https://tctechcrunch2011.files.wordpress.com/2017/12/dscf3505.jpg?w=680" class="attachment-large size-large wp-post-image" alt="" srcset="https://tctechcrunch2011.files.wordpress.com/2017/12/dscf3505.jpg?w=680 680w, https://tctechcrunch2011.files.wordpress.com/2017/12/dscf3505.jpg?w=1360 1360w, https://tctechcrunch2011.files.wordpress.com/2017/12/dscf3505.jpg?w=150 150w, https://tctechcrunch2011.files.wordpress.com/2017/12/dscf3505.jpg?w=300 300w, https://tctechcrunch2011.files.wordpress.com/2017/12/dscf3505.jpg?w=768 768w" sizes="(max-width: 680px) 100vw, 680px" /&gt;&amp;nbsp;The Max sounds good. But is it $399 good? On the whole, it&amp;#8217;s a solid offering. It isn&amp;#8217;t a flashy speaker from a design perspective, but the audio is loud and clear, and the bass bumps like a mofo. &lt;a href="https://techcrunch.com/2017/12/21/google-home-max-review/?ncid=rss"&gt;Read More&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=vpA1_wb_Sg4:2mN31GNREDI:2mJPEYqXBVI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=2mJPEYqXBVI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=vpA1_wb_Sg4:2mN31GNREDI:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=vpA1_wb_Sg4:2mN31GNREDI:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=vpA1_wb_Sg4:2mN31GNREDI:-BTjWOF_DHI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=vpA1_wb_Sg4:2mN31GNREDI:-BTjWOF_DHI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=vpA1_wb_Sg4:2mN31GNREDI:D7DqB2pKExk"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=vpA1_wb_Sg4:2mN31GNREDI:D7DqB2pKExk" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=vpA1_wb_Sg4:2mN31GNREDI:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/Techcrunch/~4/vpA1_wb_Sg4" height="1" width="1" alt=""/&gt;</description>
+		<wfw:commentRss>https://techcrunch.com/2017/12/21/google-home-max-review/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/12/dscf3505.jpg?w=210&amp;h=158&amp;crop=1" />
+<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/dscf3505.jpg" type="image/jpeg" medium="image"><media:title type="html">Google%20Home%20Max%26nbsp%3Breview</media:title></media:content>
+		<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/12/dscf3505.jpg" />
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/dscf3505.jpg" medium="image">
+			<media:title type="html">DSCF3505</media:title>
+		</media:content>
+
+		<media:content url="http://0.gravatar.com/avatar/69b6dc548d05dedd0132f12e075bf7de?s=96&amp;d=identicon&amp;r=G" medium="image">
+			<media:title type="html">bheater</media:title>
+		</media:content>
+
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/dscf3495.jpg" medium="image" />
+
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/screen-shot-2017-12-21-at-6-06-12-pm.png" medium="image" />
+
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/dscf3493.jpg" medium="image" />
+
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/dscf3502.jpg" medium="image" />
+	<feedburner:origLink>https://techcrunch.com/2017/12/21/google-home-max-review/?ncid=rss</feedburner:origLink></item>
+		<item>
+		<title>Apple’s Design Delirium</title>
+		<link>http://feedproxy.google.com/~r/Techcrunch/~3/YaiuZztbFhY/</link>
+		<comments>https://techcrunch.com/2017/12/21/apples-design-delirium/#respond</comments>
+		<pubDate>Thu, 21 Dec 2017 23:27:16 +0000</pubDate>
+		<dc:creator><![CDATA[Danny Crichton]]></dc:creator>
+				<category><![CDATA[Developer]]></category>
+		<category><![CDATA[TC]]></category>
+		<category><![CDATA[Apple]]></category>
+		<category><![CDATA[iOS]]></category>
+		<category><![CDATA[Mac OS X]]></category>
+
+		<guid isPermaLink="false">http://techcrunch.com/?p=1580821</guid>
+		<description>&lt;img width="680" height="447" src="https://tctechcrunch2011.files.wordpress.com/2017/06/gettyimages-634120922.jpg?w=680" class="attachment-large size-large wp-post-image" alt="" srcset="https://tctechcrunch2011.files.wordpress.com/2017/06/gettyimages-634120922.jpg?w=680 680w, https://tctechcrunch2011.files.wordpress.com/2017/06/gettyimages-634120922.jpg?w=1360 1360w, https://tctechcrunch2011.files.wordpress.com/2017/06/gettyimages-634120922.jpg?w=150 150w, https://tctechcrunch2011.files.wordpress.com/2017/06/gettyimages-634120922.jpg?w=300 300w, https://tctechcrunch2011.files.wordpress.com/2017/06/gettyimages-634120922.jpg?w=768 768w" sizes="(max-width: 680px) 100vw, 680px" /&gt;&amp;nbsp;I watch with increasing trepidation at the direction Apple is taking its products. The most recent concern came yesterday from Bloomberg that Apple intends to offer its software developers new libraries that will allow apps to serve both touchscreen interfaces like the iPhone as well as traditional mouse and keyboard setups on desktop computers using a single unified set of APIs. &lt;a href="https://techcrunch.com/2017/12/21/apples-design-delirium/?ncid=rss"&gt;Read More&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=YaiuZztbFhY:VixiIWT6KiA:2mJPEYqXBVI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=2mJPEYqXBVI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=YaiuZztbFhY:VixiIWT6KiA:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=YaiuZztbFhY:VixiIWT6KiA:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=YaiuZztbFhY:VixiIWT6KiA:-BTjWOF_DHI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=YaiuZztbFhY:VixiIWT6KiA:-BTjWOF_DHI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=YaiuZztbFhY:VixiIWT6KiA:D7DqB2pKExk"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=YaiuZztbFhY:VixiIWT6KiA:D7DqB2pKExk" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=YaiuZztbFhY:VixiIWT6KiA:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/Techcrunch/~4/YaiuZztbFhY" height="1" width="1" alt=""/&gt;</description>
+		<wfw:commentRss>https://techcrunch.com/2017/12/21/apples-design-delirium/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/06/gettyimages-634120922.jpg?w=210&amp;h=158&amp;crop=1" />
+<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/06/gettyimages-634120922.jpg" type="image/jpeg" medium="image"><media:title type="html">Apple%E2%80%99s%20Design%20Delirium</media:title></media:content>
+		<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/06/gettyimages-634120922.jpg" />
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/06/gettyimages-634120922.jpg" medium="image">
+			<media:title type="html">GERMANY-US-IT-APPLE</media:title>
+		</media:content>
+
+		<media:content url="http://2.gravatar.com/avatar/8c216d6030a712ef1dd35e2d6ffdf497?s=96&amp;d=identicon&amp;r=G" medium="image">
+			<media:title type="html">dancric</media:title>
+		</media:content>
+	<feedburner:origLink>https://techcrunch.com/2017/12/21/apples-design-delirium/?ncid=rss</feedburner:origLink></item>
+		<item>
+		<title>Podia helps content creators build their online business</title>
+		<link>http://feedproxy.google.com/~r/Techcrunch/~3/r4g8M5GfOjg/</link>
+		<comments>https://techcrunch.com/2017/12/21/coach-becomes-podia/#respond</comments>
+		<pubDate>Thu, 21 Dec 2017 23:03:44 +0000</pubDate>
+		<dc:creator><![CDATA[Anthony Ha]]></dc:creator>
+				<category><![CDATA[Media]]></category>
+		<category><![CDATA[Startups]]></category>
+		<category><![CDATA[TC]]></category>
+		<category><![CDATA[Podia]]></category>
+
+		<guid isPermaLink="false">http://techcrunch.com/?p=1580780</guid>
+		<description>&lt;img width="680" height="371" src="https://tctechcrunch2011.files.wordpress.com/2014/12/screen-shot-2014-12-01-at-5-05-25-pm.png?w=680" class="attachment-large size-large wp-post-image" alt="cash register" srcset="https://tctechcrunch2011.files.wordpress.com/2014/12/screen-shot-2014-12-01-at-5-05-25-pm.png?w=680 680w, https://tctechcrunch2011.files.wordpress.com/2014/12/screen-shot-2014-12-01-at-5-05-25-pm.png?w=150 150w, https://tctechcrunch2011.files.wordpress.com/2014/12/screen-shot-2014-12-01-at-5-05-25-pm.png?w=300 300w, https://tctechcrunch2011.files.wordpress.com/2014/12/screen-shot-2014-12-01-at-5-05-25-pm.png 752w" sizes="(max-width: 680px) 100vw, 680px" /&gt;&amp;nbsp;More than a year and a half ago, I wrote about Coach, a startup offering tools for tutors and other freelancers to make money and operate their business online. Since then, the company has shifted focus in a big way, and it recently announced that it&amp;#8217;s raised $3 million in seed funding. It&amp;#8217;s got a new name, too &amp;#8212; Podia. &lt;a href="https://techcrunch.com/2017/12/21/coach-becomes-podia/?ncid=rss"&gt;Read More&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=r4g8M5GfOjg:RiAyXOGv4T0:2mJPEYqXBVI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=2mJPEYqXBVI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=r4g8M5GfOjg:RiAyXOGv4T0:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=r4g8M5GfOjg:RiAyXOGv4T0:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=r4g8M5GfOjg:RiAyXOGv4T0:-BTjWOF_DHI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=r4g8M5GfOjg:RiAyXOGv4T0:-BTjWOF_DHI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=r4g8M5GfOjg:RiAyXOGv4T0:D7DqB2pKExk"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=r4g8M5GfOjg:RiAyXOGv4T0:D7DqB2pKExk" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=r4g8M5GfOjg:RiAyXOGv4T0:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/Techcrunch/~4/r4g8M5GfOjg" height="1" width="1" alt=""/&gt;</description>
+		<wfw:commentRss>https://techcrunch.com/2017/12/21/coach-becomes-podia/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2014/12/screen-shot-2014-12-01-at-5-05-25-pm.png?w=210&amp;h=158&amp;crop=1" />
+<media:content url="http://tctechcrunch2011.files.wordpress.com/2014/12/screen-shot-2014-12-01-at-5-05-25-pm.png" type="image/png" medium="image"><media:title type="html">Podia%20helps%20content%20creators%20build%20their%20online%26nbsp%3Bbusiness</media:title></media:content>
+		<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2014/12/screen-shot-2014-12-01-at-5-05-25-pm.png" />
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2014/12/screen-shot-2014-12-01-at-5-05-25-pm.png" medium="image">
+			<media:title type="html">cash register</media:title>
+		</media:content>
+
+		<media:content url="http://1.gravatar.com/avatar/72b358648f4587cc2a11895c32b8e979?s=96&amp;d=identicon&amp;r=G" medium="image">
+			<media:title type="html">anthha</media:title>
+		</media:content>
+
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/1qn0x0xd0rohntfgjfqz9-w.png?w=680" medium="image">
+			<media:title type="html">Podia</media:title>
+		</media:content>
+	<feedburner:origLink>https://techcrunch.com/2017/12/21/coach-becomes-podia/?ncid=rss</feedburner:origLink></item>
+		<item>
+		<title>A new bipartisan Senate bill seeks to bolster US election security at the state level</title>
+		<link>http://feedproxy.google.com/~r/Techcrunch/~3/JM-onB7Qw_8/</link>
+		<comments>https://techcrunch.com/2017/12/21/secure-elections-act/#respond</comments>
+		<pubDate>Thu, 21 Dec 2017 22:58:15 +0000</pubDate>
+		<dc:creator><![CDATA[Taylor Hatmaker]]></dc:creator>
+				<category><![CDATA[Government]]></category>
+		<category><![CDATA[TC]]></category>
+		<category><![CDATA[electronic voting]]></category>
+		<category><![CDATA[voting machines]]></category>
+		<category><![CDATA[Politics]]></category>
+		<category><![CDATA[2016 election]]></category>
+
+		<guid isPermaLink="false">http://techcrunch.com/?p=1580799</guid>
+		<description>&lt;img width="680" height="446" src="https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-890909666.jpg?w=680" class="attachment-large size-large wp-post-image" alt="" srcset="https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-890909666.jpg?w=680 680w, https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-890909666.jpg?w=150 150w, https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-890909666.jpg?w=300 300w, https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-890909666.jpg?w=768 768w, https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-890909666.jpg 1024w" sizes="(max-width: 680px) 100vw, 680px" /&gt;&amp;nbsp;A bipartisan group of lawmakers in the Senate has introduced a bill designed to protect the technical integrity of American elections as the nation moves toward midterm season. Introduced in the Senate, the bill known as the Secure Elections Act. &lt;a href="https://techcrunch.com/2017/12/21/secure-elections-act/?ncid=rss"&gt;Read More&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=JM-onB7Qw_8:Av_dGrqnxnc:2mJPEYqXBVI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=2mJPEYqXBVI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=JM-onB7Qw_8:Av_dGrqnxnc:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=JM-onB7Qw_8:Av_dGrqnxnc:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=JM-onB7Qw_8:Av_dGrqnxnc:-BTjWOF_DHI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=JM-onB7Qw_8:Av_dGrqnxnc:-BTjWOF_DHI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=JM-onB7Qw_8:Av_dGrqnxnc:D7DqB2pKExk"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=JM-onB7Qw_8:Av_dGrqnxnc:D7DqB2pKExk" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=JM-onB7Qw_8:Av_dGrqnxnc:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/Techcrunch/~4/JM-onB7Qw_8" height="1" width="1" alt=""/&gt;</description>
+		<wfw:commentRss>https://techcrunch.com/2017/12/21/secure-elections-act/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-890909666.jpg?w=210&amp;h=158&amp;crop=1" />
+<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-890909666.jpg" type="image/jpeg" medium="image"><media:title type="html">A%20new%20bipartisan%20Senate%20bill%20seeks%20to%20bolster%20US%20election%20security%20at%20the%20state%26nbsp%3Blevel</media:title></media:content>
+		<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-890909666.jpg" />
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-890909666.jpg" medium="image">
+			<media:title type="html">Democratic Senate Candidate Doug Jones Votes In Alabama Special Election</media:title>
+		</media:content>
+
+		<media:content url="http://0.gravatar.com/avatar/3436ad42e80c700e632782e3c5e0e80e?s=96&amp;d=identicon&amp;r=G" medium="image">
+			<media:title type="html">taylortechcrunch</media:title>
+		</media:content>
+	<feedburner:origLink>https://techcrunch.com/2017/12/21/secure-elections-act/?ncid=rss</feedburner:origLink></item>
+		<item>
+		<title>There’s no magic bullet for reversing the FCC’s net neutrality decision</title>
+		<link>http://feedproxy.google.com/~r/Techcrunch/~3/0YzvyCTrj1E/</link>
+		<comments>https://techcrunch.com/2017/12/21/theres-no-magic-bullet-for-reversing-the-fccs-net-neutrality-decision/#respond</comments>
+		<pubDate>Thu, 21 Dec 2017 22:45:43 +0000</pubDate>
+		<dc:creator><![CDATA[Devin Coldewey]]></dc:creator>
+				<category><![CDATA[Government]]></category>
+		<category><![CDATA[Policy]]></category>
+		<category><![CDATA[TC]]></category>
+		<category><![CDATA[FCC]]></category>
+		<category><![CDATA[net neutrality]]></category>
+		<category><![CDATA[Net Neutrality Vote]]></category>
+		<category><![CDATA[Politics]]></category>
+
+		<guid isPermaLink="false">http://techcrunch.com/?p=1578916</guid>
+		<description>&lt;img width="680" height="383" src="https://tctechcrunch2011.files.wordpress.com/2017/05/dont-tread-on-net2.png?w=680" class="attachment-large size-large wp-post-image" alt="" srcset="https://tctechcrunch2011.files.wordpress.com/2017/05/dont-tread-on-net2.png?w=680 680w, https://tctechcrunch2011.files.wordpress.com/2017/05/dont-tread-on-net2.png?w=1360 1360w, https://tctechcrunch2011.files.wordpress.com/2017/05/dont-tread-on-net2.png?w=150 150w, https://tctechcrunch2011.files.wordpress.com/2017/05/dont-tread-on-net2.png?w=300 300w, https://tctechcrunch2011.files.wordpress.com/2017/05/dont-tread-on-net2.png?w=768 768w" sizes="(max-width: 680px) 100vw, 680px" /&gt;&amp;nbsp;Huge numbers of people are upset at the FCC&amp;#8217;s decision to undo its own highly popular net neutrality rules. But the grand plans to undo this mischief being announced left and right should be taken with a grain of salt. Unfortunately, it all comes down to politics. &lt;a href="https://techcrunch.com/2017/12/21/theres-no-magic-bullet-for-reversing-the-fccs-net-neutrality-decision/?ncid=rss"&gt;Read More&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=0YzvyCTrj1E:Oza3cAczg_U:2mJPEYqXBVI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=2mJPEYqXBVI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=0YzvyCTrj1E:Oza3cAczg_U:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=0YzvyCTrj1E:Oza3cAczg_U:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=0YzvyCTrj1E:Oza3cAczg_U:-BTjWOF_DHI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=0YzvyCTrj1E:Oza3cAczg_U:-BTjWOF_DHI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=0YzvyCTrj1E:Oza3cAczg_U:D7DqB2pKExk"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=0YzvyCTrj1E:Oza3cAczg_U:D7DqB2pKExk" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=0YzvyCTrj1E:Oza3cAczg_U:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/Techcrunch/~4/0YzvyCTrj1E" height="1" width="1" alt=""/&gt;</description>
+		<wfw:commentRss>https://techcrunch.com/2017/12/21/theres-no-magic-bullet-for-reversing-the-fccs-net-neutrality-decision/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/05/dont-tread-on-net2.png?w=210&amp;h=158&amp;crop=1" />
+<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/05/dont-tread-on-net2.png" type="image/png" medium="image"><media:title type="html">There%26%238217%3Bs%20no%20magic%20bullet%20for%20reversing%20the%20FCC%26%238217%3Bs%20net%20neutrality%26nbsp%3Bdecision</media:title></media:content>
+		<media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/05/dont-tread-on-net2.png" />
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/05/dont-tread-on-net2.png" medium="image">
+			<media:title type="html">dont-tread-on-net2</media:title>
+		</media:content>
+
+		<media:content url="http://0.gravatar.com/avatar/69fae9a8a3933fa91e81c086b8eee14a?s=96&amp;d=identicon&amp;r=G" medium="image">
+			<media:title type="html">devin</media:title>
+		</media:content>
+
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/10/gettyimages-542031737.jpg" medium="image" />
+
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-843454912.jpg" medium="image" />
+
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-892335360.jpeg" medium="image" />
+
+		<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/net-neutrality-repeal-banner.png" medium="image" />
+	<feedburner:origLink>https://techcrunch.com/2017/12/21/theres-no-magic-bullet-for-reversing-the-fccs-net-neutrality-decision/?ncid=rss</feedburner:origLink></item>
+	</channel>
+</rss>
