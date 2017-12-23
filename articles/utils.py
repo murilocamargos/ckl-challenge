@@ -1,50 +1,73 @@
 from django.shortcuts import get_object_or_404
+from django.template.defaultfilters import slugify
 from .models import Author, Category, Outlet, Article
 
 def create_article(outlet, data):
     """
-    This function creates an article with all its dependencies, such as,
+    This function creates an article with all its attributes such as
     its author and categories.
 
     Args:
         outlet:  an Outlet object to create/find the author
         data: a dictionary with the article's attributes, with the
-                 following structure:
-                  - title
-                  - url
-                  - date
-                  - thumb
-                  - content
-                  - author
-                    - name
-                    - avatar
-                  - categories (a list of categories' names)
+              following keys:
+               - [required] title
+               - [required] url
+               - [required] date
+               - [optional] thumb
+               - [required] content
+               - [required*] author
+                    - [required] name
+                    - [optional] slug
+                    - [optional] outlet
+                    - [optional] profile
+                    - [optional] twitter
+                    - [optional] linkedin
+                    - [optional] facebook
+                    - [optional] website
+                    - [optional] avatar
+                    - [optional] about
+               - [optional] categories (it's a list with categories' names)
     """
-    if data['date'] == '' or data['title'] == '':
+
+    required = ['title', 'url', 'date', 'author', 'content']
+    for key in required:
+        if key not in data:
+            return None
+
+    if not 'name' in data['author']:
         return None
+
+    # Form a dictionary with all author's information but his/her name
+    author_defaults = {key: data['author'][key] for key in data['author'] if key != 'name'}
 
     author, created = Author.objects.get_or_create(
         name = data['author']['name'],
         outlet_id = outlet.id,
-        defaults = {
-            'avatar': data['author']['avatar']
-        }
+        defaults = author_defaults
     )
 
+    # Form a dictionary with all article's information but its `url`, the article's
+    # information can be seen as anything whose type is str inside `data`. However,
+    # `date` does not live up by this rule, so we add it manually to article_defaults.
+    url = data.pop('url')
+    article_defaults = {key: data[key] for key in data if type(data[key]) == str}
+    article_defaults['date'] = data.pop('date')
+    article_defaults['author_id'] = author.id
+    article_defaults['outlet_id'] = outlet.id
+
     article, created = Article.objects.get_or_create(
-        url = data['url'],
-        defaults = {
-            'title': data['title'],
-            'date': data['date'],
-            'thumb': data['thumb'],
-            'content': data['content'],
-            'author_id': author.id,
-            'outlet_id': outlet.id
-        }
+        url = url,
+        defaults = article_defaults
     )
 
     for cat_name in data['categories']:
-        category, created = Category.objects.get_or_create(name = cat_name)
+        category, created = Category.objects.get_or_create(
+            slug = slugify(cat_name),
+            defaults = {
+                'name': cat_name
+            }
+        )
         article.categories.add(category)
 
     return article
