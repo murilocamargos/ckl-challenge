@@ -1,3 +1,4 @@
 *.sublime*
 *.sqlite3
 *.pyc
+celerybeat-*

@@ -91,7 +91,7 @@ class UtilsTestCase(TestCase):
                 'avatar': 'mcamargos',
                 'about': 'Bla Bla Bla',
             },
-            'categories': ['IT', 'Django']
+            'categories': ['IT', 'Django'],
         }
 
         article = utils.create_article(outlet, article)

@@ -19,7 +19,6 @@ def create_article(outlet, data):
                - [required*] author
                     - [required] name
                     - [optional] slug
-                    - [optional] outlet
                     - [optional] profile
                     - [optional] twitter
                     - [optional] linkedin
@@ -30,13 +29,31 @@ def create_article(outlet, data):
                - [optional] categories (it's a list with categories' names)
     """
 
-    required = ['title', 'url', 'date', 'author', 'content']
-    for key in required:
-        if key not in data:
-            return None
+    required = ['title', 'url', 'date', 'content', 'author', 'author.name']
+    accepted = required + ['thumb', 'categories', 'author.slug', 'author.profile',
+                    'author.twitter', 'author.linkedin', 'author.facebook',
+                    'author.website', 'author.avatar', 'author.about']
 
-    if not 'name' in data['author']:
-        return None
+    # Get input keys with dot notation
+    keys = []
+    for key in data:
+        keys += [key]
+        if type(data[key]) == dict:
+            keys += [key + '.' + subkey for subkey in data[key]]
+
+    # Check if there is any key not accepted
+    for key in keys:
+        if key in required:
+            required.remove(key)
+        if key not in accepted:
+            raise ValueError('You can\'t use the attribute `' + key + '`.')
+    
+    # Check if all required keys were provided correctly
+    if len(required) != 0:
+        raise ValueError('You must provide all required parameters to add an article.')
+
+    if 'categories' in data and type(data['categories']) != list:
+        raise ValueError('The categories parameter should be a list, even if it has only one item.')
 
     # Form a dictionary with all author's information but his/her name
     author_defaults = {key: data['author'][key] for key in data['author'] if key != 'name'}
@@ -72,6 +89,8 @@ def create_article(outlet, data):
 
     return article
 
+
+
 def get_text_or_attr(item, key, attr = None):
     """
     This function returns a string or a list of strings containing
@@ -104,6 +123,8 @@ def get_text_or_attr(item, key, attr = None):
     if len(items) == 1:
         return items[0]
     return items
+
+
 
 def remove_query(url):
     """This function removes anything after `?` from a string."""
