@@ -2,8 +2,10 @@ from django.db import models
 from django.template.defaultfilters import slugify
 
 class NameSlug(models.Model):
-    """This class is an abstraction for every model that needs a name and
-       its slugified version along with creation and changing dates."""
+    """
+    This class is an abstraction for every model that needs a name and
+    its slugified version along with creation and changing dates.
+    """
     name = models.CharField(max_length=255, blank=False, unique=True)
     slug = models.SlugField(max_length=255, unique=True)
 

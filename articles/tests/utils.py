@@ -10,7 +10,7 @@ class UtilsTestCase(TestCase):
     def setUp(self):
         """Defines the test client and other test variables."""
         # Load and parse an existing xml example file
-        file = os.path.join(os.path.dirname(__file__), 'files/example.xml')
+        file = os.path.join(os.path.dirname(__file__), 'files/articles.xml')
         self.tree = etree.parse(file)
 
     def test_utils_remove_query(self):

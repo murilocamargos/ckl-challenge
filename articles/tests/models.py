@@ -1,5 +1,5 @@
 from django.test import TestCase
-from ..models import Author, Outlet, Category, Article
+from articles.models import Author, Outlet, Category, Article
 from django.utils import timezone
 
 class AuthorModelTestCase(TestCase):

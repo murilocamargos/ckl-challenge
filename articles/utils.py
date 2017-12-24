@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404
-from django.template.defaultfilters import slugify
+from django.template.defaultfilters import slugify, title
 from .models import Author, Category, Outlet, Article
 
 def create_article(outlet, data):
@@ -82,7 +82,7 @@ def create_article(outlet, data):
         category, created = Category.objects.get_or_create(
             slug = slugify(cat_name),
             defaults = {
-                'name': cat_name
+                'name': title(cat_name)
             }
         )
         article.categories.add(category)
