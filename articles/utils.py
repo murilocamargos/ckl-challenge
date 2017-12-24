@@ -30,9 +30,9 @@ def create_article(outlet, data):
     """
 
     required = ['title', 'url', 'date', 'content', 'author', 'author.name']
-    accepted = required + ['thumb', 'categories', 'author.slug', 'author.profile',
-                    'author.twitter', 'author.linkedin', 'author.facebook',
-                    'author.website', 'author.avatar', 'author.about']
+    accepted = ['author.twitter', 'categories', 'author.slug', 'author.avatar',
+        'author.facebook', 'author.linkedin', 'author.about', 'author.profile',
+        'author.website', 'thumb'] + required
 
     # Get input keys with dot notation
     keys = []
@@ -56,26 +56,27 @@ def create_article(outlet, data):
         raise ValueError('The categories parameter should be a list, even if it has only one item.')
 
     # Form a dictionary with all author's information but his/her name
-    author_defaults = {key: data['author'][key] for key in data['author'] if key != 'name'}
+    author_def = {k: data['author'][k] for k in data['author'] if k != 'name'}
 
     author, created = Author.objects.get_or_create(
         name = data['author']['name'],
         outlet_id = outlet.id,
-        defaults = author_defaults
+        defaults = author_def
     )
 
-    # Form a dictionary with all article's information but its `url`, the article's
-    # information can be seen as anything whose type is str inside `data`. However,
-    # `date` does not live up by this rule, so we add it manually to article_defaults.
+    # Form a dictionary with all article's information but its `url`, the
+    # article's information can be seen as anything whose type is str inside
+    # `data`. However, `date` does not live up by this rule, so we add it
+    # manually to article_def.
     url = data.pop('url')
-    article_defaults = {key: data[key] for key in data if type(data[key]) == str}
-    article_defaults['date'] = data.pop('date')
-    article_defaults['author_id'] = author.id
-    article_defaults['outlet_id'] = outlet.id
+    article_def = {key: data[key] for key in data if type(data[key]) == str}
+    article_def['date'] = data.pop('date')
+    article_def['author_id'] = author.id
+    article_def['outlet_id'] = outlet.id
 
     article, created = Article.objects.get_or_create(
         url = url,
-        defaults = article_defaults
+        defaults = article_def
     )
 
     for cat_name in data['categories']:
@@ -88,7 +89,6 @@ def create_article(outlet, data):
         article.categories.add(category)
 
     return article
-
 
 
 def get_text_or_attr(item, key, attr = None):

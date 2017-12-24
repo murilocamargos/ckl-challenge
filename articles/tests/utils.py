@@ -38,8 +38,10 @@ class UtilsTestCase(TestCase):
         self.assertEqual(thumbs, ['https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg?w=210&h=158&crop=1', 'https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg'])
 
     def test_utils_create_article(self):
-        """Tests if article creator helper is adding an article and its
-           properties such as categories and author."""
+        """
+        Tests if article creator helper is adding an article and its properties
+        such as categories and author.
+        """
 
         outlet = Outlet.objects.create(name = 'TechCrunch')
 
@@ -70,8 +72,10 @@ class UtilsTestCase(TestCase):
         self.assertEqual(Author.objects.count(), 1)
 
     def test_utils_create_article_author(self):
-        """Tests if article creator helper is adding all the attributes
-           of its author."""
+        """
+        Tests if article creator helper is adding all the attributes of its
+        author.
+        """
 
         outlet = Outlet.objects.create(name = 'TechCrunch')
 
@@ -83,12 +87,12 @@ class UtilsTestCase(TestCase):
             'content': 'The article\'s content.',
             'author': {
                 'name': 'Murilo Camargos',
-                'profile': 'mcamargos',
-                'twitter': 'mcamargos',
-                'linkedin': 'mcamargos',
-                'facebook': 'mcamargos',
-                'website': 'mcamargos',
-                'avatar': 'mcamargos',
+                'profile': 'mcam',
+                'twitter': 'mcam',
+                'linkedin': 'mcam',
+                'facebook': 'mcam',
+                'website': 'mcam',
+                'avatar': 'mcam',
                 'about': 'Bla Bla Bla',
             },
             'categories': ['IT', 'Django'],
@@ -97,10 +101,10 @@ class UtilsTestCase(TestCase):
         article = utils.create_article(outlet, article)
 
         # Check if the author was created with all properties defined
-        self.assertEqual(Author.objects.filter(profile = 'mcamargos').count(), 1)
-        self.assertEqual(Author.objects.filter(twitter = 'mcamargos').count(), 1)
-        self.assertEqual(Author.objects.filter(linkedin = 'mcamargos').count(), 1)
-        self.assertEqual(Author.objects.filter(facebook = 'mcamargos').count(), 1)
-        self.assertEqual(Author.objects.filter(website = 'mcamargos').count(), 1)
-        self.assertEqual(Author.objects.filter(avatar = 'mcamargos').count(), 1)
+        self.assertEqual(Author.objects.filter(profile = 'mcam').count(), 1)
+        self.assertEqual(Author.objects.filter(twitter = 'mcam').count(), 1)
+        self.assertEqual(Author.objects.filter(linkedin = 'mcam').count(), 1)
+        self.assertEqual(Author.objects.filter(facebook = 'mcam').count(), 1)
+        self.assertEqual(Author.objects.filter(website = 'mcam').count(), 1)
+        self.assertEqual(Author.objects.filter(avatar = 'mcam').count(), 1)
         self.assertEqual(Author.objects.filter(about__contains = 'Bla').count(), 1)

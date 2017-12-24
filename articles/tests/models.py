@@ -152,7 +152,7 @@ class ArticleModelTestCase(TestCase):
         self.assertEqual(self.article.outlet, self.outlets[2])
 
     def test_article_assign_categories(self):
-        """Tests if it is possible to assign multiple categories to an article."""
+        """Tests assigning of multiple categories to an article."""
         c1 = self.categories[0]
         c2 = self.categories[1]
 
