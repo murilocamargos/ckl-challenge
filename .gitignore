@@ -1,4 +1,5 @@
 *.sublime*
 *.sqlite3
 *.pyc
+.env
 celerybeat-*

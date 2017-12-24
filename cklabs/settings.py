@@ -21,12 +21,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5uh6$k*7uuvq@fu#o^960ca%*yxhn7m+)u=#v!tf$#_8rn#q6t'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '2c!#os$$5&dw8xzelk)ta&$8uf$f4lucquzrpqw&6ez93(^c_f')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', 'True'))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cheesecake-challenge.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -127,9 +127,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
-BROKER_URL = 'redis://localhost:6379'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+BROKER_URL = os.environ.get('REDIS_URL', 'redis://localhost:6379')
+CELERY_RESULT_BACKEND = os.environ.get('REDIS_URL', 'redis://localhost:6379')
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'

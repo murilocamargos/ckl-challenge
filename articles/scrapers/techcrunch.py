@@ -1,6 +1,6 @@
 from django.template.defaultfilters import slugify
 from articles.scrapers.scraper import WebScraper
-from articles.utils import get_text_or_attr, remove_query, create_article
+from articles.utils import get_text_or_attr, remove_query
 import re, dateutil.parser
 
 class TechCrunch(WebScraper):
