@@ -1,6 +1,17 @@
 from rest_framework import generics
 from .serializers import AuthorSerializer, OutletSerializer, CategorySerializer, ArticleSerializer
 from .models import Author, Outlet, Category, Article
+from django.http import JsonResponse
+
+def index(request):
+    endpoints = {
+        'get authors': '/authors',
+        'get categories': '/categories',
+        'get articles': '/articles',
+        'get outlets': '/outlets',
+    }
+
+    return JsonResponse(endpoints)
 
 class AuthorsRetrieveView(generics.ListAPIView):
     """This class handles the http GET, requests for showing all authors."""
