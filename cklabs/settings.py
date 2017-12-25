@@ -84,6 +84,17 @@ if os.environ.get('TESTING', 'False') == 'True' or DEBUG:
     }
 
 else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'cklabs_api',
+            'USER': 'cklabs',
+            'PASSWORD': 'cklabs',
+            'HOST': '',
+            'PORT': '',
+        }
+    }
+    
     db_from_env = dj_database_url.config(conn_max_age=500)
     DATABASES['default'].update(db_from_env)
 
