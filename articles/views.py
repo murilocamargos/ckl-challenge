@@ -1,4 +1,4 @@
-from django.http import JsonResponse
+from django.shortcuts import render
 
 from rest_framework import generics
 
@@ -6,15 +6,9 @@ from articles.serializers import *
 from articles.models import *
 from articles.filters import *
 
-def index(request):
-    endpoints = {
-        'get authors': '/authors',
-        'get categories': '/categories',
-        'get articles': '/articles',
-        'get outlets': '/outlets',
-    }
-
-    return JsonResponse(endpoints)
+def api(request):
+    """Renders the api docs."""
+    return render(request, 'index.html')
 
 class AuthorsRetrieveView(generics.ListAPIView):
     """This class handles the http GET, requests for showing all authors."""

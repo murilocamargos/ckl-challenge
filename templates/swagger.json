@@ -1,0 +1,257 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is a web scraping tool, written in Django, that constantly scrapes the articles of a major blog like TechCrunch (http://techcrunch.com) and stores it in a PostgreSQL database.\nThese are the relevant data being stored:\n- Outlet name and metadata (Title, website and description);\n- Authors (name, outlet, profile page, about, avatar and social networks);\n- Published articles and metadata (title, publication date, author, content, thumbnail, url, outlet, authors, categories);\n- Categories' tags\n\nThis rest API, provides access to all these informations.",
+    "version": "1.0.0",
+    "title": "CKLabs"
+  },
+  "host": "cheesecake-challenge.herokuapp.com",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/outlets": {
+      "get": {
+        "tags": [
+          "outlet"
+        ],
+        "summary": "Returns all stored outlets.",
+        "description": "This endpoind returns all stored outlets with their informations.",
+        "operationId": "get_outlets",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "List with all stored outlets",
+            "schema": {
+              "$ref": "#/definitions/Outlet"
+            }
+          }
+        }
+      }
+    },
+    "/authors": {
+      "get": {
+        "tags": [
+          "author"
+        ],
+        "summary": "Returns all stored authors.",
+        "description": "This endpoind returns all stored authors with their informations.",
+        "operationId": "get_authors",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "List with all stored authors",
+            "schema": {
+              "$ref": "#/definitions/Author"
+            }
+          }
+        }
+      }
+    },
+    "/categories": {
+      "get": {
+        "tags": [
+          "category"
+        ],
+        "summary": "Returns all stored categories.",
+        "description": "This endpoind returns all stored categories.",
+        "operationId": "get_categories",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "List with all stored categories",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        }
+      }
+    },
+    "/articles": {
+      "get": {
+        "tags": [
+          "article"
+        ],
+        "summary": "Returns all stored articles.",
+        "description": "This endpoind returns all stored articles.",
+        "operationId": "get_articles",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "List with all stored articles",
+            "schema": {
+              "$ref": "#/definitions/Article"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Outlet": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "website": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "xml": {
+        "name": "Outlet"
+      }
+    },
+    "Category": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "xml": {
+        "name": "Categories"
+      }
+    },
+    "Author": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "outlet": {
+          "$ref": "#/definitions/Outlet"
+        },
+        "name": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "profile": {
+          "type": "string"
+        },
+        "twitter": {
+          "type": "string"
+        },
+        "linkedin": {
+          "type": "string"
+        },
+        "facebook": {
+          "type": "string"
+        },
+        "website": {
+          "type": "string"
+        },
+        "avatar": {
+          "type": "string"
+        },
+        "about": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "Article": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "outlet": {
+          "$ref": "#/definitions/Outlet"
+        },
+        "categories": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Category"
+          }
+        },
+        "authors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Author"
+          }
+        },
+        "title": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "url": {
+          "type": "string"
+        },
+        "thumb": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "xml": {
+        "name": "Outlet"
+      }
+    }
+  }
+}
