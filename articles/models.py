@@ -72,8 +72,8 @@ class Article(models.Model):
     thumb = models.CharField(max_length=255, default='')
     content = models.TextField(blank=False)
 
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
     outlet = models.ForeignKey(Outlet, on_delete=models.CASCADE)
+    authors = models.ManyToManyField(Author)
     categories = models.ManyToManyField(Category)
 
     created_at = models.DateTimeField(auto_now_add=True)

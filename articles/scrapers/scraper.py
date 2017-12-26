@@ -92,7 +92,7 @@ class WebScraper(object):
             # Check the article's page for his/her twitter if needed
             if not 'twitter' in author:
                 parsed = self.download(article_url, self.article_page_type)
-                author['twitter'] = self.extract_twitter(parsed)
+                author['twitter'] = self.extract_twitter(parsed, author_name)
 
         author['name'] = author_name
 

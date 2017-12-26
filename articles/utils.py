@@ -28,41 +28,45 @@ def create_article(outlet, data):
                     - [optional] about
                - [optional] categories (it's a list with categories' names)
     """
+    required = {
+        'article': ['title', 'url', 'date', 'content', 'authors'],
+        'authors': ['name']
+    }
 
-    required = ['title', 'url', 'date', 'content', 'author', 'author.name']
-    accepted = ['author.twitter', 'categories', 'author.slug', 'author.avatar',
-        'author.facebook', 'author.linkedin', 'author.about', 'author.profile',
-        'author.website', 'thumb'] + required
-
-    # Get input keys with dot notation
-    keys = []
-    for key in data:
-        keys += [key]
-        if type(data[key]) == dict:
-            keys += [key + '.' + subkey for subkey in data[key]]
+    accepted = {
+        'article': required['article'] + ['categories', 'thumb'],
+        'authors': required['authors'] + ['twitter', 'slug', 'avatar',
+            'facebook', 'linkedin', 'about', 'profile', 'website']
+    }
 
     # Check if there is any key not accepted
-    for key in keys:
-        if key in required:
-            required.remove(key)
-        if key not in accepted:
-            raise ValueError('You can\'t use the attribute `' + key + '`.')
-    
-    # Check if all required keys were provided correctly
-    if len(required) != 0:
+    req = []
+    for key in data:
+        error = key not in accepted['article']
+        if key in required['article']:
+            req += [key]
+        if error: break
+
+    if req != required['article']:
         raise ValueError('You must provide all required parameters to add an article.')
 
+    for author in data['authors']:
+        req = []
+        for key in author:
+            error = key not in accepted['authors']
+            if key in required['authors']:
+                req += [key]
+            if error: break
+
+        if req != required['authors']:
+            raise ValueError('You must provide all required parameters to add an article.')
+        if error: break
+
+    if error:
+        raise ValueError('There are unacceptable attributes on your request.')
+    
     if 'categories' in data and type(data['categories']) != list:
         raise ValueError('The categories parameter should be a list, even if it has only one item.')
-
-    # Form a dictionary with all author's information but his/her name
-    author_def = {k: data['author'][k] for k in data['author'] if k != 'name'}
-
-    author, created = Author.objects.get_or_create(
-        name = data['author']['name'],
-        outlet_id = outlet.id,
-        defaults = author_def
-    )
 
     # Form a dictionary with all article's information but its `url`, the
     # article's information can be seen as anything whose type is str inside
@@ -71,7 +75,6 @@ def create_article(outlet, data):
     url = data.pop('url')
     article_def = {key: data[key] for key in data if type(data[key]) == str}
     article_def['date'] = data.pop('date')
-    article_def['author_id'] = author.id
     article_def['outlet_id'] = outlet.id
 
     article, created = Article.objects.get_or_create(
@@ -79,6 +82,20 @@ def create_article(outlet, data):
         defaults = article_def
     )
 
+    # Store non existing authors and assign them to the article
+    for author_info in data['authors']:
+        # Form a dictionary with all author's information but his/her name
+        author_def = {k: author_info[k] for k in author_info if k != 'name'}
+
+        author, created = Author.objects.get_or_create(
+            name = author_info['name'],
+            outlet_id = outlet.id,
+            defaults = author_def
+        )
+
+        article.authors.add(author)
+
+    # Store non existing categories and assign them to the article
     for cat_name in data['categories']:
         category, created = Category.objects.get_or_create(
             slug = slugify(cat_name),
@@ -86,6 +103,7 @@ def create_article(outlet, data):
                 'name': title(cat_name)
             }
         )
+
         article.categories.add(category)
 
     return article

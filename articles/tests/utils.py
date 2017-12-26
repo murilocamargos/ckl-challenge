@@ -51,9 +51,9 @@ class UtilsTestCase(TestCase):
             'url': 'http://www.myarticle.com.br',
             'date': dateutil.parser.parse('Fri, 22 Dec 2017 17:21:29 +0000'),
             'content': 'The article\'s content.',
-            'author': {
-                'name': 'Murilo Camargos',
-            },
+            'authors': [
+                {'name': 'Murilo Camargos'},
+            ],
             'categories': ['IT', 'Django', 'it']
         }
 
@@ -85,16 +85,18 @@ class UtilsTestCase(TestCase):
             'url': 'http://www.myarticle.com.br',
             'date': dateutil.parser.parse('Fri, 22 Dec 2017 17:21:29 +0000'),
             'content': 'The article\'s content.',
-            'author': {
-                'name': 'Murilo Camargos',
-                'profile': 'mcam',
-                'twitter': 'mcam',
-                'linkedin': 'mcam',
-                'facebook': 'mcam',
-                'website': 'mcam',
-                'avatar': 'mcam',
-                'about': 'Bla Bla Bla',
-            },
+            'authors': [
+                {
+                    'name': 'Murilo Camargos',
+                    'profile': 'mcam',
+                    'twitter': 'mcam',
+                    'linkedin': 'mcam',
+                    'facebook': 'mcam',
+                    'website': 'mcam',
+                    'avatar': 'mcam',
+                    'about': 'Bla Bla Bla',
+                },
+            ],
             'categories': ['IT', 'Django'],
         }
 

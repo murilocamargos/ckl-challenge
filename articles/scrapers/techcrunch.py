@@ -49,9 +49,12 @@ class TechCrunch(WebScraper):
                 article['date'] = ''
 
             # Get the author attribute and tries to fetch informations about
-            # him/her
-            author_name = get_text_or_attr(item, 'dc:creator')
-            article['author'] = self.get_author(author_name, article['url'])
+            # him/her. An article can have more than one author; on techcrunch's
+            # feed, they are separated by a comma.
+            author_names = get_text_or_attr(item, 'dc:creator').split(',')
+            article['authors'] = []
+            for author in author_names:
+                article['authors'] + [self.get_author(author, article['url'])]
             
             # Tries to find the article's thumbnail url
             thumb = get_text_or_attr(item, 'media:thumbnail', 'url')
@@ -69,20 +72,29 @@ class TechCrunch(WebScraper):
 
         return articles
 
-    def extract_twitter(self, parsed_html):
-        """This method extract the twitter username from an article page."""
-        meta = parsed_html.xpath('/html/head/meta[20]')
-        twitter = ''
+    def extract_twitter(self, parsed_html, author_name = ''):
+        """
+        This method extract the twitter username following the author's name
+        from an article page.
+        """
+        meta = parsed_html.xpath("/html/head/meta[@name='sailthru.author']")
 
         # Regex to match twitter usernames
         regex = '(?<=^|(?<=[^a-zA-Z0-9-_\.]))@([A-Za-z]+[A-Za-z0-9]+)'
 
         if meta:
-            handle = re.findall(regex, meta[0].get('content'))
-            if handle:
-                twitter = 'https://twitter.com/' + handle[0]
+            content = meta[0].get('content')
+            found, twitter = None, None
+            
+            for author in content.split('/span')[:-1]:
+                if author_name in author or author_name == '':
+                    found = author
+                    twitter = re.findall(regex, author)
 
-        return twitter
+            if found and twitter:
+                return 'https://twitter.com/' + twitter[0]
+
+        return ''
 
     def extract_author(self, parsed_html):
         """

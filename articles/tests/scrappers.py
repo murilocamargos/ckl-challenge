@@ -5,6 +5,11 @@ from articles.scrapers.scraper import WebScraper
 from articles.scrapers.techcrunch import TechCrunch
 from articles.models import Author, Outlet
 
+def parse_html(file_name):
+    """Helper function to parse html files for testing."""
+    file_path = os.path.join(os.path.dirname(__file__), 'files/' + file_name)
+    return html.parse(file_path)
+
 class WebScrapperTestCase(TestCase):
     """This class defines the test suite for the web scrapers."""
 
@@ -67,19 +72,25 @@ class TechCrunchScraperTestCase(TestCase):
         Outlet.objects.create(name = 'TechCrunch')
         self.ws = TechCrunch()
 
-        file = os.path.join(os.path.dirname(__file__), 'files/article.html')
-        self.article_tree = html.parse(file)
-
         file = os.path.join(os.path.dirname(__file__), 'files/articles.xml')
         self.articles_tree = etree.parse(file)
 
-        file = os.path.join(os.path.dirname(__file__), 'files/author.html')
-        self.author_tree = html.parse(file)
-
-    def test_techcrunch_extract_twitter(self):
-        """Tests if twitter extraction is working on article page."""
-        twitter = self.ws.extract_twitter(self.article_tree)
+    def test_techcrunch_extract_twitter_single(self):
+        """Tests twitter extraction for single author articles."""
+        parsed = parse_html('article_single_author.html')
+        
+        twitter = self.ws.extract_twitter(parsed)
         self.assertEqual(twitter, 'https://twitter.com/jglasner')
+
+    def test_techcrunch_extract_twitter_multiple(self):
+        """Tests twitter extraction for multiple author articles."""
+        parsed = parse_html('article_multiple_authors.html')
+
+        twitter_1 = self.ws.extract_twitter(parsed, 'Anthony Ha')
+        self.assertEqual(twitter_1, 'https://twitter.com/anthonyha')
+
+        twitter_2 = self.ws.extract_twitter(parsed, 'Darrell Etherington')
+        self.assertEqual(twitter_2, 'https://twitter.com/etherington')
 
     def test_techcrunch_get_authors_page(self):
         """Tests if author's url page is being correctly generated."""
@@ -99,7 +110,8 @@ class TechCrunchScraperTestCase(TestCase):
 
     def test_techcrunch_extract_author(self):
         """Tests if an author's information can be extracted from his page."""
-        result = self.ws.extract_author(self.author_tree)
+        parsed = parse_html('author.html')
+        result = self.ws.extract_author(parsed)
         result = list(result.keys())
         expected = ['twitter', 'linkedin', 'about', 'profile', 'avatar']
 
