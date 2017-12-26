@@ -20,6 +20,7 @@ class AuthorSerializer(serializers.ModelSerializer):
             'created_at', 'updated_at')
         read_only_fields = ('created_at', 'updated_at')
 
+
 class OutletSerializer(serializers.ModelSerializer):
     """Serializer to map the Outlet instance into JSON format."""
 
@@ -30,6 +31,7 @@ class OutletSerializer(serializers.ModelSerializer):
             'updated_at')
         read_only_fields = ('created_at', 'updated_at')
 
+
 class CategorySerializer(serializers.ModelSerializer):
     """Serializer to map the Category instance into JSON format."""
 
@@ -39,11 +41,24 @@ class CategorySerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'slug', 'created_at', 'updated_at')
         read_only_fields = ('slug', 'created_at', 'updated_at')
 
+
 class ArticleSerializer(serializers.ModelSerializer):
     """Serializer to map the Article instance into JSON format."""
-    categories = CategorySerializer(read_only=True, many=True)
-    authors = AuthorSerializer(read_only=True, many=True)
-    outlet = OutletSerializer(read_only=True, many=False)
+    #categories = CategorySerializer(many=True, queryset=Category.objects.all())
+    categories = serializers.PrimaryKeyRelatedField(
+        many = True,
+        queryset = Category.objects.all(),
+        required = False
+    )
+    authors = serializers.PrimaryKeyRelatedField(
+        many = True,
+        queryset = Author.objects.all(),
+        required = False
+    )
+    outlet = serializers.PrimaryKeyRelatedField(
+        many = False,
+        queryset = Outlet.objects.all()
+    )
 
     class Meta:
         """Meta class to map serializer's fields with the model fields."""

@@ -26,8 +26,215 @@
           "200": {
             "description": "List with all stored outlets",
             "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Outlet"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/outlet": {
+      "post": {
+        "tags": [
+          "outlet"
+        ],
+        "summary": "Creates an outlet.",
+        "description": "This endpoind creates an outlet if the user trying to do it is logged as admin.",
+        "operationId": "create_outlet",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "outlet",
+            "description": "The outlet's information.",
+            "required": true,
+            "schema": {
               "$ref": "#/definitions/Outlet"
             }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Succesfully created",
+            "schema": {
+              "$ref": "#/definitions/Outlet"
+            }
+          },
+          "400": {
+            "description": "Name, slug, website or description wasn't provided"
+          },
+          "403": {
+            "description": "User not logged as admin"
+          }
+        }
+      }
+    },
+    "/outlet/{id}": {
+      "get": {
+        "tags": [
+          "outlet"
+        ],
+        "summary": "Retrieves an outlet.",
+        "description": "This endpoind retrieves an outlet given its ID.",
+        "operationId": "retrieve_outlet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "required": true,
+            "description": "Numeric ID of the outlet to get"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Outlet found",
+            "schema": {
+              "$ref": "#/definitions/Outlet"
+            }
+          },
+          "404": {
+            "description": "Outlet not found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "outlet"
+        ],
+        "summary": "Update an entire outlet.",
+        "description": "This endpoind updates an entire outlet given its ID if the user is logged as admin.",
+        "operationId": "update_outlet",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "required": true,
+            "description": "Numeric ID of the outlet to get"
+          },
+          {
+            "in": "body",
+            "name": "outlet",
+            "description": "The outlet's information.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Outlet"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Outlet updated",
+            "schema": {
+              "$ref": "#/definitions/Outlet"
+            }
+          },
+          "400": {
+            "description": "One or more parameters weren't provided"
+          },
+          "403": {
+            "description": "User not logged as admin"
+          },
+          "404": {
+            "description": "Outlet not found"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "outlet"
+        ],
+        "summary": "Update parts of an outlet.",
+        "description": "This endpoind updates parts of an outlet given its ID if the user is logged as admin.",
+        "operationId": "update_parts_outlet",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "required": true,
+            "description": "Numeric ID of the outlet to get"
+          },
+          {
+            "in": "body",
+            "name": "outlet",
+            "required": true,
+            "description": "The outlet's information.",
+            "schema": {
+              "$ref": "#/definitions/Outlet"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Outlet updated",
+            "schema": {
+              "$ref": "#/definitions/Outlet"
+            }
+          },
+          "403": {
+            "description": "User not logged as admin"
+          },
+          "404": {
+            "description": "Outlet not found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "outlet"
+        ],
+        "summary": "Delete an outlet.",
+        "description": "This endpoind deletes an outlet given its ID if the user is logged as admin.",
+        "operationId": "delete_outlet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "required": true,
+            "description": "Numeric ID of the outlet to get"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Outlet deleted"
+          },
+          "403": {
+            "description": "User not logged as admin"
+          },
+          "404": {
+            "description": "Outlet not found"
           }
         }
       }
@@ -47,8 +254,215 @@
           "200": {
             "description": "List with all stored authors",
             "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Author"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/author": {
+      "post": {
+        "tags": [
+          "author"
+        ],
+        "summary": "Creates an author.",
+        "description": "This endpoind creates an author if the user trying to do it is logged as admin.",
+        "operationId": "create_author",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "author",
+            "description": "The author's information.",
+            "required": true,
+            "schema": {
               "$ref": "#/definitions/Author"
             }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Succesfully created",
+            "schema": {
+              "$ref": "#/definitions/Author"
+            }
+          },
+          "400": {
+            "description": "Name or slug wasn't provided"
+          },
+          "403": {
+            "description": "User not logged as admin"
+          }
+        }
+      }
+    },
+    "/author/{id}": {
+      "get": {
+        "tags": [
+          "author"
+        ],
+        "summary": "Retrieves an author.",
+        "description": "This endpoind retrieves an author given its ID.",
+        "operationId": "retrieve_author",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "required": true,
+            "description": "Numeric ID of the author to get"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "author found",
+            "schema": {
+              "$ref": "#/definitions/Author"
+            }
+          },
+          "404": {
+            "description": "author not found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "author"
+        ],
+        "summary": "Update an entire author.",
+        "description": "This endpoind updates an entire author given its ID if the user is logged as admin.",
+        "operationId": "update_author",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "required": true,
+            "description": "Numeric ID of the author to get"
+          },
+          {
+            "in": "body",
+            "name": "author",
+            "description": "The author's information.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Author"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "author updated",
+            "schema": {
+              "$ref": "#/definitions/Author"
+            }
+          },
+          "400": {
+            "description": "One or more parameters weren't provided"
+          },
+          "403": {
+            "description": "User not logged as admin"
+          },
+          "404": {
+            "description": "author not found"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "author"
+        ],
+        "summary": "Update parts of an author.",
+        "description": "This endpoind updates parts of an author given its ID if the user is logged as admin.",
+        "operationId": "update_parts_author",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "required": true,
+            "description": "Numeric ID of the author to get"
+          },
+          {
+            "in": "body",
+            "name": "author",
+            "required": true,
+            "description": "The author's information.",
+            "schema": {
+              "$ref": "#/definitions/Author"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "author updated",
+            "schema": {
+              "$ref": "#/definitions/Author"
+            }
+          },
+          "403": {
+            "description": "User not logged as admin"
+          },
+          "404": {
+            "description": "author not found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "author"
+        ],
+        "summary": "Delete an author.",
+        "description": "This endpoind deletes an author given its ID if the user is logged as admin.",
+        "operationId": "delete_author",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "required": true,
+            "description": "Numeric ID of the author to get"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "author deleted"
+          },
+          "403": {
+            "description": "User not logged as admin"
+          },
+          "404": {
+            "description": "author not found"
           }
         }
       }
@@ -59,7 +473,7 @@
           "category"
         ],
         "summary": "Returns all stored categories.",
-        "description": "This endpoind returns all stored categories.",
+        "description": "This endpoind returns all stored categories with their informations.",
         "operationId": "get_categories",
         "produces": [
           "application/json"
@@ -68,8 +482,215 @@
           "200": {
             "description": "List with all stored categories",
             "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Category"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/category": {
+      "post": {
+        "tags": [
+          "category"
+        ],
+        "summary": "Creates a category.",
+        "description": "This endpoind creates a category if the user trying to do it is logged as admin.",
+        "operationId": "create_category",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "category",
+            "description": "The category's information.",
+            "required": true,
+            "schema": {
               "$ref": "#/definitions/Category"
             }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Succesfully created",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          },
+          "400": {
+            "description": "Name or slug wasn't provided"
+          },
+          "403": {
+            "description": "User not logged as admin"
+          }
+        }
+      }
+    },
+    "/category/{id}": {
+      "get": {
+        "tags": [
+          "category"
+        ],
+        "summary": "Retrieves a category.",
+        "description": "This endpoind retrieves a category given its ID.",
+        "operationId": "retrieve_category",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "required": true,
+            "description": "Numeric ID of the category to get"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "category found",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          },
+          "404": {
+            "description": "category not found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "category"
+        ],
+        "summary": "Update an entire category.",
+        "description": "This endpoind updates an entire category given its ID if the user is logged as admin.",
+        "operationId": "update_category",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "required": true,
+            "description": "Numeric ID of the category to get"
+          },
+          {
+            "in": "body",
+            "name": "category",
+            "description": "The category's information.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "category updated",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          },
+          "400": {
+            "description": "One or more parameters weren't provided"
+          },
+          "403": {
+            "description": "User not logged as admin"
+          },
+          "404": {
+            "description": "category not found"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "category"
+        ],
+        "summary": "Update parts of a category.",
+        "description": "This endpoind updates parts of a category given its ID if the user is logged as admin.",
+        "operationId": "update_parts_category",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "required": true,
+            "description": "Numeric ID of the category to get"
+          },
+          {
+            "in": "body",
+            "name": "category",
+            "required": true,
+            "description": "The category's information.",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "category updated",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          },
+          "403": {
+            "description": "User not logged as admin"
+          },
+          "404": {
+            "description": "category not found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "category"
+        ],
+        "summary": "Delete a category.",
+        "description": "This endpoind deletes a category given its ID if the user is logged as admin.",
+        "operationId": "delete_category",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "required": true,
+            "description": "Numeric ID of the category to get"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "category deleted"
+          },
+          "403": {
+            "description": "User not logged as admin"
+          },
+          "404": {
+            "description": "category not found"
           }
         }
       }
@@ -80,7 +701,7 @@
           "article"
         ],
         "summary": "Returns all stored articles.",
-        "description": "This endpoind returns all stored articles.",
+        "description": "This endpoind returns all stored articles with their informations.",
         "operationId": "get_articles",
         "produces": [
           "application/json"
@@ -89,8 +710,215 @@
           "200": {
             "description": "List with all stored articles",
             "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Article"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/article": {
+      "post": {
+        "tags": [
+          "article"
+        ],
+        "summary": "Creates an article.",
+        "description": "This endpoind creates an article if the user trying to do it is logged as admin.",
+        "operationId": "create_article",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "article",
+            "description": "The article's information.",
+            "required": true,
+            "schema": {
               "$ref": "#/definitions/Article"
             }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Succesfully created",
+            "schema": {
+              "$ref": "#/definitions/Article"
+            }
+          },
+          "400": {
+            "description": "Title, url, date, outlet or content wasn't provided"
+          },
+          "403": {
+            "description": "User not logged as admin"
+          }
+        }
+      }
+    },
+    "/article/{id}": {
+      "get": {
+        "tags": [
+          "article"
+        ],
+        "summary": "Retrieves an article.",
+        "description": "This endpoind retrieves an article given its ID.",
+        "operationId": "retrieve_article",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "required": true,
+            "description": "Numeric ID of the article to get"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "article found",
+            "schema": {
+              "$ref": "#/definitions/Article"
+            }
+          },
+          "404": {
+            "description": "article not found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "article"
+        ],
+        "summary": "Update an entire article.",
+        "description": "This endpoind updates an entire article given its ID if the user is logged as admin.",
+        "operationId": "update_article",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "required": true,
+            "description": "Numeric ID of the article to get"
+          },
+          {
+            "in": "body",
+            "name": "article",
+            "description": "The article's information.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Article"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "article updated",
+            "schema": {
+              "$ref": "#/definitions/Article"
+            }
+          },
+          "400": {
+            "description": "One or more parameters weren't provided"
+          },
+          "403": {
+            "description": "User not logged as admin"
+          },
+          "404": {
+            "description": "article not found"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "article"
+        ],
+        "summary": "Update parts of an article.",
+        "description": "This endpoind updates parts of an article given its ID if the user is logged as admin.",
+        "operationId": "update_parts_article",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "required": true,
+            "description": "Numeric ID of the article to get"
+          },
+          {
+            "in": "body",
+            "name": "article",
+            "required": true,
+            "description": "The article's information.",
+            "schema": {
+              "$ref": "#/definitions/Article"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "article updated",
+            "schema": {
+              "$ref": "#/definitions/Article"
+            }
+          },
+          "403": {
+            "description": "User not logged as admin"
+          },
+          "404": {
+            "description": "article not found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "article"
+        ],
+        "summary": "Delete an article.",
+        "description": "This endpoind deletes an article given its ID if the user is logged as admin.",
+        "operationId": "delete_article",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "required": true,
+            "description": "Numeric ID of the article to get"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "article deleted"
+          },
+          "403": {
+            "description": "User not logged as admin"
+          },
+          "404": {
+            "description": "article not found"
           }
         }
       }

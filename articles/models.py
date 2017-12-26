@@ -30,11 +30,14 @@ class NameSlug(models.Model):
 class Outlet(NameSlug):
     """This class represents an information outlet."""
     website = models.CharField(max_length=255, blank=False, unique=True)
-    description = models.TextField()
+    description = models.TextField(blank=True)
 
 class Category(NameSlug):
     """This class represents the article category."""
     pass
+
+    class Meta:
+        verbose_name_plural = 'categories'
 
 class Author(models.Model):
     """This class represents an author."""
