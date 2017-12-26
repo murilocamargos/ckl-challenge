@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -84,6 +83,8 @@ if os.environ.get('TESTING', 'False') == 'True' or DEBUG:
     }
 
 else:
+    import dj_database_url
+
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -143,21 +144,22 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CELERY_ACCEPT_CONTENT = ['application/json']
-CELERY_TASK_SERIALIZER = 'json'
-CELERY_RESULT_SERIALIZER = 'json'
-CELERY_TIMEZONE = 'UTC'
+if not DEBUG:
+    CELERY_ACCEPT_CONTENT = ['application/json']
+    CELERY_TASK_SERIALIZER = 'json'
+    CELERY_RESULT_SERIALIZER = 'json'
+    CELERY_TIMEZONE = 'UTC'
 
-BROKER_TRANSPORT = 'sqs'
-BROKER_TRANSPORT_OPTIONS = {
-    'region': 'us-east-2',
-}
-BROKER_USER = os.environ.get('AWS_ACCESS_KEY_ID')
-BROKER_PASSWORD = os.environ.get('AWS_SECRET_ACCESS_KEY')
-CELERY_DEFAULT_QUEUE = 'cheesecake-challenge'
-CELERY_QUEUES = {
-    CELERY_DEFAULT_QUEUE: {
-        'exchange': CELERY_DEFAULT_QUEUE,
-        'binding_key': CELERY_DEFAULT_QUEUE,
+    BROKER_TRANSPORT = 'sqs'
+    BROKER_TRANSPORT_OPTIONS = {
+        'region': 'us-east-2',
     }
-}
+    BROKER_USER = os.environ.get('AWS_ACCESS_KEY_ID')
+    BROKER_PASSWORD = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    CELERY_DEFAULT_QUEUE = 'cheesecake-challenge'
+    CELERY_QUEUES = {
+        CELERY_DEFAULT_QUEUE: {
+            'exchange': CELERY_DEFAULT_QUEUE,
+            'binding_key': CELERY_DEFAULT_QUEUE,
+        }
+    }
