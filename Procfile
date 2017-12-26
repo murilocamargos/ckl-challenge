@@ -1,2 +1,2 @@
 web: gunicorn cklabs.wsgi --log-file -
-worker: celery -A cklabs worker -B
+worker: celery -A cklabs worker -B --loglevel=INFO

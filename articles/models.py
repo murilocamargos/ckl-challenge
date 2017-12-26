@@ -30,7 +30,6 @@ class NameSlug(models.Model):
 class Outlet(NameSlug):
     """This class represents an information outlet."""
     website = models.CharField(max_length=255, blank=False, unique=True)
-    feed_url = models.CharField(max_length=255, default='')
     description = models.TextField()
 
 class Category(NameSlug):

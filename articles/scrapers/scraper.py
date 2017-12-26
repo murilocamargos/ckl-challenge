@@ -1,6 +1,7 @@
-from articles.models import Outlet, Author
-from lxml import etree, html
 from articles.utils import create_article
+from articles.models import Outlet, Author
+
+from lxml import etree, html
 import requests
 
 class WebScraper(object):

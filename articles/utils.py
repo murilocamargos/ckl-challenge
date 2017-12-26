@@ -1,6 +1,7 @@
 from django.shortcuts import get_object_or_404
 from django.template.defaultfilters import slugify, title
-from .models import Author, Category, Outlet, Article
+
+from articles.models import Author, Category, Outlet, Article
 
 def check_data(data):
     """

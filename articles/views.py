@@ -1,7 +1,10 @@
-from rest_framework import generics
-from .serializers import AuthorSerializer, OutletSerializer, CategorySerializer, ArticleSerializer
-from .models import Author, Outlet, Category, Article
 from django.http import JsonResponse
+
+from rest_framework import generics
+
+from articles.serializers import *
+from articles.models import *
+from articles.filters import *
 
 def index(request):
     endpoints = {
@@ -20,8 +23,9 @@ class AuthorsRetrieveView(generics.ListAPIView):
 
 class ArticlesRetrieveView(generics.ListAPIView):
     """This class handles the http GET, requests for showing all articles."""
-    queryset = Article.objects.all()
+    queryset = Article.objects.all().order_by('-date')
     serializer_class = ArticleSerializer
+    filter_class = ArticleFilter
     
 class CategoriesRetrieveView(generics.ListAPIView):
     """This class handles the http GET, requests for showing all categories."""

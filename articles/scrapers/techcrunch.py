@@ -1,6 +1,8 @@
 from django.template.defaultfilters import slugify
+
 from articles.scrapers.scraper import WebScraper
 from articles.utils import get_text_or_attr, remove_query
+
 import re, dateutil.parser
 
 class TechCrunch(WebScraper):
@@ -131,7 +133,7 @@ class TechCrunch(WebScraper):
         xpath = '/html/body/div[4]/div[2]/div[1]/div/div[1]/div[2]/p'
 
         for p in parsed_html.xpath(xpath):
-            author['about'] += self.html_to_string(p)
+            author['about'] += self.html_to_string(p).strip()
 
         # Get Crunchbase url profile
         xpath = '/html/body/div[4]/div[2]/div[1]/div/div[1]/div[2]/a'

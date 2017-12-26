@@ -1,5 +1,13 @@
 from rest_framework import serializers
-from .models import Author, Outlet, Category, Article
+from rest_framework.renderers import JSONRenderer
+
+from articles.models import Author, Outlet, Category, Article
+
+class MyJSONRenderer(JSONRenderer):
+    """Overloads default JSONRederer to force pretty print."""
+    def get_indent(self, accepted_media_type, renderer_context):
+        return renderer_context.get('indent', 4)
+
 
 class AuthorSerializer(serializers.ModelSerializer):
     """Serializer to map the Model instance into JSON format."""
@@ -29,10 +37,13 @@ class CategorySerializer(serializers.ModelSerializer):
         """Meta class to map serializer's fields with the model fields."""
         model = Category
         fields = ('id', 'name', 'slug', 'created_at', 'updated_at')
-        read_only_fields = ('created_at', 'updated_at')
+        read_only_fields = ('slug', 'created_at', 'updated_at')
 
 class ArticleSerializer(serializers.ModelSerializer):
     """Serializer to map the Article instance into JSON format."""
+    categories = CategorySerializer(read_only=True, many=True)
+    authors = AuthorSerializer(read_only=True, many=True)
+    outlet = OutletSerializer(read_only=True, many=False)
 
     class Meta:
         """Meta class to map serializer's fields with the model fields."""
