@@ -2,6 +2,7 @@
 from __future__ import absolute_import, unicode_literals
 
 from articles.scrapers.techcrunch import TechCrunch
+from articles.scrapers.cheesecakelabs import CheesecakeLabs
 
 from celery.task.schedules import crontab
 from celery.decorators import periodic_task
@@ -13,8 +14,10 @@ set_event_loop(Hub())
 
 logger = get_task_logger(__name__)
 
+
+
 @periodic_task(
-    run_every=(crontab(minute='*/120')),
+    run_every=(crontab(hour='*/3')),
     name="fetch_techcrunch_articles",
     ignore_result=True
 )
@@ -23,3 +26,16 @@ def fetch_techcrunch_articles():
     ws = TechCrunch()
     ws.get_articles()
     logger.info("TechCrunch download finished.")
+
+
+
+@periodic_task(
+    run_every=(crontab(hour='*/12')),
+    name="fetch_cheesecakelabs_articles",
+    ignore_result=True
+)
+def fetch_cheesecakelabs_articles():
+    logger.info("CheesecakeLabs download just started.")
+    ws = CheesecakeLabs()
+    ws.get_articles()
+    logger.info("CheesecakeLabs download finished.")

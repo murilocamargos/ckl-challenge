@@ -4,13 +4,15 @@ from lxml import etree
 from articles.models import Outlet, Author, Category, Article
 import os, dateutil.parser
 
+current_path = os.path.dirname(__file__)
+
 class UtilsTestCase(TestCase):
     """This class defines the test suite for the utility functions."""
 
     def setUp(self):
         """Defines the test client and other test variables."""
         # Load and parse an existing xml example file
-        file = os.path.join(os.path.dirname(__file__), 'files/articles.xml')
+        file = os.path.join(current_path, 'files/techcrunch_articles.xml')
         self.tree = etree.parse(file)
 
         self.article_data = {

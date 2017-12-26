@@ -1,0 +1,1450 @@
+{
+ "kind": "plus#activityFeed",
+ "etag": "\"ucaTEV-ZanNH5M3SCxYRM0QRw2Y/HxcK6ZxfTg8I7GEdUrGELqyGYss\"",
+ "nextPageToken": "ADSJ_i2sjXMjnliYlXLljTVmrd7yIy5oZFIST1Vl0lFIV4Lmf9nqo5bg_TkhrWCsPqOOTuOW7hOOPzdMeHWvJUrZlIQ7tApQCa27pEqbdBfwtjDpyMtCdHHHwAHzWxoa",
+ "title": "Google+ List of Activities for Collection PUBLIC",
+ "updated": "2017-12-11T16:40:39.622Z",
+ "items": [
+  {
+   "kind": "plus#activity",
+   "etag": "\"ucaTEV-ZanNH5M3SCxYRM0QRw2Y/nZfT-mDBfXNgxWnThf454uvnmBw\"",
+   "title": "NEW ARTICLE JUST GOT RELEASE:\nCheck out how Atomic Design using React by our Caker Danilo Woznica",
+   "published": "2017-12-11T16:40:39.622Z",
+   "updated": "2017-12-11T16:40:39.622Z",
+   "id": "z13cvdegfyuxifmcx22gwrnjzzjowjrwx04",
+   "url": "https://plus.google.com/117441029475835978521/posts/5wvtf7XzcuN",
+   "actor": {
+    "id": "117441029475835978521",
+    "displayName": "Cheesecake Labs - Mobile App Design and Development Company",
+    "url": "https://plus.google.com/117441029475835978521",
+    "image": {
+     "url": "https://lh5.googleusercontent.com/-QTwc7UfdiYQ/AAAAAAAAAAI/AAAAAAAAAX4/j0qOKQ_RvE4/photo.jpg?sz=50"
+    },
+    "verification": {
+     "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+    }
+   },
+   "verb": "post",
+   "object": {
+    "objectType": "note",
+    "actor": {
+     "verification": {
+      "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+     }
+    },
+    "content": "NEW ARTICLE JUST GOT RELEASE: \u003cbr /\u003eCheck out how Atomic Design using React by our Caker Danilo Woznica ",
+    "url": "https://plus.google.com/117441029475835978521/posts/5wvtf7XzcuN",
+    "replies": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13cvdegfyuxifmcx22gwrnjzzjowjrwx04/comments"
+    },
+    "plusoners": {
+     "totalItems": 4,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13cvdegfyuxifmcx22gwrnjzzjowjrwx04/people/plusoners"
+    },
+    "resharers": {
+     "totalItems": 4,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13cvdegfyuxifmcx22gwrnjzzjowjrwx04/people/resharers"
+    },
+    "attachments": [
+     {
+      "objectType": "article",
+      "displayName": "Atomic Design with React | Cheesecake Labs",
+      "content": "How one methodology allowed me to create a great design system from scratch and made me a better developer, with principles of componentization, hierarchies and reuses of code. I have recently had the opportunity to work on a new product from scratch made in React and PWA with the well-crafted and componentized UI at Cheesecake. …",
+      "url": "https://cheesecakelabs.com/blog/atomic-design-react/?utm_source=gplus&utm_medium=cklpage&utm_campaign=blog&utm_content=atomic-design-react/",
+      "image": {
+       "url": "https://lh3.googleusercontent.com/proxy/suaH0MDaPKwQBeAlHb77NAW2YOxuJYGxU-SiORF8Rp1cSIQwTbfyspyYGFMSXMjErfe_IjSyLQ0BTCCTR_CSm4fC9lYp9juLb2ajF-poya3akFjO9BqxkKUn1y0Jc4oBUX9uaA90g4WsbtST4O_6ZDSMssL0k0Y=w506-h910",
+       "type": "image/jpeg",
+       "height": 910,
+       "width": 506
+      },
+      "fullImage": {
+       "url": "https://s3.amazonaws.com/ckl-website-static/wp-content/uploads/2017/12/danilo_blogpost2-02-1280x680.jpg",
+       "type": "image/jpeg"
+      }
+     }
+    ]
+   },
+   "provider": {
+    "title": "Google+"
+   },
+   "access": {
+    "kind": "plus#acl",
+    "description": "Public",
+    "items": [
+     {
+      "type": "public"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "plus#activity",
+   "etag": "\"ucaTEV-ZanNH5M3SCxYRM0QRw2Y/g7I1zjwGKYSEkaCmun0QfpAb03g\"",
+   "title": "",
+   "published": "2017-11-24T16:47:40.807Z",
+   "updated": "2017-11-24T16:47:40.807Z",
+   "id": "z13pirkatkfnenaa004cdnmyhzzxynlyzno0k",
+   "url": "https://plus.google.com/117441029475835978521/posts/Z9V5zYTqP5j",
+   "actor": {
+    "id": "117441029475835978521",
+    "displayName": "Cheesecake Labs - Mobile App Design and Development Company",
+    "url": "https://plus.google.com/117441029475835978521",
+    "image": {
+     "url": "https://lh5.googleusercontent.com/-QTwc7UfdiYQ/AAAAAAAAAAI/AAAAAAAAAX4/j0qOKQ_RvE4/photo.jpg?sz=50"
+    },
+    "verification": {
+     "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+    }
+   },
+   "verb": "post",
+   "object": {
+    "objectType": "note",
+    "actor": {
+     "verification": {
+      "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+     }
+    },
+    "content": "",
+    "url": "https://plus.google.com/117441029475835978521/posts/Z9V5zYTqP5j",
+    "replies": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13pirkatkfnenaa004cdnmyhzzxynlyzno0k/comments"
+    },
+    "plusoners": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13pirkatkfnenaa004cdnmyhzzxynlyzno0k/people/plusoners"
+    },
+    "resharers": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13pirkatkfnenaa004cdnmyhzzxynlyzno0k/people/resharers"
+    },
+    "attachments": [
+     {
+      "objectType": "video",
+      "displayName": "Master Baker - Primeira Temporada",
+      "url": "https://www.youtube.com/watch?v=C3teNwueNiQ&feature=autoshare",
+      "image": {
+       "url": "https://lh3.googleusercontent.com/proxy/0J5sUKzC4P8v3F_UsXeWH0R1SEPxfGvOTTn6YCHbHLOgtbw1629aombxL0wHiizGfHzPY0Mcscg5JUe5hJfZVA=w506-h284-n",
+       "type": "image/jpeg",
+       "height": 284,
+       "width": 506
+      },
+      "embed": {
+       "url": "https://www.youtube.com/v/C3teNwueNiQ?version=3&autohide=1&autoplay=1&feature=autoshare-u",
+       "type": "application/x-shockwave-flash"
+      }
+     }
+    ]
+   },
+   "provider": {
+    "title": ""
+   },
+   "access": {
+    "kind": "plus#acl",
+    "description": "Public",
+    "items": [
+     {
+      "type": "public"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "plus#activity",
+   "etag": "\"ucaTEV-ZanNH5M3SCxYRM0QRw2Y/_uVRPjRTxj8q8JRpFJy8Q0inON0\"",
+   "title": "NEW ARTICLE: Android automated UI tests: the baby steps",
+   "published": "2017-11-20T16:25:09.366Z",
+   "updated": "2017-11-20T16:25:09.366Z",
+   "id": "z12pvftorkiutxtq004cdnmyhzzxynlyzno0k",
+   "url": "https://plus.google.com/117441029475835978521/posts/ZFPaHGkUtHQ",
+   "actor": {
+    "id": "117441029475835978521",
+    "displayName": "Cheesecake Labs - Mobile App Design and Development Company",
+    "url": "https://plus.google.com/117441029475835978521",
+    "image": {
+     "url": "https://lh5.googleusercontent.com/-QTwc7UfdiYQ/AAAAAAAAAAI/AAAAAAAAAX4/j0qOKQ_RvE4/photo.jpg?sz=50"
+    },
+    "verification": {
+     "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+    }
+   },
+   "verb": "post",
+   "object": {
+    "objectType": "note",
+    "actor": {
+     "verification": {
+      "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+     }
+    },
+    "content": "NEW ARTICLE: Android automated UI tests: the baby steps ",
+    "url": "https://plus.google.com/117441029475835978521/posts/ZFPaHGkUtHQ",
+    "replies": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12pvftorkiutxtq004cdnmyhzzxynlyzno0k/comments"
+    },
+    "plusoners": {
+     "totalItems": 3,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12pvftorkiutxtq004cdnmyhzzxynlyzno0k/people/plusoners"
+    },
+    "resharers": {
+     "totalItems": 2,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12pvftorkiutxtq004cdnmyhzzxynlyzno0k/people/resharers"
+    },
+    "attachments": [
+     {
+      "objectType": "article",
+      "displayName": "Android automated UI tests: the baby steps | Cheesecake Labs",
+      "content": "Since I started building apps I was sure of only two things: one is that I love seeing users enjoying my apps; and the second is that I hate seeing users clicking everywhere and crashing them. So how can I be sure that my users will be able to have a joyful experience (even with …",
+      "url": "https://cheesecakelabs.com/br/blog/android-automated-ui-tests-baby-steps-2/?utm_source=gplus&utm_medium=ckl-page&utm_campaign=blog+&utm_content=android-automated-ui-tests-baby-steps-5",
+      "image": {
+       "url": "https://lh3.googleusercontent.com/proxy/VsaouXoKnMFcRxu7hjhDBlvd3_bj79PLhYKuY6nmr3m57opfKQBLknrcS0KYweSM9XceQvcxU5yMDVMJ3HibhCUkMd8P2-Woh-3AAORN9WU87J_QaO-PaVrB73yxvyYT59dNxUmIN9-TZBlwTSPN=w506-h910",
+       "type": "image/jpeg",
+       "height": 910,
+       "width": 506
+      },
+      "fullImage": {
+       "url": "https://s3.amazonaws.com/ckl-website-static/wp-content/uploads/2017/11/banner_fran-1280x680.png",
+       "type": "image/jpeg"
+      }
+     }
+    ]
+   },
+   "provider": {
+    "title": "Google+"
+   },
+   "access": {
+    "kind": "plus#acl",
+    "description": "Public",
+    "items": [
+     {
+      "type": "public"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "plus#activity",
+   "etag": "\"ucaTEV-ZanNH5M3SCxYRM0QRw2Y/d1afJZSk6bzuZ2DBOUtlxsP8w7w\"",
+   "title": "New article just got released! 👇\n\nOur Caker Alexandre talks about the newest recognition as #2 of the...",
+   "published": "2017-11-16T18:22:11.014Z",
+   "updated": "2017-11-16T18:36:28.769Z",
+   "id": "z12dsd04atjjhbnpk04cdnmyhzzxynlyzno0k",
+   "url": "https://plus.google.com/117441029475835978521/posts/WYP9D9AJ7P8",
+   "actor": {
+    "id": "117441029475835978521",
+    "displayName": "Cheesecake Labs - Mobile App Design and Development Company",
+    "url": "https://plus.google.com/117441029475835978521",
+    "image": {
+     "url": "https://lh5.googleusercontent.com/-QTwc7UfdiYQ/AAAAAAAAAAI/AAAAAAAAAX4/j0qOKQ_RvE4/photo.jpg?sz=50"
+    },
+    "verification": {
+     "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+    }
+   },
+   "verb": "post",
+   "object": {
+    "objectType": "note",
+    "actor": {
+     "verification": {
+      "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+     }
+    },
+    "content": "New article just got released! 👇\u003cbr /\u003e\u003cbr /\u003eOur Caker Alexandre talks about the newest recognition as #2 of the Top Developers in Latin America by Clutch.co. \u003ca href=\"https://cheesecakelabs.com/br/blog/cheesecake-labs-ranked-amongst-top-developers-latin-america-clutch/\" class=\"ot-anchor\"\u003ehttps://cheesecakelabs.com/br/blog/cheesecake-labs-ranked-amongst-top-developers-latin-america-clutch/\u003c/a\u003e ",
+    "url": "https://plus.google.com/117441029475835978521/posts/WYP9D9AJ7P8",
+    "replies": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12dsd04atjjhbnpk04cdnmyhzzxynlyzno0k/comments"
+    },
+    "plusoners": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12dsd04atjjhbnpk04cdnmyhzzxynlyzno0k/people/plusoners"
+    },
+    "resharers": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12dsd04atjjhbnpk04cdnmyhzzxynlyzno0k/people/resharers"
+    }
+   },
+   "provider": {
+    "title": "Google+"
+   },
+   "access": {
+    "kind": "plus#acl",
+    "description": "Public",
+    "items": [
+     {
+      "type": "public"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "plus#activity",
+   "etag": "\"ucaTEV-ZanNH5M3SCxYRM0QRw2Y/x-MlqjNYgERotioY77fB5BG9DFc\"",
+   "title": "Apollo – The GraphQL client that makes API integration a breeze #apollo #GraphQL #programmig #code #...",
+   "published": "2017-11-14T15:52:51.785Z",
+   "updated": "2017-11-14T15:52:51.785Z",
+   "id": "z13fzjqz3pvbgf1nm22gwrnjzzjowjrwx04",
+   "url": "https://plus.google.com/117441029475835978521/posts/L5ST1iRqisY",
+   "actor": {
+    "id": "117441029475835978521",
+    "displayName": "Cheesecake Labs - Mobile App Design and Development Company",
+    "url": "https://plus.google.com/117441029475835978521",
+    "image": {
+     "url": "https://lh5.googleusercontent.com/-QTwc7UfdiYQ/AAAAAAAAAAI/AAAAAAAAAX4/j0qOKQ_RvE4/photo.jpg?sz=50"
+    },
+    "verification": {
+     "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+    }
+   },
+   "verb": "post",
+   "object": {
+    "objectType": "note",
+    "actor": {
+     "verification": {
+      "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+     }
+    },
+    "content": "Apollo – The GraphQL client that makes API integration a breeze \u003ca rel=\"nofollow\" class=\"ot-hashtag\" href=\"https://plus.google.com/s/%23apollo\"\u003e#apollo\u003c/a\u003e \u003ca rel=\"nofollow\" class=\"ot-hashtag\" href=\"https://plus.google.com/s/%23GraphQL\"\u003e#GraphQL\u003c/a\u003e \u003ca rel=\"nofollow\" class=\"ot-hashtag\" href=\"https://plus.google.com/s/%23programmig\"\u003e#programmig\u003c/a\u003e \u003ca rel=\"nofollow\" class=\"ot-hashtag\" href=\"https://plus.google.com/s/%23code\"\u003e#code\u003c/a\u003e \u003ca rel=\"nofollow\" class=\"ot-hashtag\" href=\"https://plus.google.com/s/%23API\"\u003e#API\u003c/a\u003e",
+    "url": "https://plus.google.com/117441029475835978521/posts/L5ST1iRqisY",
+    "replies": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13fzjqz3pvbgf1nm22gwrnjzzjowjrwx04/comments"
+    },
+    "plusoners": {
+     "totalItems": 1,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13fzjqz3pvbgf1nm22gwrnjzzjowjrwx04/people/plusoners"
+    },
+    "resharers": {
+     "totalItems": 1,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13fzjqz3pvbgf1nm22gwrnjzzjowjrwx04/people/resharers"
+    },
+    "attachments": [
+     {
+      "objectType": "article",
+      "displayName": "Apollo - The GraphQL client that makes API integration a breeze | Cheesecake Labs",
+      "content": "Integrating apps and servers is not an easy task, we all know that. Even with great tools like Alamofire and Retrofit there are still a lot of things to take care of in the app side: different endpoints, encoding / decoding JSON strings, API versions, data consistency and so on… Recently I have worked in …",
+      "url": "https://cheesecakelabs.com/blog/apollo-graphql-client-makes-api-integration-breeze/?utm_source=gplus&utm_medium=ckl-page&utm_campaign=blog&utm_content=apollo-graphql-client-makes-api-integration-breeze",
+      "image": {
+       "url": "https://lh3.googleusercontent.com/proxy/AiymDZmvqVqMnUs1AHfol9ka70BSaNdCVzvjffIbdtkhcBL9Y2R0HIxmFHLQLkUHN6IuykK8toFIr9SLXKBZp3XLe09cKBtGaySxUmZEGgJ_Nn6xfWEH1E8sJTDrwE0V6mcHRWWenvHoZ0pbp5rK6Q=w506-h910",
+       "type": "image/jpeg",
+       "height": 910,
+       "width": 506
+      },
+      "fullImage": {
+       "url": "https://s3.amazonaws.com/ckl-website-static/wp-content/uploads/2017/11/Bannerposter-1280x680.png",
+       "type": "image/jpeg"
+      }
+     }
+    ]
+   },
+   "provider": {
+    "title": "Google+"
+   },
+   "access": {
+    "kind": "plus#acl",
+    "description": "Public",
+    "items": [
+     {
+      "type": "public"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "plus#activity",
+   "etag": "\"ucaTEV-ZanNH5M3SCxYRM0QRw2Y/GuGkfP3izryOQWazt7DQ4whRsj8\"",
+   "title": "NEW ARTICLE: The Case for Clojure and GraphQL: Replacing Django",
+   "published": "2017-10-16T19:52:10.062Z",
+   "updated": "2017-10-16T19:52:10.062Z",
+   "id": "z12xcr1xcqzfvvwwu04cdnmyhzzxynlyzno0k",
+   "url": "https://plus.google.com/117441029475835978521/posts/SukEXgqtnY9",
+   "actor": {
+    "id": "117441029475835978521",
+    "displayName": "Cheesecake Labs - Mobile App Design and Development Company",
+    "url": "https://plus.google.com/117441029475835978521",
+    "image": {
+     "url": "https://lh5.googleusercontent.com/-QTwc7UfdiYQ/AAAAAAAAAAI/AAAAAAAAAX4/j0qOKQ_RvE4/photo.jpg?sz=50"
+    },
+    "verification": {
+     "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+    }
+   },
+   "verb": "post",
+   "object": {
+    "objectType": "note",
+    "actor": {
+     "verification": {
+      "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+     }
+    },
+    "content": "NEW ARTICLE: The Case for Clojure and GraphQL: Replacing Django",
+    "url": "https://plus.google.com/117441029475835978521/posts/SukEXgqtnY9",
+    "replies": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12xcr1xcqzfvvwwu04cdnmyhzzxynlyzno0k/comments"
+    },
+    "plusoners": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12xcr1xcqzfvvwwu04cdnmyhzzxynlyzno0k/people/plusoners"
+    },
+    "resharers": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12xcr1xcqzfvvwwu04cdnmyhzzxynlyzno0k/people/resharers"
+    },
+    "attachments": [
+     {
+      "objectType": "article",
+      "displayName": "The Case for Clojure and GraphQL: Replacing Django | Cheesecake Labs",
+      "content": "In the last few months, I worked on two projects that were similar in scope and complexity; both were API backends for mobile apps, had similar requirements and timeframes. However, one thing set them apart: one was written in Django + REST while the other was written in Clojure + GraphQL. Since I was the …",
+      "url": "https://cheesecakelabs.com/blog/case-clojure-graphql-replacing-django/?utm_source=g-plus&utm_medium=ckl-page&utm_campaign=blog&utm_content=case-clojure-graphql-replacing-django",
+      "image": {
+       "url": "https://lh3.googleusercontent.com/proxy/gJ0MEwK5gQuP6QqfmG30WYuu5KzjHNGDw7rEK4KasmFBchhOfWLsdDN52Xj8vQffeSEjwquQWuazj_HzWniRZxN40ZWpBWIjkXO8NZyJMA5mpShOFPKxVfDQ2yUF0uB11AkdzcSUdPKOP_3oLnX5QNE=w506-h910",
+       "type": "image/jpeg",
+       "height": 910,
+       "width": 506
+      },
+      "fullImage": {
+       "url": "https://s3.amazonaws.com/ckl-website-static/wp-content/uploads/2017/10/django_banner-1280x680.png",
+       "type": "image/jpeg"
+      }
+     }
+    ]
+   },
+   "provider": {
+    "title": "Google+"
+   },
+   "access": {
+    "kind": "plus#acl",
+    "description": "Public",
+    "items": [
+     {
+      "type": "public"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "plus#activity",
+   "etag": "\"ucaTEV-ZanNH5M3SCxYRM0QRw2Y/fdpXN_htTBHSXZD3rHuAHV5ltwI\"",
+   "title": "NEW ARTICLE: How custom #UI controls in #xcode’s Interface Builder boosted my UI #development 📲",
+   "published": "2017-10-09T19:00:53.419Z",
+   "updated": "2017-10-09T19:00:53.419Z",
+   "id": "z12runbwcme2drgtm22gwrnjzzjowjrwx04",
+   "url": "https://plus.google.com/117441029475835978521/posts/9RwkZARocc6",
+   "actor": {
+    "id": "117441029475835978521",
+    "displayName": "Cheesecake Labs - Mobile App Design and Development Company",
+    "url": "https://plus.google.com/117441029475835978521",
+    "image": {
+     "url": "https://lh5.googleusercontent.com/-QTwc7UfdiYQ/AAAAAAAAAAI/AAAAAAAAAX4/j0qOKQ_RvE4/photo.jpg?sz=50"
+    },
+    "verification": {
+     "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+    }
+   },
+   "verb": "post",
+   "object": {
+    "objectType": "note",
+    "actor": {
+     "verification": {
+      "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+     }
+    },
+    "content": "NEW ARTICLE: How custom \u003ca rel=\"nofollow\" class=\"ot-hashtag\" href=\"https://plus.google.com/s/%23UI\"\u003e#UI\u003c/a\u003e controls in \u003ca rel=\"nofollow\" class=\"ot-hashtag\" href=\"https://plus.google.com/s/%23xcode\"\u003e#xcode\u003c/a\u003e’s Interface Builder boosted my UI \u003ca rel=\"nofollow\" class=\"ot-hashtag\" href=\"https://plus.google.com/s/%23development\"\u003e#development\u003c/a\u003e 📲  ",
+    "url": "https://plus.google.com/117441029475835978521/posts/9RwkZARocc6",
+    "replies": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12runbwcme2drgtm22gwrnjzzjowjrwx04/comments"
+    },
+    "plusoners": {
+     "totalItems": 2,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12runbwcme2drgtm22gwrnjzzjowjrwx04/people/plusoners"
+    },
+    "resharers": {
+     "totalItems": 3,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12runbwcme2drgtm22gwrnjzzjowjrwx04/people/resharers"
+    },
+    "attachments": [
+     {
+      "objectType": "article",
+      "displayName": "How custom UI controls in Xcode’s Interface Builder boosted my UI development | Cheesecake Labs",
+      "content": "To use or not to use Xcode’s Interface Builder (let’s call it IB) is a very common discussion between iOS developers. There are many arguments against using it like version control issues and difficulties in debugging. This post in our blog have some considerations about it for example. But I believe that if the project …",
+      "url": "https://cheesecakelabs.com/br/blog/building-custom-ui-controls-xcodes-interface-builder/?utm_source=gplus&utm_medium=ckl-page&utm_campaign=blog&utm_content=building-custom-ui-controls-xcodes-interface-builder",
+      "image": {
+       "url": "https://lh3.googleusercontent.com/proxy/aJ4hj5gFtv6wqVhCyKQtDTdEyb7irPK1LKEHo-sw2XsBsWtal8wJcJUIF4HGrx-R34Yqg7-o1ZXNrH7aqZ6pUjKzU_VY_ultztPZEMfYt2b6zc3DC92S_iCvKfiI3TbjNXFlBtUGkrImOtgfF1tC3salcflJJ2RPhBrJbg=w506-h910",
+       "type": "image/jpeg",
+       "height": 910,
+       "width": 506
+      },
+      "fullImage": {
+       "url": "https://s3.amazonaws.com/ckl-website-static/wp-content/uploads/2017/09/interfacebuilder_banner2-1280x680.png",
+       "type": "image/jpeg"
+      }
+     }
+    ]
+   },
+   "provider": {
+    "title": "Google+"
+   },
+   "access": {
+    "kind": "plus#acl",
+    "description": "Public",
+    "items": [
+     {
+      "type": "public"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "plus#activity",
+   "etag": "\"ucaTEV-ZanNH5M3SCxYRM0QRw2Y/5GzE7X2A-ZoA1HAM4wUnSyf-Yj8\"",
+   "title": "Behavior-Driven Development: way beyond a testing principle",
+   "published": "2017-10-02T21:46:08.990Z",
+   "updated": "2017-10-02T21:46:08.990Z",
+   "id": "z12uvxoppkazyhvfw22gwrnjzzjowjrwx04",
+   "url": "https://plus.google.com/117441029475835978521/posts/MtH5dgbRbvk",
+   "actor": {
+    "id": "117441029475835978521",
+    "displayName": "Cheesecake Labs - Mobile App Design and Development Company",
+    "url": "https://plus.google.com/117441029475835978521",
+    "image": {
+     "url": "https://lh5.googleusercontent.com/-QTwc7UfdiYQ/AAAAAAAAAAI/AAAAAAAAAX4/j0qOKQ_RvE4/photo.jpg?sz=50"
+    },
+    "verification": {
+     "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+    }
+   },
+   "verb": "post",
+   "object": {
+    "objectType": "note",
+    "actor": {
+     "verification": {
+      "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+     }
+    },
+    "content": "Behavior-Driven Development: way beyond a testing principle",
+    "url": "https://plus.google.com/117441029475835978521/posts/MtH5dgbRbvk",
+    "replies": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12uvxoppkazyhvfw22gwrnjzzjowjrwx04/comments"
+    },
+    "plusoners": {
+     "totalItems": 7,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12uvxoppkazyhvfw22gwrnjzzjowjrwx04/people/plusoners"
+    },
+    "resharers": {
+     "totalItems": 5,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12uvxoppkazyhvfw22gwrnjzzjowjrwx04/people/resharers"
+    },
+    "attachments": [
+     {
+      "objectType": "article",
+      "displayName": "Behavior-Driven Development: way beyond a testing principle | Cheesecake Labs",
+      "content": "Picture this: 5 people talking about the same subject in different languages. What are the chances of misunderstanding? As you can imagine: a lot. Well, this is a common scenario in software development teams up to some point. One of the most common reasons that lead to failure when building a product is the lack …",
+      "url": "https://cheesecakelabs.com/blog/bdd-beyond-testing/?utm_source=g-plus&utm_medium=marcella-page&utm_campaign=blog&utm_content=bdd-beyond-testing",
+      "image": {
+       "url": "https://lh3.googleusercontent.com/proxy/FM-ylgRn1q-jD2AEMLnxVmcuQWBClneEmSZ4TMLjB_8LA892oWZ-iYLFsVBF-7cGgYO-KTLLxgetNiky4AUIs0LOXUc0Xj-KlEDX74e23XrqtgGc7_q_eMPin_haJ2PDrIT19EEZuE4bbXRNf1S5q6M=w506-h910",
+       "type": "image/jpeg",
+       "height": 910,
+       "width": 506
+      },
+      "fullImage": {
+       "url": "https://s3.amazonaws.com/ckl-website-static/wp-content/uploads/2017/09/BannerRicardo-1280x680.png",
+       "type": "image/jpeg"
+      }
+     }
+    ]
+   },
+   "provider": {
+    "title": "Google+"
+   },
+   "access": {
+    "kind": "plus#acl",
+    "description": "Public",
+    "items": [
+     {
+      "type": "public"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "plus#activity",
+   "etag": "\"ucaTEV-ZanNH5M3SCxYRM0QRw2Y/Y-KDb3MiQNeIP-VB7aopuPDkkDw\"",
+   "title": "NEW ARTICLE: 12 online services to boost your #business efficiency by Ray Garcia 🖱️",
+   "published": "2017-09-21T19:02:36.704Z",
+   "updated": "2017-09-21T19:02:36.704Z",
+   "id": "z12ff5ny3kqftn3qy04cdnmyhzzxynlyzno0k",
+   "url": "https://plus.google.com/117441029475835978521/posts/e9kjhbtKPSM",
+   "actor": {
+    "id": "117441029475835978521",
+    "displayName": "Cheesecake Labs - Mobile App Design and Development Company",
+    "url": "https://plus.google.com/117441029475835978521",
+    "image": {
+     "url": "https://lh5.googleusercontent.com/-QTwc7UfdiYQ/AAAAAAAAAAI/AAAAAAAAAX4/j0qOKQ_RvE4/photo.jpg?sz=50"
+    },
+    "verification": {
+     "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+    }
+   },
+   "verb": "post",
+   "object": {
+    "objectType": "note",
+    "actor": {
+     "verification": {
+      "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+     }
+    },
+    "content": "NEW ARTICLE: 12 online services to boost your \u003ca rel=\"nofollow\" class=\"ot-hashtag\" href=\"https://plus.google.com/s/%23business\"\u003e#business\u003c/a\u003e efficiency by Ray Garcia 🖱️ ",
+    "url": "https://plus.google.com/117441029475835978521/posts/e9kjhbtKPSM",
+    "replies": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12ff5ny3kqftn3qy04cdnmyhzzxynlyzno0k/comments"
+    },
+    "plusoners": {
+     "totalItems": 3,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12ff5ny3kqftn3qy04cdnmyhzzxynlyzno0k/people/plusoners"
+    },
+    "resharers": {
+     "totalItems": 3,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12ff5ny3kqftn3qy04cdnmyhzzxynlyzno0k/people/resharers"
+    },
+    "attachments": [
+     {
+      "objectType": "article",
+      "displayName": "12 online services to boost your business efficiency | Cheesecake Labs",
+      "content": "As companies grow, it’s common to see directors facing the challenge of managing different processes which can get more complex due to customer’s increase. First-time managers often have to cope with areas such as people management, finances, marketing, operations, etc and the easiest way to deal with that amount of info is using the classical …",
+      "url": "https://cheesecakelabs.com/blog/12-online-services-boost-business-efficiency/?utm_source=ckl-page&utm_medium=g-plus&utm_campaign=blog&utm_content=12-online-services-boost-business-efficiency",
+      "image": {
+       "url": "https://lh3.googleusercontent.com/proxy/YuMnVo-wF1nYYCHgJnTHasG83rerzi8VidsNqbEsmMU74JCxWhvFHobFg_bYjmsyEzsuItcMNsgBNyzZP7MTJrj6TFqialJkMu-9A-eRbI9jpNRUQIu8qudCmB4evYcQph1wXF4E8Ok-e77p8Xnmr5NM3NR6Be4TquEl20A=w506-h910",
+       "type": "image/jpeg",
+       "height": 910,
+       "width": 506
+      },
+      "fullImage": {
+       "url": "https://s3.amazonaws.com/ckl-website-static/wp-content/uploads/2017/09/boostyourbusiness_banner2-1280x680.jpg",
+       "type": "image/jpeg"
+      }
+     }
+    ]
+   },
+   "provider": {
+    "title": "Google+"
+   },
+   "access": {
+    "kind": "plus#acl",
+    "description": "Public",
+    "items": [
+     {
+      "type": "public"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "plus#activity",
+   "etag": "\"ucaTEV-ZanNH5M3SCxYRM0QRw2Y/BHz_izz5UVnkrHaj9yQvolzPt74\"",
+   "title": "New article just got released!\n\nOur Caker Alyne Kautnick talking about women in tech and why is this...",
+   "published": "2017-09-20T20:18:10.416Z",
+   "updated": "2017-09-20T20:18:10.416Z",
+   "id": "z12nxlhbxzyfxrf0h22gwrnjzzjowjrwx04",
+   "url": "https://plus.google.com/117441029475835978521/posts/3EWJ6uUt8w8",
+   "actor": {
+    "id": "117441029475835978521",
+    "displayName": "Cheesecake Labs - Mobile App Design and Development Company",
+    "url": "https://plus.google.com/117441029475835978521",
+    "image": {
+     "url": "https://lh5.googleusercontent.com/-QTwc7UfdiYQ/AAAAAAAAAAI/AAAAAAAAAX4/j0qOKQ_RvE4/photo.jpg?sz=50"
+    },
+    "verification": {
+     "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+    }
+   },
+   "verb": "post",
+   "object": {
+    "objectType": "note",
+    "actor": {
+     "verification": {
+      "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+     }
+    },
+    "content": "New article just got released!\u003cbr /\u003e\u003cbr /\u003eOur  Caker Alyne Kautnick talking about women in tech and why is this a taboo. \u003cbr /\u003e",
+    "url": "https://plus.google.com/117441029475835978521/posts/3EWJ6uUt8w8",
+    "replies": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12nxlhbxzyfxrf0h22gwrnjzzjowjrwx04/comments"
+    },
+    "plusoners": {
+     "totalItems": 2,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12nxlhbxzyfxrf0h22gwrnjzzjowjrwx04/people/plusoners"
+    },
+    "resharers": {
+     "totalItems": 2,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12nxlhbxzyfxrf0h22gwrnjzzjowjrwx04/people/resharers"
+    },
+    "attachments": [
+     {
+      "objectType": "article",
+      "displayName": "Women in technology: why is this still a taboo? | Cheesecake Labs",
+      "content": "Technology is a heavily male-dominated area, but women can and should have more recognition and representativeness.",
+      "url": "https://cheesecakelabs.com/blog/women-technology-still-taboo/?utm_source=gplus&utm_medium=ckl-page&utm_campaign=blog&utm_content=women-technology-still-taboo",
+      "image": {
+       "url": "https://lh3.googleusercontent.com/proxy/l4XzzyMpvXUqLM9SJb1jfebIWm3wuHMHQ4lWAS6VYDBtRKQLDgWUOpBRqSHR96pwcTpeuEEdakfjFjCPriqyE3jNfvUZl-wMiad_RS-NYZ0NvIGNo6a69u0ShDw4zP9viFTZqXIt04-4Rh0Vlo8A08FdXtK0sg=w506-h910",
+       "type": "image/jpeg",
+       "height": 910,
+       "width": 506
+      },
+      "fullImage": {
+       "url": "https://s3.amazonaws.com/ckl-website-static/wp-content/uploads/2017/09/womenintech_banner-1280x680.jpg",
+       "type": "image/jpeg"
+      }
+     }
+    ]
+   },
+   "provider": {
+    "title": "Google+"
+   },
+   "access": {
+    "kind": "plus#acl",
+    "description": "Public",
+    "items": [
+     {
+      "type": "public"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "plus#activity",
+   "etag": "\"ucaTEV-ZanNH5M3SCxYRM0QRw2Y/nO9Mm637zPu6uQgCxo_GVb7zkMs\"",
+   "title": "Dear designers, love your developers because they’ve learned display grid – and you’ve done it too.",
+   "published": "2017-09-18T16:23:17.422Z",
+   "updated": "2017-09-18T16:23:17.422Z",
+   "id": "z124jrq4opbscbegh04cdnmyhzzxynlyzno0k",
+   "url": "https://plus.google.com/117441029475835978521/posts/QdzD69pspqD",
+   "actor": {
+    "id": "117441029475835978521",
+    "displayName": "Cheesecake Labs - Mobile App Design and Development Company",
+    "url": "https://plus.google.com/117441029475835978521",
+    "image": {
+     "url": "https://lh5.googleusercontent.com/-QTwc7UfdiYQ/AAAAAAAAAAI/AAAAAAAAAX4/j0qOKQ_RvE4/photo.jpg?sz=50"
+    },
+    "verification": {
+     "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+    }
+   },
+   "verb": "post",
+   "object": {
+    "objectType": "note",
+    "actor": {
+     "verification": {
+      "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+     }
+    },
+    "content": "Dear designers, love your developers because they’ve learned display grid – and you’ve done it too.",
+    "url": "https://plus.google.com/117441029475835978521/posts/QdzD69pspqD",
+    "replies": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z124jrq4opbscbegh04cdnmyhzzxynlyzno0k/comments"
+    },
+    "plusoners": {
+     "totalItems": 2,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z124jrq4opbscbegh04cdnmyhzzxynlyzno0k/people/plusoners"
+    },
+    "resharers": {
+     "totalItems": 2,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z124jrq4opbscbegh04cdnmyhzzxynlyzno0k/people/resharers"
+    },
+    "attachments": [
+     {
+      "objectType": "article",
+      "displayName": "Dear designers, love your developers because they've learned display grid – and you've done it too | Cheesecake Labs",
+      "content": "The capacity to build web layouts have been improving and what’s best: it is so simple that you can start using it right now!",
+      "url": "https://cheesecakelabs.com/blog/dear-designers-love-developers-learned-display-grid/?utm_source=ckl-page&utm_medium=glpus&utm_campaign=blog&utm_content=dear-designers-love-developers-learned-display-grid",
+      "image": {
+       "url": "https://lh3.googleusercontent.com/proxy/HZHINCU5cVx99-lMI99TRhQf2BBakUwfdwCDCJRUXaNf8LGY5G2nCFzyEmi-iFULO5cwtqyWo-rDwpzWMjdS0-kwNH5pLqfooQS_HAKFhL20duvJg6swXhijSd4xZdz2A653fot65V-6T7x954kveh3whWT4tw=w506-h910",
+       "type": "image/jpeg",
+       "height": 910,
+       "width": 506
+      },
+      "fullImage": {
+       "url": "https://s3.amazonaws.com/ckl-website-static/wp-content/uploads/2017/09/nativereact_banner-1280x680.jpg",
+       "type": "image/jpeg"
+      }
+     }
+    ]
+   },
+   "provider": {
+    "title": "Google+"
+   },
+   "access": {
+    "kind": "plus#acl",
+    "description": "Public",
+    "items": [
+     {
+      "type": "public"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "plus#activity",
+   "etag": "\"ucaTEV-ZanNH5M3SCxYRM0QRw2Y/aikG6wnq6Uw3dAPpVE75nH6FPsw\"",
+   "title": "How to migrate to react native? ⚛️\n\nAn article from our Caker Andrio explaining how was his experience...",
+   "published": "2017-09-15T18:10:40.531Z",
+   "updated": "2017-09-15T18:10:40.531Z",
+   "id": "z13fixsw5yi0hds3k22gwrnjzzjowjrwx04",
+   "url": "https://plus.google.com/117441029475835978521/posts/KrsE9nFqfm7",
+   "actor": {
+    "id": "117441029475835978521",
+    "displayName": "Cheesecake Labs - Mobile App Design and Development Company",
+    "url": "https://plus.google.com/117441029475835978521",
+    "image": {
+     "url": "https://lh5.googleusercontent.com/-QTwc7UfdiYQ/AAAAAAAAAAI/AAAAAAAAAX4/j0qOKQ_RvE4/photo.jpg?sz=50"
+    },
+    "verification": {
+     "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+    }
+   },
+   "verb": "post",
+   "object": {
+    "objectType": "note",
+    "actor": {
+     "verification": {
+      "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+     }
+    },
+    "content": "How to migrate to react native? ⚛️\u003cbr /\u003e\u003cbr /\u003eAn article from our Caker Andrio explaining how was his experience!",
+    "url": "https://plus.google.com/117441029475835978521/posts/KrsE9nFqfm7",
+    "replies": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13fixsw5yi0hds3k22gwrnjzzjowjrwx04/comments"
+    },
+    "plusoners": {
+     "totalItems": 2,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13fixsw5yi0hds3k22gwrnjzzjowjrwx04/people/plusoners"
+    },
+    "resharers": {
+     "totalItems": 2,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13fixsw5yi0hds3k22gwrnjzzjowjrwx04/people/resharers"
+    },
+    "attachments": [
+     {
+      "objectType": "article",
+      "displayName": "From native to React Native | Cheesecake Labs",
+      "content": "Reactive Native main objective is to allow the development of mobile apps using the same design as React.",
+      "url": "https://cheesecakelabs.com/blog/native-react-native/?utm_source=ckl-page&utm_medium=glpus&utm_campaign=blog&utm_content=native-react-native",
+      "image": {
+       "url": "https://lh3.googleusercontent.com/proxy/Yu_PfprqassqQCu9dm8ib-hAIcDqWGwYwsp5ucSNU8kN9wCXi_Z-m-z7hOQ-jv1glwQNbJibzYAEdEr_lDyGBzfeOvkhtUFURTVUYJ7u60lUv1eLI6s9ZI7OIBha3oCVZf9RRvj3SZXINnX-MQ=w120-h120",
+       "type": "image/jpeg",
+       "height": 120,
+       "width": 120
+      },
+      "fullImage": {
+       "url": "https://s3.amazonaws.com/ckl-website-static/wp-content/uploads/2017/09/nativereact_banner.png",
+       "type": "image/jpeg"
+      }
+     }
+    ]
+   },
+   "provider": {
+    "title": "Google+"
+   },
+   "access": {
+    "kind": "plus#acl",
+    "description": "Public",
+    "items": [
+     {
+      "type": "public"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "plus#activity",
+   "etag": "\"ucaTEV-ZanNH5M3SCxYRM0QRw2Y/dFaCRsBPmpmg_kZaJBCiSAzdIMA\"",
+   "title": "iOS Architectures: Should I use VIPER?",
+   "published": "2017-08-31T18:26:38.030Z",
+   "updated": "2017-08-31T18:26:38.030Z",
+   "id": "z123ddnygoj3u3fpq04cdnmyhzzxynlyzno0k",
+   "url": "https://plus.google.com/117441029475835978521/posts/XW8nanTLy41",
+   "actor": {
+    "id": "117441029475835978521",
+    "displayName": "Cheesecake Labs - Mobile App Design and Development Company",
+    "url": "https://plus.google.com/117441029475835978521",
+    "image": {
+     "url": "https://lh5.googleusercontent.com/-QTwc7UfdiYQ/AAAAAAAAAAI/AAAAAAAAAX4/j0qOKQ_RvE4/photo.jpg?sz=50"
+    },
+    "verification": {
+     "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+    }
+   },
+   "verb": "post",
+   "object": {
+    "objectType": "note",
+    "actor": {
+     "verification": {
+      "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+     }
+    },
+    "content": "iOS Architectures: Should I use VIPER?",
+    "url": "https://plus.google.com/117441029475835978521/posts/XW8nanTLy41",
+    "replies": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z123ddnygoj3u3fpq04cdnmyhzzxynlyzno0k/comments"
+    },
+    "plusoners": {
+     "totalItems": 1,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z123ddnygoj3u3fpq04cdnmyhzzxynlyzno0k/people/plusoners"
+    },
+    "resharers": {
+     "totalItems": 1,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z123ddnygoj3u3fpq04cdnmyhzzxynlyzno0k/people/resharers"
+    },
+    "attachments": [
+     {
+      "objectType": "article",
+      "displayName": "iOS Architectures: Should I use VIPER? | Cheesecake Labs",
+      "content": "We will point some ups and downs using VIPER on a new iOS project and some tips that will help you to choose this architecture among other ones.",
+      "url": "https://cheesecakelabs.com/blog/ios-architecture-viper-tips/?utm_source=ckl-page&utm_medium=gplus&utm_campaign=blog&utm_content=ios-architecture-viper-tips",
+      "image": {
+       "url": "https://lh3.googleusercontent.com/proxy/2O9LU59AKbu2HE9lvuFPH-NvyvC8flD3RrCWwPNuW_dTP7oNJv2fI-WNRinBNcRUGKo7pK5OaolDiVujT-XJgfTrgCzMlF0g-xqDq4J8-UpNH_GGEQPCSCPVCyUaBowuoRZXO3moDcOYx7Tc7iCPXXVYLEz2bg=w506-h910",
+       "type": "image/jpeg",
+       "height": 910,
+       "width": 506
+      },
+      "fullImage": {
+       "url": "https://s3.amazonaws.com/ckl-website-static/wp-content/uploads/2017/08/vipershould_banner-1280x680.png",
+       "type": "image/jpeg"
+      }
+     }
+    ]
+   },
+   "provider": {
+    "title": "Google+"
+   },
+   "access": {
+    "kind": "plus#acl",
+    "description": "Public",
+    "items": [
+     {
+      "type": "public"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "plus#activity",
+   "etag": "\"ucaTEV-ZanNH5M3SCxYRM0QRw2Y/sN4IyO4sTmRdNvimpbynQqY4idk\"",
+   "title": "New article just came out of the oven!\n\nEndy share at his article the recipe that Cheesecake Labs uses...",
+   "published": "2017-08-21T19:11:33.940Z",
+   "updated": "2017-08-21T19:11:33.940Z",
+   "id": "z134hdhpus2ajlhln22gwrnjzzjowjrwx04",
+   "url": "https://plus.google.com/117441029475835978521/posts/9bvopxXY5uR",
+   "actor": {
+    "id": "117441029475835978521",
+    "displayName": "Cheesecake Labs - Mobile App Design and Development Company",
+    "url": "https://plus.google.com/117441029475835978521",
+    "image": {
+     "url": "https://lh5.googleusercontent.com/-QTwc7UfdiYQ/AAAAAAAAAAI/AAAAAAAAAX4/j0qOKQ_RvE4/photo.jpg?sz=50"
+    },
+    "verification": {
+     "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+    }
+   },
+   "verb": "post",
+   "object": {
+    "objectType": "note",
+    "actor": {
+     "verification": {
+      "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+     }
+    },
+    "content": "New article just came out of the oven!\u003cbr /\u003e\u003cbr /\u003eEndy share at his article the recipe that Cheesecake Labs uses to prepare its Cakers, by giving them the special ingredients to bake a Cheesecake using the right temperature 🍰\u003cbr /\u003e",
+    "url": "https://plus.google.com/117441029475835978521/posts/9bvopxXY5uR",
+    "replies": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z134hdhpus2ajlhln22gwrnjzzjowjrwx04/comments"
+    },
+    "plusoners": {
+     "totalItems": 4,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z134hdhpus2ajlhln22gwrnjzzjowjrwx04/people/plusoners"
+    },
+    "resharers": {
+     "totalItems": 3,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z134hdhpus2ajlhln22gwrnjzzjowjrwx04/people/resharers"
+    },
+    "attachments": [
+     {
+      "objectType": "article",
+      "displayName": "The Soft-Start of a Software Developer | Cheesecake Labs",
+      "content": "In this article, one of our Cakers shows how the Cheesecake Labs' culture is the main factor for promoting the professional and personal growth.",
+      "url": "https://cheesecakelabs.com/blog/soft-start-software-developer/?utm_source=gplus&utm_medium=ckl-gplus&utm_campaign=blog&utm_content=soft-start-software-developer",
+      "image": {
+       "url": "https://lh3.googleusercontent.com/proxy/NUNaz6TGtewYqcjMWLsHpcCNlPYN1-eR2DvnEOs3KdT948ca70hrUgf-tq2S14xf9ZGIwqXH9MX0jBOC6UMoN9Fz8xtT6i2xH-Yx4Dz48jN8WN4CWRrvmYgHC7iFarZNa01HkSPtsKdlEp1v6Ylh7c3gvA=w506-h910",
+       "type": "image/jpeg",
+       "height": 910,
+       "width": 506
+      },
+      "fullImage": {
+       "url": "https://s3.amazonaws.com/ckl-website-static/wp-content/uploads/2017/08/devstart_banner-1280x680.png",
+       "type": "image/jpeg"
+      }
+     }
+    ]
+   },
+   "provider": {
+    "title": "Google+"
+   },
+   "access": {
+    "kind": "plus#acl",
+    "description": "Public",
+    "items": [
+     {
+      "type": "public"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "plus#activity",
+   "etag": "\"ucaTEV-ZanNH5M3SCxYRM0QRw2Y/VfLoAxYTNrik5QktYOeMHYfNlHo\"",
+   "title": "New article: Importance of #Wellbeing at the workplace 🔋 #wellness",
+   "published": "2017-08-10T18:58:10.415Z",
+   "updated": "2017-08-10T18:58:10.415Z",
+   "id": "z13mebfqnzujytsf122gwrnjzzjowjrwx04",
+   "url": "https://plus.google.com/117441029475835978521/posts/HMSNCBBf9jq",
+   "actor": {
+    "id": "117441029475835978521",
+    "displayName": "Cheesecake Labs - Mobile App Design and Development Company",
+    "url": "https://plus.google.com/117441029475835978521",
+    "image": {
+     "url": "https://lh5.googleusercontent.com/-QTwc7UfdiYQ/AAAAAAAAAAI/AAAAAAAAAX4/j0qOKQ_RvE4/photo.jpg?sz=50"
+    },
+    "verification": {
+     "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+    }
+   },
+   "verb": "post",
+   "object": {
+    "objectType": "note",
+    "actor": {
+     "verification": {
+      "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+     }
+    },
+    "content": "New article: Importance of \u003ca rel=\"nofollow\" class=\"ot-hashtag\" href=\"https://plus.google.com/s/%23Wellbeing\"\u003e#Wellbeing\u003c/a\u003e at the workplace 🔋  \u003ca rel=\"nofollow\" class=\"ot-hashtag\" href=\"https://plus.google.com/s/%23wellness\"\u003e#wellness\u003c/a\u003e",
+    "url": "https://plus.google.com/117441029475835978521/posts/HMSNCBBf9jq",
+    "replies": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13mebfqnzujytsf122gwrnjzzjowjrwx04/comments"
+    },
+    "plusoners": {
+     "totalItems": 3,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13mebfqnzujytsf122gwrnjzzjowjrwx04/people/plusoners"
+    },
+    "resharers": {
+     "totalItems": 1,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13mebfqnzujytsf122gwrnjzzjowjrwx04/people/resharers"
+    },
+    "attachments": [
+     {
+      "objectType": "article",
+      "displayName": "Importance of Wellbeing at the Workplace | Cheesecake Labs",
+      "content": "Being at a place where you feel appreciated is great, but not enough. A place where you feel comfortable and happy is all about people and environment.",
+      "url": "https://cheesecakelabs.com/blog/importance-wellbeing-workplace/?utm_source=gplus&utm_medium=ckl-page&utm_campaign=blog&utm_content=importance-wellbeing-workplace",
+      "image": {
+       "url": "https://lh3.googleusercontent.com/proxy/eAg8QZsmtAKI_5491RwqW9TmGXVYslZAvK0_wqftcXcx_Yfxb23jNHUp36--pbzvjr_Q0CALQ86R4RNgKQxG30tNYo37ScTDZTiAU1v4SLhPaRF34zMh8BzSIg9G9eoOiABX3WU-wuAqg795Bekg-y7coA=w506-h910",
+       "type": "image/jpeg",
+       "height": 910,
+       "width": 506
+      },
+      "fullImage": {
+       "url": "https://s3.amazonaws.com/ckl-website-static/wp-content/uploads/2017/08/wellness_banner-1280x680.png",
+       "type": "image/jpeg"
+      }
+     }
+    ]
+   },
+   "provider": {
+    "title": "Google+"
+   },
+   "access": {
+    "kind": "plus#acl",
+    "description": "Public",
+    "items": [
+     {
+      "type": "public"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "plus#activity",
+   "etag": "\"ucaTEV-ZanNH5M3SCxYRM0QRw2Y/numG0uYSEwo4_VDRNp64qjB2rZY\"",
+   "title": "Brand new post!\n\nOur Caker Alexandre talks about the Design as an incremental and agile process in the...",
+   "published": "2017-07-28T13:47:41.115Z",
+   "updated": "2017-07-28T13:47:41.115Z",
+   "id": "z13hhrzgummpyxl3d22gwrnjzzjowjrwx04",
+   "url": "https://plus.google.com/117441029475835978521/posts/JerLbHxVVTw",
+   "actor": {
+    "id": "117441029475835978521",
+    "displayName": "Cheesecake Labs - Mobile App Design and Development Company",
+    "url": "https://plus.google.com/117441029475835978521",
+    "image": {
+     "url": "https://lh5.googleusercontent.com/-QTwc7UfdiYQ/AAAAAAAAAAI/AAAAAAAAAX4/j0qOKQ_RvE4/photo.jpg?sz=50"
+    },
+    "verification": {
+     "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+    }
+   },
+   "verb": "post",
+   "object": {
+    "objectType": "note",
+    "actor": {
+     "verification": {
+      "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+     }
+    },
+    "content": "Brand new post! \u003cbr /\u003e\u003cbr /\u003eOur Caker Alexandre talks about the Design as an incremental and agile process in the product development 🎡  ",
+    "url": "https://plus.google.com/117441029475835978521/posts/JerLbHxVVTw",
+    "replies": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13hhrzgummpyxl3d22gwrnjzzjowjrwx04/comments"
+    },
+    "plusoners": {
+     "totalItems": 4,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13hhrzgummpyxl3d22gwrnjzzjowjrwx04/people/plusoners"
+    },
+    "resharers": {
+     "totalItems": 2,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13hhrzgummpyxl3d22gwrnjzzjowjrwx04/people/resharers"
+    },
+    "attachments": [
+     {
+      "objectType": "article",
+      "displayName": "Design as an Incremental and Agile Process | Cheesecake Labs",
+      "content": "It is better to have a product on the market that can be improved, instead of a project that will never be released and finished.",
+      "url": "https://cheesecakelabs.com/blog/design-incremental-agile-process/?utm_source=gplus&utm_medium=ckl-page&utm_campaign=blog&utm_content=design-incremental-agile-process",
+      "image": {
+       "url": "https://lh3.googleusercontent.com/proxy/HYL_lD-atU3d9m9uM647Is3NSzetUOfHO4avuZbR49hWKL_xFpVSBfKPUFmg0mtchrOSrNxKS9zZ9H_WZjvN7Fkxqdh9meVtTn1N4w6_cKAIJb76fkxKz46VUblk05SH3drKFRuHDQbEaTl1oGcYn_7EfrIXiw=w506-h910",
+       "type": "image/jpeg",
+       "height": 910,
+       "width": 506
+      },
+      "fullImage": {
+       "url": "https://s3.amazonaws.com/ckl-website-static/wp-content/uploads/2017/07/designagile_banner-1280x680.png",
+       "type": "image/jpeg"
+      }
+     }
+    ]
+   },
+   "provider": {
+    "title": "Google+"
+   },
+   "access": {
+    "kind": "plus#acl",
+    "description": "Public",
+    "items": [
+     {
+      "type": "public"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "plus#activity",
+   "etag": "\"ucaTEV-ZanNH5M3SCxYRM0QRw2Y/0RJqJW3M_U043osccoMTgRVyloA\"",
+   "title": "BEM, ITCSS, CSS-in-JS… what is the best approach to scale the CSS Architecture in a ReactJS project?",
+   "published": "2017-07-14T20:01:33.472Z",
+   "updated": "2017-07-14T20:01:33.472Z",
+   "id": "z13cf1awnzjlu3csp22gwrnjzzjowjrwx04",
+   "url": "https://plus.google.com/117441029475835978521/posts/4ZQ9DZecPo5",
+   "actor": {
+    "id": "117441029475835978521",
+    "displayName": "Cheesecake Labs - Mobile App Design and Development Company",
+    "url": "https://plus.google.com/117441029475835978521",
+    "image": {
+     "url": "https://lh5.googleusercontent.com/-QTwc7UfdiYQ/AAAAAAAAAAI/AAAAAAAAAX4/j0qOKQ_RvE4/photo.jpg?sz=50"
+    },
+    "verification": {
+     "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+    }
+   },
+   "verb": "post",
+   "object": {
+    "objectType": "note",
+    "actor": {
+     "verification": {
+      "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+     }
+    },
+    "content": "BEM, ITCSS, CSS-in-JS… what is the best approach to scale the CSS Architecture in a ReactJS project?\u003cbr /\u003e\u003cbr /\u003e",
+    "url": "https://plus.google.com/117441029475835978521/posts/4ZQ9DZecPo5",
+    "replies": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13cf1awnzjlu3csp22gwrnjzzjowjrwx04/comments"
+    },
+    "plusoners": {
+     "totalItems": 4,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13cf1awnzjlu3csp22gwrnjzzjowjrwx04/people/plusoners"
+    },
+    "resharers": {
+     "totalItems": 3,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13cf1awnzjlu3csp22gwrnjzzjowjrwx04/people/resharers"
+    },
+    "attachments": [
+     {
+      "objectType": "article",
+      "displayName": "CSS Architecture with ReactJS | Cheesecake Labs",
+      "content": "The idea behind this organization is helping you create better ReactJS projects by structuring and scaling your CSS architecture.",
+      "url": "http://cheesecakelabs.com/blog/css-architecture-reactjs?utm_source=gplus&utm_medium=ckl-gplus&utm_campaign=blog&utm_content=css-architecture-reactjs",
+      "image": {
+       "url": "https://lh3.googleusercontent.com/proxy/H0jw-tVfvCThhoFXbxZIKKH-PSR8fCpfUfg4xWSEB8Db5f6WxVwuw4SrYKZUgMdKiG7brIDXV3do4I3v5PeG7GxtDPx9ozJIgZM7boGsz4T9eauRSgvuiO7WyLu8mDX5rSs6WahHHjSXJ-gb2Is=w506-h910",
+       "type": "image/jpeg",
+       "height": 910,
+       "width": 506
+      },
+      "fullImage": {
+       "url": "https://s3.amazonaws.com/ckl-website-static/wp-content/uploads/2017/07/Banner_css-1280x680.png",
+       "type": "image/jpeg"
+      }
+     }
+    ]
+   },
+   "provider": {
+    "title": "Google+"
+   },
+   "access": {
+    "kind": "plus#acl",
+    "description": "Public",
+    "items": [
+     {
+      "type": "public"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "plus#activity",
+   "etag": "\"ucaTEV-ZanNH5M3SCxYRM0QRw2Y/EHjOJjoooXlXU4fTi11slwF9Ous\"",
+   "title": "Wanna know how we plan our digital marketing? 💡\n\nOur Caker Leandro share some of his ideas about the...",
+   "published": "2017-07-05T21:15:25.875Z",
+   "updated": "2017-07-05T21:15:25.875Z",
+   "id": "z13vjnipuljqizk1o22gwrnjzzjowjrwx04",
+   "url": "https://plus.google.com/117441029475835978521/posts/9nPA1gXoekM",
+   "actor": {
+    "id": "117441029475835978521",
+    "displayName": "Cheesecake Labs - Mobile App Design and Development Company",
+    "url": "https://plus.google.com/117441029475835978521",
+    "image": {
+     "url": "https://lh5.googleusercontent.com/-QTwc7UfdiYQ/AAAAAAAAAAI/AAAAAAAAAX4/j0qOKQ_RvE4/photo.jpg?sz=50"
+    },
+    "verification": {
+     "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+    }
+   },
+   "verb": "post",
+   "object": {
+    "objectType": "note",
+    "actor": {
+     "verification": {
+      "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+     }
+    },
+    "content": "Wanna know how we plan our digital marketing? 💡\u003cbr /\u003e\u003cbr /\u003eOur Caker Leandro share some of his ideas about the theories of the Golden Circle of Simon Sinek at his brand new article.",
+    "url": "https://plus.google.com/117441029475835978521/posts/9nPA1gXoekM",
+    "replies": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13vjnipuljqizk1o22gwrnjzzjowjrwx04/comments"
+    },
+    "plusoners": {
+     "totalItems": 3,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13vjnipuljqizk1o22gwrnjzzjowjrwx04/people/plusoners"
+    },
+    "resharers": {
+     "totalItems": 1,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13vjnipuljqizk1o22gwrnjzzjowjrwx04/people/resharers"
+    },
+    "attachments": [
+     {
+      "objectType": "article",
+      "displayName": "How I make inspirational marketing campaigns | Cheesecake Labs",
+      "content": "A post about how to use the Golden Circle Model to improve the way you think and create strategies in your Digital Marketing Campaign.",
+      "url": "https://cheesecakelabs.com/blog/how-i-make-inspirational-marketing-campaigns?utm_source=gplus&utm_medium=ckl-gplus&utm_campaign=blog&utm_content=how-i-make-inspirational-marketing-campaigns",
+      "image": {
+       "url": "https://lh3.googleusercontent.com/proxy/-mynY4aA9ZF9PR-qHw5nwnioUKW-7FRGEwGrVXQfj859nFfEElxdwtY625BXRYPRyQmb__cTagseMmr5Mx-fCRYuL3PkjSPHCHNPM2d7ynrQIKc8I8PTviildXMrhM0lvkGuvQ=w506-h910",
+       "type": "image/jpeg",
+       "height": 910,
+       "width": 506
+      },
+      "fullImage": {
+       "url": "https://s3.amazonaws.com/ckl-website-static/wp-content/uploads/2017/06/golden_fb.png",
+       "type": "image/jpeg"
+      }
+     }
+    ]
+   },
+   "provider": {
+    "title": "Google+"
+   },
+   "access": {
+    "kind": "plus#acl",
+    "description": "Public",
+    "items": [
+     {
+      "type": "public"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "plus#activity",
+   "etag": "\"ucaTEV-ZanNH5M3SCxYRM0QRw2Y/7CtPdugELxtb8M63TT3gMRWKVXA\"",
+   "title": "What really annoys me about Django migrations.",
+   "published": "2017-06-27T21:15:36.507Z",
+   "updated": "2017-06-27T21:15:36.507Z",
+   "id": "z12fwlhapxqqhrsah04cdnmyhzzxynlyzno0k",
+   "url": "https://plus.google.com/117441029475835978521/posts/bR635ESRG3Q",
+   "actor": {
+    "id": "117441029475835978521",
+    "displayName": "Cheesecake Labs - Mobile App Design and Development Company",
+    "url": "https://plus.google.com/117441029475835978521",
+    "image": {
+     "url": "https://lh5.googleusercontent.com/-QTwc7UfdiYQ/AAAAAAAAAAI/AAAAAAAAAX4/j0qOKQ_RvE4/photo.jpg?sz=50"
+    },
+    "verification": {
+     "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+    }
+   },
+   "verb": "post",
+   "object": {
+    "objectType": "note",
+    "actor": {
+     "verification": {
+      "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+     }
+    },
+    "content": "What really annoys me about Django migrations. ",
+    "url": "https://plus.google.com/117441029475835978521/posts/bR635ESRG3Q",
+    "replies": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12fwlhapxqqhrsah04cdnmyhzzxynlyzno0k/comments"
+    },
+    "plusoners": {
+     "totalItems": 6,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12fwlhapxqqhrsah04cdnmyhzzxynlyzno0k/people/plusoners"
+    },
+    "resharers": {
+     "totalItems": 3,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z12fwlhapxqqhrsah04cdnmyhzzxynlyzno0k/people/resharers"
+    },
+    "attachments": [
+     {
+      "objectType": "article",
+      "displayName": "What really annoys me about Django migrations | Cheesecake Labs",
+      "content": "Automated database migrations have been a convenient way of dealing with schema changes for a long time in Django. It’s been only 3 years since migrations have been incorporated into Django but South had been the de-facto solution since 2008. The same way an ORM allows us to forget about SQL when writing queries to …",
+      "url": "https://cheesecakelabs.com/blog/really-annoys-django-migrations/?utm_source=gplus&utm_medium=ckl-gplus&utm_campaign=blog&utm_content=what-really-annoys-me-about-django-migrations",
+      "image": {
+       "url": "https://lh3.googleusercontent.com/proxy/s9_wWpXokW8TC85AXtFl_yIdFkF0UVE4WaGD_n-LiR5mQeY-zPA1PkqPC_WNerxm9K1wGFfQr_vs0nwib06Sj--oU5ozVFc1KjCFZQhMcfvqcLCnslz4JJrf2GxneajYUIy25rCtBD_mFRHSGwZwKFU5aoc=w506-h910",
+       "type": "image/jpeg",
+       "height": 910,
+       "width": 506
+      },
+      "fullImage": {
+       "url": "https://s3.amazonaws.com/ckl-website-static/wp-content/uploads/2017/06/Banner_database2-1280x680.png",
+       "type": "image/jpeg"
+      }
+     }
+    ]
+   },
+   "provider": {
+    "title": "Google+"
+   },
+   "access": {
+    "kind": "plus#acl",
+    "description": "Public",
+    "items": [
+     {
+      "type": "public"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "plus#activity",
+   "etag": "\"ucaTEV-ZanNH5M3SCxYRM0QRw2Y/Tnjg_Cj46y-je7MD9Y09kZyPRF0\"",
+   "title": "An incredible analysis about the changes in Google Maps in one year.",
+   "published": "2017-06-27T01:00:52.581Z",
+   "updated": "2017-06-27T01:00:52.581Z",
+   "id": "z13gwz2wjpr4czx0u22gwrnjzzjowjrwx04",
+   "url": "https://plus.google.com/117441029475835978521/posts/5W2wr9cYL4x",
+   "actor": {
+    "id": "117441029475835978521",
+    "displayName": "Cheesecake Labs - Mobile App Design and Development Company",
+    "url": "https://plus.google.com/117441029475835978521",
+    "image": {
+     "url": "https://lh5.googleusercontent.com/-QTwc7UfdiYQ/AAAAAAAAAAI/AAAAAAAAAX4/j0qOKQ_RvE4/photo.jpg?sz=50"
+    },
+    "verification": {
+     "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+    }
+   },
+   "verb": "post",
+   "object": {
+    "objectType": "note",
+    "actor": {
+     "verification": {
+      "adHocVerified": "UNKNOWN_VERIFICATION_STATUS"
+     }
+    },
+    "content": "An incredible analysis about the changes in Google Maps in one year.",
+    "url": "https://plus.google.com/117441029475835978521/posts/5W2wr9cYL4x",
+    "replies": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13gwz2wjpr4czx0u22gwrnjzzjowjrwx04/comments"
+    },
+    "plusoners": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13gwz2wjpr4czx0u22gwrnjzzjowjrwx04/people/plusoners"
+    },
+    "resharers": {
+     "totalItems": 0,
+     "selfLink": "https://www.googleapis.com/plus/v1/activities/z13gwz2wjpr4czx0u22gwrnjzzjowjrwx04/people/resharers"
+    },
+    "attachments": [
+     {
+      "objectType": "article",
+      "displayName": "A Year of Google Maps & Apple Maps",
+      "content": "Google Maps's Quiet Transformation",
+      "url": "http://buff.ly/2tes7Tp",
+      "image": {
+       "url": "https://lh3.googleusercontent.com/proxy/kMZjccDMF9HShA_eBuI9NP0-9NLDFryvnZl18mmE_xvhGqR-x236ZElrSpsnmm3Bv4fPvffkDy3ZUgMXwQiuQrEVxe-AyONdW-niR8hac5EPShRjdqSwaRUloqPU8QiB6pnIH--aU6xnOukt-cb8RWfdY6PeHmPUJg=w506-h910",
+       "type": "image/jpeg",
+       "height": 910,
+       "width": 506
+      },
+      "fullImage": {
+       "url": "https://static1.squarespace.com/static/54ff63f0e4b0bafce6932642/t/59287384ff7c50d499da16f4/1498522335035/",
+       "type": "image/jpeg"
+      }
+     }
+    ]
+   },
+   "provider": {
+    "title": ""
+   },
+   "access": {
+    "kind": "plus#acl",
+    "description": "Public",
+    "items": [
+     {
+      "type": "public"
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -2,6 +2,7 @@ from django.template.defaultfilters import slugify
 
 from articles.scrapers.scraper import WebScraper
 from articles.utils import get_text_or_attr, remove_query
+from articles.models import Article
 
 import re, dateutil.parser
 
@@ -30,7 +31,6 @@ class TechCrunch(WebScraper):
         store them in DB; its return should be a list of dictionaries in the
         form given in utils' function `create_article`.
         """
-        articles = []
 
         # Iterates over every item (article) in xml
         for item in parsed_xml.xpath("//item"):
@@ -49,6 +49,10 @@ class TechCrunch(WebScraper):
 
             url = get_text_or_attr(item, 'feedburner:origLink')
             article['url'] = remove_query(url)
+
+            # If article's URL is already stored, don't parse it again
+            if Article.objects.filter(url = article['url']).count() > 0:
+                continue
 
             # It is interesting to have the publication date as a `dateutil`
             # object, so we can do whatever manipulation we want.
@@ -78,9 +82,7 @@ class TechCrunch(WebScraper):
 
             article['content'] = content
 
-            articles += [article]
-
-        return articles
+            yield article
 
     def extract_twitter(self, parsed_html, author_name = ''):
         """

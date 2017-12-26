@@ -7,7 +7,7 @@ class AuthorModelTestCase(TestCase):
 
     def setUp(self):
         """Defines the test client and other test variables."""
-        self.name = "Murilo Camargos"
+        self.name = "Donald Knuth"
         self.author = Author(name = self.name)
 
     def test_author_can_create(self):
@@ -24,13 +24,13 @@ class AuthorModelTestCase(TestCase):
     def test_author_default_slug(self):
         """Tests if the author's name is slugified by default."""
         self.author.save()
-        self.assertEqual(self.author.slug, 'murilo-camargos')
+        self.assertEqual(self.author.slug, 'donald-knuth')
 
     def test_author_defined_slug(self):
         """Tests if the model accepts a user defined slug."""
-        self.author.slug = 'john-doe'
+        self.author.slug = 'james-gosling'
         self.author.save()
-        self.assertEqual(self.author.slug, 'john-doe')
+        self.assertEqual(self.author.slug, 'james-gosling')
 
 class OutletModelTestCase(TestCase):
     """This class defines the test suite for the Outlet model."""
@@ -67,7 +67,7 @@ class CategoryModelTestCase(TestCase):
 
     def setUp(self):
         """Defines the test client and other test variables."""
-        self.name = "Culture"
+        self.name = "CKL Rocks"
         self.category = Category(name = self.name)
 
     def test_category_can_create(self):
@@ -84,13 +84,13 @@ class CategoryModelTestCase(TestCase):
     def test_category_default_slug(self):
         """Tests if the category's name is slugified by default."""
         self.category.save()
-        self.assertEqual(self.category.slug, 'culture')
+        self.assertEqual(self.category.slug, 'ckl-rocks')
 
     def test_category_defined_slug(self):
         """Tests if the model accepts a user defined slug."""
-        self.category.slug = 'cult'
+        self.category.slug = 'cheesecake'
         self.category.save()
-        self.assertEqual(self.category.slug, 'cult')
+        self.assertEqual(self.category.slug, 'cheesecake')
 
 class ArticleModelTestCase(TestCase):
     """This class defines the test suite for the Article model."""
@@ -111,9 +111,9 @@ class ArticleModelTestCase(TestCase):
         ]
 
         self.authors = [
-            Author.objects.create(name = 'Murilo'),
-            Author.objects.create(name = 'John'),
-            Author.objects.create(name = 'Doe'),
+            Author.objects.create(name = 'Bill Gates'),
+            Author.objects.create(name = 'Guido van Rossum'),
+            Author.objects.create(name = 'Ada Lovelace'),
         ]
 
         # Add some articles

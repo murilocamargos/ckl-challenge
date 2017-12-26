@@ -2,7 +2,7 @@ from articles.utils import create_article
 from articles.models import Outlet, Author
 
 from lxml import etree, html
-import requests
+import requests, json
 
 class WebScraper(object):
     """This class provides some helpful method to scraping web content."""
@@ -22,6 +22,10 @@ class WebScraper(object):
         elif content_type == 'html':
             response = requests.get(url)
             tree = html.fromstring(response.content)
+
+        elif content_type == 'json':
+            response = requests.get(url)
+            tree = json.loads(response.text)
 
         return tree
 
@@ -62,9 +66,12 @@ class WebScraper(object):
         if not parsed:
             return []
 
-        articles = self.extract_articles(parsed)
-        
-        return [create_article(self.outlet, art) for art in articles]
+        results = []
+        for art in self.extract_articles(parsed):
+            results += [create_article(self.outlet, art)]
+            print(results[-1])
+
+        return results
 
     def get_author(self, author_name, article_url):
         """

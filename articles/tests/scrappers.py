@@ -1,13 +1,18 @@
 from django.test import TestCase
-from lxml import html, etree
-import os
+
 from articles.scrapers.scraper import WebScraper
 from articles.scrapers.techcrunch import TechCrunch
+from articles.scrapers.cheesecakelabs import CheesecakeLabs
 from articles.models import Author, Outlet
+
+from lxml import html, etree
+import os, json
+
+current_path = os.path.dirname(__file__)
 
 def parse_html(file_name):
     """Helper function to parse html files for testing."""
-    file_path = os.path.join(os.path.dirname(__file__), 'files/' + file_name)
+    file_path = os.path.join(current_path, 'files/' + file_name)
     return html.parse(file_path)
 
 class WebScrapperTestCase(TestCase):
@@ -51,7 +56,7 @@ class WebScrapperTestCase(TestCase):
         """Test if html conversion of a lxml item is working correctly."""
 
         # Loads and parse html exemplo file
-        file = os.path.join(os.path.dirname(__file__), 'files/author.html')
+        file = os.path.join(current_path, 'files/techcrunch_author.html')
         tree = html.parse(file)
 
         # Search for h2 tags inside anything with id equals to `latest`
@@ -64,6 +69,9 @@ class WebScrapperTestCase(TestCase):
 
         self.assertEqual(result, expected)
 
+
+
+
 class TechCrunchScraperTestCase(TestCase):
     """This class defines the test suite for the TechCrunch scraper."""
 
@@ -72,19 +80,19 @@ class TechCrunchScraperTestCase(TestCase):
         Outlet.objects.create(name = 'TechCrunch')
         self.ws = TechCrunch()
 
-        file = os.path.join(os.path.dirname(__file__), 'files/articles.xml')
+        file = os.path.join(current_path, 'files/techcrunch_articles.xml')
         self.articles_tree = etree.parse(file)
 
     def test_techcrunch_extract_twitter_single(self):
         """Tests twitter extraction for single author articles."""
-        parsed = parse_html('article_single_author.html')
+        parsed = parse_html('techcrunch_single_author.html')
         
         twitter = self.ws.extract_twitter(parsed)
         self.assertEqual(twitter, 'https://twitter.com/jglasner')
 
     def test_techcrunch_extract_twitter_multiple(self):
         """Tests twitter extraction for multiple author articles."""
-        parsed = parse_html('article_multiple_authors.html')
+        parsed = parse_html('techcrunch_multiple_authors.html')
 
         twitter_1 = self.ws.extract_twitter(parsed, 'Anthony Ha')
         self.assertEqual(twitter_1, 'https://twitter.com/anthonyha')
@@ -110,7 +118,7 @@ class TechCrunchScraperTestCase(TestCase):
 
     def test_techcrunch_extract_author(self):
         """Tests if an author's information can be extracted from his page."""
-        parsed = parse_html('author.html')
+        parsed = parse_html('techcrunch_author.html')
         result = self.ws.extract_author(parsed)
         result = list(result.keys())
         expected = ['twitter', 'linkedin', 'about', 'profile', 'avatar']
@@ -133,4 +141,25 @@ class TechCrunchScraperTestCase(TestCase):
 
         results = self.ws.extract_articles(self.articles_tree)
 
-        self.assertEqual(len(results), 20)
+        self.assertEqual(len(list(results)), 20)
+
+
+class CheesecakeLabsScraperTestCase(TestCase):
+    """This class defines the test suite for the CheesecakeLabs scraper."""
+
+    def setUp(self):
+        """Defines the test client and other test variables."""
+        Outlet.objects.create(name = 'CheesecakeLabs')
+        self.ws = CheesecakeLabs()
+
+        file = os.path.join(current_path, 'files/cheesecakelabs_articles.json')
+        self.articles_tree = json.load(open(file, encoding = 'utf8'))
+
+    def test_techcrunch_article_info(self):
+        """Tests if an article list can be extracted from xml feed."""
+        parsed = parse_html('cheesecakelabs_article.html')
+
+        results = self.ws.article_info(parsed)
+        expct = ['title', 'categories', 'thumb', 'date', 'content', 'authors']
+
+        self.assertEqual(list(results.keys()), expct)

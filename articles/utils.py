@@ -68,6 +68,10 @@ def create_article(outlet, data):
     # manually to article_def.
     url = data.pop('url')
 
+    categories = None
+    if 'categories' in data:
+        categories = data.pop('categories')
+
     article_def = {key: data[key] for key in data if type(data[key]) == str}
     article_def['date'] = data.pop('date')
     article_def['outlet_id'] = outlet.id
@@ -91,17 +95,16 @@ def create_article(outlet, data):
         article.authors.add(author)
 
     # Store non existing categories and assign them to the article
-    data['categories'] = data['categories']
+    if categories:
+        for cat_name in categories:
+            category, created = Category.objects.get_or_create(
+                slug = slugify(cat_name),
+                defaults = {
+                    'name': title(cat_name)
+                }
+            )
 
-    for cat_name in data['categories']:
-        category, created = Category.objects.get_or_create(
-            slug = slugify(cat_name),
-            defaults = {
-                'name': title(cat_name)
-            }
-        )
-
-        article.categories.add(category)
+            article.categories.add(category)
 
     return article
 
