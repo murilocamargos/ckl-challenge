@@ -1,7 +1,7 @@
 from __future__ import absolute_import, unicode_literals
-from django.conf import settings
+import os
 
-if not settings.DEBUG:
+if not os.environ.get('DJANGO_DEBUG', 'True') == 'True':
     # This will make sure the app is always imported when
     # Django starts so that shared_task will use this app.
     from .celery import app as celery_app
