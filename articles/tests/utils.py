@@ -13,6 +13,16 @@ class UtilsTestCase(TestCase):
         file = os.path.join(os.path.dirname(__file__), 'files/articles.xml')
         self.tree = etree.parse(file)
 
+        self.article_data = {
+            'title': 'My article',
+            'url': 'http://www.myarticle.com.br',
+            'date': dateutil.parser.parse('Fri, 22 Dec 2017 17:21:29 +0000'),
+            'content': 'The article\'s content.',
+            'authors': [
+                {'name': 'Murilo Camargos'},
+            ],
+        }
+
     def test_utils_remove_query(self):
         """Tests if query is removed from a given url."""
         url = 'https://www.google.com.br/?gws_rd=cr&dcr=0&ei=OEI9Wpr0HMeNwwSF6IGAAQ'
@@ -37,6 +47,39 @@ class UtilsTestCase(TestCase):
         thumbs = utils.get_text_or_attr(item, 'media:thumbnail', 'url')
         self.assertEqual(thumbs, ['https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg?w=210&h=158&crop=1', 'https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg'])
 
+    def test_utils_check_data_correct(self):
+        """Tests if data is correctly checked for article creation."""
+        self.assertEqual(utils.check_data(self.article_data), True)
+
+    def test_utils_check_data_remove_required(self):
+        """Tests if data check raises exception after removing required."""
+        msg = 'You must provide all required parameters to add an article.'
+
+        # Remove title (required)
+        del self.article_data['title']
+        with self.assertRaisesMessage(ValueError, msg):
+            utils.check_data(self.article_data)
+
+        # Put title back in and add an author without name
+        self.article_data['title'] = 'Title returns'
+        self.article_data['authors'] += [{'linkedin': 'johndoe'}]
+        with self.assertRaisesMessage(ValueError, msg):
+            utils.check_data(self.article_data)
+
+    def test_utils_check_data_add_unaccepted(self):
+        """Tests if data check raises exception after adding unaccepted."""
+        msg = 'There are unacceptable attributes on your request.'
+
+        self.article_data['stranger'] = 'things'
+        with self.assertRaisesMessage(ValueError, msg):
+            utils.check_data(self.article_data)
+
+        # Remove `stranger` from `data` and use `John` attribute in author
+        del self.article_data['stranger']
+        self.article_data['authors'][0]['John'] = 'Doe'
+        with self.assertRaisesMessage(ValueError, msg):
+            utils.check_data(self.article_data)
+
     def test_utils_create_article(self):
         """
         Tests if article creator helper is adding an article and its properties
@@ -53,6 +96,7 @@ class UtilsTestCase(TestCase):
             'content': 'The article\'s content.',
             'authors': [
                 {'name': 'Murilo Camargos'},
+                {'name': 'John Kennedy'}
             ],
             'categories': ['IT', 'Django', 'it']
         }
@@ -69,7 +113,7 @@ class UtilsTestCase(TestCase):
         self.assertEqual(Category.objects.count(), 2)
 
         # Check if author was created
-        self.assertEqual(Author.objects.count(), 1)
+        self.assertEqual(Author.objects.count(), 2)
 
     def test_utils_create_article_author(self):
         """

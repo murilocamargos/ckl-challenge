@@ -35,7 +35,15 @@ class TechCrunch(WebScraper):
             article = {}
             
             article['title'] = get_text_or_attr(item, 'title')
-            article['categories'] = get_text_or_attr(item, 'category')
+
+            # The article's categories must be always a list, even if it has
+            # only one element.
+            categories = get_text_or_attr(item, 'category')
+            
+            if type(categories) == str:
+                categories = [categories]
+
+            article['categories'] = categories
 
             url = get_text_or_attr(item, 'feedburner:origLink')
             article['url'] = remove_query(url)
@@ -54,7 +62,7 @@ class TechCrunch(WebScraper):
             author_names = get_text_or_attr(item, 'dc:creator').split(',')
             article['authors'] = []
             for author in author_names:
-                article['authors'] + [self.get_author(author, article['url'])]
+                article['authors'] += [self.get_author(author, article['url'])]
             
             # Tries to find the article's thumbnail url
             thumb = get_text_or_attr(item, 'media:thumbnail', 'url')
