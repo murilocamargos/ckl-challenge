@@ -9,6 +9,7 @@ class MyJSONRenderer(JSONRenderer):
         return renderer_context.get('indent', 4)
 
 
+
 class AuthorSerializer(serializers.ModelSerializer):
     """Serializer to map the Model instance into JSON format."""
 
@@ -19,6 +20,7 @@ class AuthorSerializer(serializers.ModelSerializer):
             'linkedin', 'facebook', 'website', 'avatar', 'about',
             'created_at', 'updated_at')
         read_only_fields = ('created_at', 'updated_at')
+
 
 
 class OutletSerializer(serializers.ModelSerializer):
@@ -32,6 +34,7 @@ class OutletSerializer(serializers.ModelSerializer):
         read_only_fields = ('created_at', 'updated_at')
 
 
+
 class CategorySerializer(serializers.ModelSerializer):
     """Serializer to map the Category instance into JSON format."""
 
@@ -42,19 +45,22 @@ class CategorySerializer(serializers.ModelSerializer):
         read_only_fields = ('slug', 'created_at', 'updated_at')
 
 
+
 class ArticleSerializer(serializers.ModelSerializer):
     """Serializer to map the Article instance into JSON format."""
-    #categories = CategorySerializer(many=True, queryset=Category.objects.all())
+
     categories = serializers.PrimaryKeyRelatedField(
         many = True,
         queryset = Category.objects.all(),
         required = False
     )
+
     authors = serializers.PrimaryKeyRelatedField(
         many = True,
         queryset = Author.objects.all(),
         required = False
     )
+
     outlet = serializers.PrimaryKeyRelatedField(
         many = False,
         queryset = Outlet.objects.all()

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2full.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:media="http://search.yahoo.com/mrss/" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" version="2.0">
+
+<channel>
+    <title>TechCrunch</title>
+    
+    <link>https://techcrunch.com</link>
+    <description>TechCrunch is a group-edited blog that profiles the companies, products and events defining and transforming the new web.</description>
+    <lastBuildDate>Fri, 22 Dec 2017 17:22:44 +0000</lastBuildDate>
+    <language>en</language>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <generator>http://wordpress.com/</generator>
+<cloud domain="techcrunch.com" port="80" path="/?rsscloud=notify" registerProcedure="" protocol="http-post" />
+<image><link>http://www.techcrunch.com</link><url>http://www.techcrunch.com/wp-content/themes/techcrunchmu/images/techcrunch_logo.png</url><title>TechCrunch</title></image>
+    <atom:link rel="search" type="application/opensearchdescription+xml" href="https://techcrunch.com/osd.xml" title="TechCrunch" />
+    
+    <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/Techcrunch" /><feedburner:info uri="techcrunch" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://techcrunch.com/?pushpress=hub" /><feedburner:feedFlare href="https://add.my.yahoo.com/rss?url=http%3A%2F%2Ffeeds.feedburner.com%2FTechcrunch" src="http://us.i1.yimg.com/us.yimg.com/i/us/my/addtomyyahoo4.gif">Subscribe with My Yahoo!</feedburner:feedFlare><feedburner:feedFlare href="http://www.newsgator.com/ngs/subscriber/subext.aspx?url=http%3A%2F%2Ffeeds.feedburner.com%2FTechcrunch" src="http://www.newsgator.com/images/ngsub1.gif">Subscribe with NewsGator</feedburner:feedFlare><feedburner:feedFlare href="http://feeds.my.aol.com/add.jsp?url=http%3A%2F%2Ffeeds.feedburner.com%2FTechcrunch" src="http://o.aolcdn.com/favorites.my.aol.com/webmaster/ffclient/webroot/locale/en-US/images/myAOLButtonSmall.gif">Subscribe with My AOL</feedburner:feedFlare><feedburner:feedFlare href="http://www.bloglines.com/sub/http://feeds.feedburner.com/Techcrunch" src="http://www.bloglines.com/images/sub_modern11.gif">Subscribe with Bloglines</feedburner:feedFlare><feedburner:feedFlare href="http://www.netvibes.com/subscribe.php?url=http%3A%2F%2Ffeeds.feedburner.com%2FTechcrunch" src="//www.netvibes.com/img/add2netvibes.gif">Subscribe with Netvibes</feedburner:feedFlare><feedburner:feedFlare href="http://fusion.google.com/add?feedurl=http%3A%2F%2Ffeeds.feedburner.com%2FTechcrunch" src="http://buttons.googlesyndication.com/fusion/add.gif">Subscribe with Google</feedburner:feedFlare><feedburner:feedFlare href="http://www.pageflakes.com/subscribe.aspx?url=http%3A%2F%2Ffeeds.feedburner.com%2FTechcrunch" src="http://www.pageflakes.com/ImageFile.ashx?instanceId=Static_4&amp;fileName=ATP_blu_91x17.gif">Subscribe with Pageflakes</feedburner:feedFlare><feedburner:browserFriendly>This is an XML content feed. It is intended to be viewed in a newsreader or syndicated to another site.</feedburner:browserFriendly><item>
+        <title>That time I got locked out of my Google account for a month</title>
+        <link>http://feedproxy.google.com/~r/Techcrunch/~3/FK4flAkgbms/</link>
+        <comments>https://techcrunch.com/2017/12/22/that-time-i-got-locked-out-of-my-google-account-for-a-month/#respond</comments>
+        <pubDate>Fri, 22 Dec 2017 17:21:29 +0000</pubDate>
+        <dc:creator><![CDATA[Ron Miller]]></dc:creator>
+                <category><![CDATA[Cloud]]></category>
+        <category><![CDATA[Drama]]></category>
+        <category><![CDATA[Security]]></category>
+        <category><![CDATA[TC]]></category>
+        <category><![CDATA[Google]]></category>
+        <category><![CDATA[gmail]]></category>
+
+        <guid isPermaLink="false">http://techcrunch.com/?p=1580971</guid>
+        <description>&lt;img width="680" height="478" src="https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg?w=680" class="attachment-large size-large wp-post-image" alt="" srcset="https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg?w=680 680w, https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg?w=1360 1360w, https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg?w=150 150w, https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg?w=300 300w, https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg?w=768 768w" sizes="(max-width: 680px) 100vw, 680px" /&gt;&amp;nbsp;How much of your digital life would you lose if you lost a single password? Without it, you are locked out and the cold reality of using free cloud services like Google is that you don&amp;#8217;t have a human arbiter to help you. If you think back to earlier times where, say you lost your bank book, your local banker probably knew who you were and could help you navigate the process of getting&amp;hellip; &lt;a href="https://techcrunch.com/2017/12/22/that-time-i-got-locked-out-of-my-google-account-for-a-month/?ncid=rss"&gt;Read More&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=FK4flAkgbms:MqAERX0eJ_o:2mJPEYqXBVI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=2mJPEYqXBVI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=FK4flAkgbms:MqAERX0eJ_o:7Q72WNTAKBA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=7Q72WNTAKBA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=FK4flAkgbms:MqAERX0eJ_o:yIl2AUoC8zA"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=yIl2AUoC8zA" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=FK4flAkgbms:MqAERX0eJ_o:-BTjWOF_DHI"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=FK4flAkgbms:MqAERX0eJ_o:-BTjWOF_DHI" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=FK4flAkgbms:MqAERX0eJ_o:D7DqB2pKExk"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?i=FK4flAkgbms:MqAERX0eJ_o:D7DqB2pKExk" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~ff/Techcrunch?a=FK4flAkgbms:MqAERX0eJ_o:qj6IDK7rITs"&gt;&lt;img src="http://feeds.feedburner.com/~ff/Techcrunch?d=qj6IDK7rITs" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/Techcrunch/~4/FK4flAkgbms" height="1" width="1" alt=""/&gt;</description>
+        <wfw:commentRss>https://techcrunch.com/2017/12/22/that-time-i-got-locked-out-of-my-google-account-for-a-month/feed/</wfw:commentRss>
+        <slash:comments>0</slash:comments>
+    <media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg?w=210&amp;h=158&amp;crop=1" />
+<media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg" type="image/jpeg" medium="image"><media:title type="html">That%20time%20I%20got%20locked%20out%20of%20my%20Google%20account%20for%20a%26nbsp%3Bmonth</media:title></media:content><twitter> <![CDATA[ ron_miller ]]> </twitter>
+        <media:thumbnail url="https://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg" />
+        <media:content url="http://tctechcrunch2011.files.wordpress.com/2017/12/gettyimages-170409877.jpg" medium="image">
+            <media:title type="html">Wi-fi and mobile phone network connections</media:title>
+        </media:content>
+
+        <media:content url="http://0.gravatar.com/avatar/0b82cfe9f0e15c08c5816481c9f383d9?s=96&amp;d=identicon&amp;r=G" medium="image">
+            <media:title type="html">ronjourn</media:title>
+        </media:content>
+    <feedburner:origLink>https://techcrunch.com/2017/12/22/that-time-i-got-locked-out-of-my-google-account-for-a-month/?ncid=rss</feedburner:origLink></item>
+    </channel>
+</rss>

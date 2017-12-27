@@ -16,6 +16,7 @@ class NameSlug(models.Model):
         """Return a human readable representation of the model instance."""
         return "{}".format(self.name)
 
+
     def save(self, *args, **kwargs):
         """Overrides save method to slugify name by default."""
         if not self.id and not self.slug:
@@ -24,20 +25,28 @@ class NameSlug(models.Model):
 
         super(NameSlug, self).save(*args, **kwargs)
 
+
     class Meta:
         abstract = True
+
+
 
 class Outlet(NameSlug):
     """This class represents an information outlet."""
     website = models.CharField(max_length=255, blank=False, unique=True)
     description = models.TextField(blank=True)
 
+
+
 class Category(NameSlug):
     """This class represents the article category."""
     pass
 
+
     class Meta:
         verbose_name_plural = 'categories'
+
+
 
 class Author(models.Model):
     """This class represents an author."""
@@ -59,6 +68,7 @@ class Author(models.Model):
         """Return a human readable representation of the model instance."""
         return "{}".format(self.name)
 
+
     def save(self, *args, **kwargs):
         """Overrides save method to slugify name by default."""
         if not self.id and not self.slug:
@@ -66,6 +76,8 @@ class Author(models.Model):
             self.slug = slugify(self.name)
 
         super(Author, self).save(*args, **kwargs)
+
+
 
 class Article(models.Model):
     title = models.CharField(max_length=255, blank=False)
@@ -80,6 +92,7 @@ class Article(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
 
     def __str__(self):
         """Return a human readable representation of the model instance."""

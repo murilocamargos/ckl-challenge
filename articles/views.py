@@ -18,15 +18,18 @@ class ArticlesRetrieveView(generics.ListAPIView):
     serializer_class = ArticleSerializer
     filter_class = ArticleFilter
 
+
 class AuthorsRetrieveView(generics.ListAPIView):
     """This class handles the http GET, requests for showing all authors."""
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
     
+
 class CategoriesRetrieveView(generics.ListAPIView):
     """This class handles the http GET, requests for showing all categories."""
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+
 
 class OutletsRetrieveView(generics.ListAPIView):
     """This class handles the http GET, requests for showing all outlets."""
@@ -41,11 +44,13 @@ class IsAdminForUpdateAndDelete(permissions.BasePermission):
     def has_object_permission(self, request, view, obj):
         return request.user.is_staff or request.method == 'GET'
 
+
 class ArticleRUDView(generics.RetrieveUpdateDestroyAPIView):
     """Handles the http GET, PUT, PATCH and DELETE requests for articles."""
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
     permission_classes = (IsAdminForUpdateAndDelete,)
+
 
 class AuthorRUDView(generics.RetrieveUpdateDestroyAPIView):
     """Handles the http GET, PUT, PATCH and DELETE requests for authors."""
@@ -53,11 +58,13 @@ class AuthorRUDView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = AuthorSerializer
     permission_classes = (IsAdminForUpdateAndDelete,)
 
+
 class CategoryRUDView(generics.RetrieveUpdateDestroyAPIView):
     """Handles the http GET, PUT, PATCH and DELETE requests for categories."""
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
     permission_classes = (IsAdminForUpdateAndDelete,)
+
 
 class OutletRUDView(generics.RetrieveUpdateDestroyAPIView):
     """Handles the http GET, PUT, PATCH and DELETE requests for outlets."""
@@ -73,17 +80,20 @@ class ArticleCreateView(generics.CreateAPIView):
     serializer_class = ArticleSerializer
     permission_classes = (permissions.IsAdminUser,)
 
+
 class AuthorCreateView(generics.CreateAPIView):
     """Handles the http POST requests for authors' creation."""
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
     permission_classes = (permissions.IsAdminUser,)
 
+
 class CategoryCreateView(generics.CreateAPIView):
     """Handles the http POST requests for categories' creation."""
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
     permission_classes = (permissions.IsAdminUser,)
+
 
 class OutletCreateView(generics.CreateAPIView):
     """Handles the http POST requests for outlets' creation."""
