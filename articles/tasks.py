@@ -31,7 +31,8 @@ logger = get_task_logger(__name__)
 def fetch_techcrunch_articles():
     logger.info("TechCrunch download just started.")
     ws = TechCrunch()
-    ws.get_articles()
+    if ws.outlet.active:
+        ws.get_articles()
     logger.info("TechCrunch download finished.")
 
 
@@ -44,7 +45,8 @@ def fetch_techcrunch_articles():
 def fetch_cheesecakelabs_articles():
     logger.info("CheesecakeLabs download just started.")
     ws = CheesecakeLabs()
-    ws.get_articles()
+    if ws.outlet.active:
+        ws.get_articles()
     logger.info("CheesecakeLabs download finished.")
 
 
@@ -57,7 +59,8 @@ def fetch_cheesecakelabs_articles():
 def fetch_mashable_articles():
     logger.info("Mashable download just started.")
     ws = Mashable()
-    ws.get_articles()
+    if ws.outlet.active:
+        ws.get_articles()
     logger.info("Mashable download finished.")
 
 
@@ -70,5 +73,6 @@ def fetch_mashable_articles():
 def fetch_engadget_articles():
     logger.info("Engadget download just started.")
     ws = Engadget()
-    ws.get_articles()
+    if ws.outlet.active:
+        ws.get_articles()
     logger.info("Engadget download finished.")

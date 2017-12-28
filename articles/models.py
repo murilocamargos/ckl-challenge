@@ -1,6 +1,21 @@
 from django.db import models
 from django.template.defaultfilters import slugify
 
+class CustomQuerySet(models.QuerySet):
+    """This class handles queryset model soft delete."""
+    def delete(self):
+        self.update(active = False)
+
+class ActiveManager(models.Manager):
+    """This class manages models that cannot be hard delete."""
+    def active(self):
+        """Get all active objects of a given model."""
+        return self.model.objects.filter(active = True)
+
+    def get_queryset(self):
+        return CustomQuerySet(self.model, using=self._db)
+
+
 class NameSlug(models.Model):
     """
     This class is an abstraction for every model that needs a name and
@@ -30,11 +45,18 @@ class NameSlug(models.Model):
         abstract = True
 
 
-
 class Outlet(NameSlug):
     """This class represents an information outlet."""
     website = models.CharField(max_length=255, blank=False, unique=True)
     description = models.TextField(blank=True)
+    active = models.BooleanField(default=True)
+
+    objects = ActiveManager()
+
+    def delete(self):
+        """Does not allow hard deletes."""
+        self.active = False
+        self.save()
 
 
 

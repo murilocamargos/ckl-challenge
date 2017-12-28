@@ -133,8 +133,14 @@ class ArticleModelTestCase(TestCase):
 
     def test_article_delete_outlet(self):
         """Tests if cascade deletion is working for outlets."""
+
+        # This test shouldn't change anything besides the outlet's active
+        # attribute due to the disabling of hard deletes for this model.
+
         save_all_articles = [article.save() for article in self.articles]
+        
         old_count = Article.objects.count()
         self.outlets[0].delete()
         new_count = Article.objects.count()
-        self.assertEqual(old_count, new_count + 2)
+
+        self.assertEqual(old_count, new_count)

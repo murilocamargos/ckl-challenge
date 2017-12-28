@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "This is a web scraping tool, written in Django, that constantly scrapes the articles of a major blog like TechCrunch (http://techcrunch.com) and stores it in a PostgreSQL database.\nThese are the relevant data being stored:\n- Outlet name and metadata (Title, website and description);\n- Authors (name, outlet, profile page, about, avatar and social networks);\n- Published articles and metadata (title, publication date, author, content, thumbnail, url, outlet, authors, categories);\n- Categories' tags\n\nThis rest API, provides access to all these informations.",
+    "description": "This is a web scraping tool, written in Django, that constantly scrapes the articles of a major technology blogs and stores it in a PostgreSQL database.\n\nThese are the relevant data being stored:\n- Outlet name and metadata (Title, website and description);\n- Authors (name, outlet, profile page, about, avatar and social networks);\n- Published articles and metadata (title, publication date, author, content, thumbnail, url, outlet, authors, categories);\n- Categories' tags\n\nCurrently we're scraping content from:\n- [TechCrunch](https://techcrunch.com/)\n- [Cheesecake Labs](https://cheesecakelabs.com/)\n- [Mashable](https://mashable.com/)\n- [Engadget](https://engadget.com/)\n\nThis rest API, provides access to all these informations.",
     "version": "1.0.0",
     "title": "CKLabs"
   },
@@ -211,7 +211,7 @@
           "outlet"
         ],
         "summary": "Delete an outlet.",
-        "description": "This endpoind deletes an outlet given its ID if the user is logged as admin.",
+        "description": "This endpoind soft deletes an outlet given its ID if the user is logged as admin. Hard deletion is not permitted because the asyncronous functions that fetch the articles depends on it.",
         "operationId": "delete_outlet",
         "produces": [
           "application/json"
@@ -706,9 +706,67 @@
         "produces": [
           "application/json"
         ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "title",
+            "type": "string",
+            "description": "Searches for articles with this exact title.\n**Example(s):**\n- ?title=Edward Snowden’s new app turns any Android phone into a surveillance system"
+          },
+          {
+            "in": "query",
+            "name": "title__contains",
+            "type": "string",
+            "description": "Searches for articles containing this string inside its titles.\n**Example(s):**\n- ?title__contains=snowden"
+          },
+          {
+            "in": "query",
+            "name": "title__startswith",
+            "type": "string",
+            "description": "Searches for articles whose titles starts with this string.\n**Example(s):**\n- ?title__startswith=edward"
+          },
+          {
+            "in": "query",
+            "name": "title__endswith",
+            "type": "string",
+            "description": "Searches for articles whose titles ends with this string.\n**Example(s):**\n- ?title__endswith=system"
+          },
+          {
+            "in": "query",
+            "name": "date_0",
+            "type": "string",
+            "format": "date-time",
+            "description": "Searches for articles published from this date and time.\n**Example(s):**\n- ?date_0=2012-12-12\n- ?date_0=2017-12-12 12:12:12\n\nThis can be used with `date_1` for range search."
+          },
+          {
+            "in": "query",
+            "name": "date_1",
+            "type": "string",
+            "format": "date-time",
+            "description": "Searches for articles published to this date and time.\n**Example(s):**\n- ?date_0=2012-12-12\n- ?date_0=2017-12-12 12:12:12\n\nThis can be used with `date_0` for range search."
+          },
+          {
+            "in": "query",
+            "name": "authors",
+            "type": "integer",
+            "description": "Search for articles written by this author. It is also possible to query multiple authors.\n**Example(s):**\n- ?authors=1\n- ?authors=1&authors=2&authors=5 ..."
+          },
+          {
+            "in": "query",
+            "name": "outlets",
+            "type": "integer",
+            "description": "Search for articles served by this outlet. It is also possible to query multiple outlets.\n**Example(s):**\n- ?outlets=1\n- ?outlets=1&outlets=2 ..."
+          },
+          {
+            "in": "query",
+            "name": "categories",
+            "type": "integer",
+            "description": "Search for articles with this category. It is also possible to query multiple categories.\n**Example(s):**\n- ?categories=1\n- ?categories=1&categories=2 ..."
+          }
+        ],
         "responses": {
           "200": {
-            "description": "List with all stored articles",
+            "description": "List with all stored articles with pagination.",
             "schema": {
               "type": "array",
               "items": {
@@ -943,6 +1001,9 @@
         },
         "description": {
           "type": "string"
+        },
+        "active": {
+          "type": "boolean"
         },
         "created_at": {
           "type": "string",
