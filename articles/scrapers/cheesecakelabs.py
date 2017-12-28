@@ -32,7 +32,7 @@ class CheesecakeLabs(WebScraper):
     def article_info(self, parsed):
         """
         All the information needed do add an article can be found in the
-        article's page itself. This method extracts these information using the 
+        article's page itself. This method extracts these informations using the 
         xpath.
         """
 
@@ -63,15 +63,18 @@ class CheesecakeLabs(WebScraper):
 
 
         # Get article's contents
-        content = parsed.xpath('.//div[@class="entry__content "]')
+        content = parsed.xpath('/html/head')
         if content:
-            data['content'] = self.html_to_string(content[0]).strip()
+            og_description = 'meta[@property="og:description"]'
+            data['content'] = self.get_text_or_attr(content[0], 
+                og_description, 'content').strip()
 
 
         # Find authors
         data['authors'] = []
         authors = parsed.xpath('.//span[@class="author vcard"]')
         about_xpath = './/div[@class="author-description"]/p[2]'
+        
         for author in authors:
             data['authors'].append({
                 'profile': self.get_text_or_attr(author, 'a', 'href'),
@@ -90,7 +93,7 @@ class CheesecakeLabs(WebScraper):
         store them in DB; its return should be a list of dictionaries in the
         form given in utils' function `create_article`.
 
-        Google's API result is a JSON.
+        Google's API result is in JSON format.
         """
         for item in data['items']:
             url = None
@@ -136,7 +139,7 @@ class CheesecakeLabs(WebScraper):
 
             # Fetch article's information directly from CheesecakeLabs blog
             parsed = self.parse(url, self.article_page_type)
-            article =  self.article_info(parsed)
+            article = self.article_info(parsed)
 
 
             if article == {}:
@@ -152,7 +155,7 @@ class CheesecakeLabs(WebScraper):
                 try:
                     article['date'] = dateutil.parser.parse(item['published'])
                 except:
-                    article = {}
+                    continue
 
 
             yield article

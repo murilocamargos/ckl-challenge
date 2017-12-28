@@ -1,7 +1,7 @@
 from django.test import TestCase
 
 from articles.models import Outlet, Author, Category, Article
-from articles.tests.utils import get_file
+from articles.tests.utils import get_file, parse_mocked
 from articles.scrapers.scraper import WebScraper
 
 from mock import patch
@@ -236,3 +236,23 @@ class WebScraperTestCase(TestCase):
         # Verify if everything in author_data was added to author Danilo
         for key in author_data:
             self.assertEqual(author_data[key], result[key])
+
+
+    def test_webscraper_clear_text(self):
+        """Tests if lxml items are begin correctly cleaned and merged."""
+        parsed = parse_mocked('cheesecakelabs_article.html', 'html')
+
+
+        # Xpath for paragraph tags on content div
+        xpath = './/div[@class="entry__content "]/p'
+
+        # Gets just the third and fourth p tags to test
+        tf = parsed.xpath(xpath)[2:4]
+
+        # Clear text from them
+        cleared = self.ws.clear_text(tf)
+
+
+        content = 'This is all reflected in our great ratings and reviews featured on Cheesecake Labs profile on Clutch with client reviews. The B2B research platform&#8217;s ratings and reviews include a combination of metrics, ranging from experience in the sector and market presence to types of clients and ability to deliver awesome results delivered to clients. Furthermore, Clutch&#8217;s dedicated analysts interviewed our current and past clients to accurately portray our strengths on our profile. We are excited to celebrate these accomplishments and our great clients who showed their appreciation for our work. These honors would not have been possible without the time they took to provide their detailed client reviews.'
+
+        self.assertEqual(cleared, content)

@@ -118,7 +118,6 @@ STATICFILES_DIRS = (
 )
 
 
-
 # These configurations are for non debugging state (production server)
 if not DEBUG:
     import dj_database_url

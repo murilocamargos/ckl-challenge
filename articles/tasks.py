@@ -3,6 +3,7 @@ from __future__ import absolute_import, unicode_literals
 
 from articles.scrapers.techcrunch import TechCrunch
 from articles.scrapers.cheesecakelabs import CheesecakeLabs
+from articles.scrapers.mashable import Mashable
 
 from celery.task.schedules import crontab
 from celery.decorators import periodic_task
@@ -39,3 +40,16 @@ def fetch_cheesecakelabs_articles():
     ws = CheesecakeLabs()
     ws.get_articles()
     logger.info("CheesecakeLabs download finished.")
+
+
+
+@periodic_task(
+    run_every=(crontab(hour='*/5')),
+    name="fetch_mashable_articles",
+    ignore_result=True
+)
+def fetch_mashable_articles():
+    logger.info("Mashable download just started.")
+    ws = Mashable()
+    ws.get_articles()
+    logger.info("Mashable download finished.")

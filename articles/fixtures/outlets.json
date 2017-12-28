@@ -22,5 +22,17 @@
             "created_at": "2017-12-22T00:00:00+00:00",
             "updated_at": "2017-12-22T00:00:00+00:00"
         }
+    },
+    {
+        "model": "articles.outlet",
+        "pk": 3,
+        "fields": {
+            "name": "Mashable",
+            "slug": "mashable",
+            "website": "https://mashable.com/",
+            "description": "Mashable is a global, multi-platform media and entertainment company. Powered by its own proprietary technology, Mashable is the go-to source for tech, digital culture and entertainment content for its dedicated and influential audience around the globe.",
+            "created_at": "2017-12-22T00:00:00+00:00",
+            "updated_at": "2017-12-22T00:00:00+00:00"
+        }
     }
 ]

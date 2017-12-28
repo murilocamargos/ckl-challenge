@@ -15,8 +15,8 @@ class ArticleModelTestCase(TestCase):
                 website = 'http://techcrunch.com'
             ),
             Outlet.objects.create(
-                name = 'Marshable',
-                website = 'http://marshable.com'
+                name = 'Mashable',
+                website = 'http://mashable.com'
             ),
             Outlet.objects.create(
                 name = 'Cheesecake Labs',

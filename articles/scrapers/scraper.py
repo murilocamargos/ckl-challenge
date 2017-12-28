@@ -1,9 +1,10 @@
 from django.template.defaultfilters import slugify, title
+from django.utils.html import strip_tags
 
 from articles.models import Author, Category, Outlet, Article
 
 from lxml import etree, html
-import requests, json
+import requests, json, twitter, os, re
 
 exceptions = {
     'feed': 'You must set the articles\' feed configs (i.e. url and type).',
@@ -129,21 +130,18 @@ class WebScraper(object):
         results = []
 
         for article_info in self.extract_articles(parsed):
-            article = self.create_article(self.outlet, article_info)
+            article = self.create_article(article_info)
             results += [article]
             print(article)
 
         return results
 
 
-    def get_author(self, author_name, article_url):
+    def get_author(self, author_name):
         """
         This method fetches an author's information by his/her name. If this
         author is already stored, there is no necessity of looking its profile
         page.
-
-        If his twitter handle is not found, we can check the possibility of
-        finding it in the article's page.
         """
 
         # Verify if the class calling this method provides the methods for
@@ -246,16 +244,30 @@ class WebScraper(object):
         """This method downloads and parses a url with a given type."""
         tree = None
 
-        response = requests.get(url)
-
         if content_type == 'xml':
+            response = requests.get(url)
             return etree.fromstring(response.content)
 
+
         elif content_type == 'html':
+            response = requests.get(url)
             return html.fromstring(response.content)
 
+
         elif content_type == 'json':
+            response = requests.get(url)
             return json.loads(response.text)
+
+
+        elif content_type == 'twitter':
+            api = twitter.Api(
+                consumer_key = os.environ.get('TWITTER_CONSUMER_KEY'),
+                consumer_secret = os.environ.get('TWITTER_CONSUMER_SECRET'),
+                access_token_key = os.environ.get('TWITTER_ACCESS_TOKEN_KEY'),
+                access_token_secret = os.environ.get('TWITTER_ACCESS_TOKEN_SECRET'),
+            )
+
+            return api.GetUserTimeline(screen_name = url)
 
         raise NotImplementedError(exceptions['parse'])
 
@@ -332,3 +344,28 @@ class WebScraper(object):
 
             if len(req) > 0:
                 raise ValueError(exceptions['required'])
+
+
+    @staticmethod
+    def clear_text(items):
+        """
+        Tries to get a clean text (i.e. without html tags and double spaces)
+        from a given xpath items.
+        """
+
+        if type(items) == str:
+            items = [items]
+
+        content = ''
+
+        for item in items:
+
+            # Convert lxml item in string with html tags
+            html = WebScraper.html_to_string(item)
+
+            if html:
+                # Remove html tags
+                content += strip_tags(html) + ' '
+
+        # Remove double spaces
+        return re.sub('[ ]{2,}', ' ', content).strip()

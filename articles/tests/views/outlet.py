@@ -29,9 +29,9 @@ class OutletViewTestCase(TestCase):
     def test_api_add_outlet_unlogged(self):
         """Test if an unlogged user can add an outlet."""
         data = {
-            'name': 'Marshable',
-            'slug': 'marshable',
-            'website': 'marshable.com',
+            'name': 'Mashable',
+            'slug': 'mashable',
+            'website': 'mashable.com',
         }
 
         request = self.client.post(reverse('outlet-create'), data)

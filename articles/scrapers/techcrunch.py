@@ -77,7 +77,7 @@ class TechCrunch(WebScraper):
             author_names = self.get_text_or_attr(item, 'dc:creator').split(',')
             article['authors'] = []
             for author in author_names:
-                article['authors'] += [self.get_author(author, article['url'])]
+                article['authors'] += [self.get_author(author)]
             
 
             # Tries to find the article's thumbnail url
@@ -87,8 +87,7 @@ class TechCrunch(WebScraper):
 
 
             # Gets the article's description and strip all html tags from it
-            content = self.get_text_or_attr(item, 'description')
-            content = re.compile(r'<[^>]+>').sub('', content).strip()
+            content = self.clear_text(item.xpath('description'))
             content = content.strip(' Read More').strip('&nbsp;').strip()
 
 
@@ -150,11 +149,9 @@ class TechCrunch(WebScraper):
 
 
         # Get description text provided by the author
-        author['about'] = ''
         xpath = '/html/body/div[4]/div[2]/div[1]/div/div[1]/div[2]/p'
-
-        for p in parsed_html.xpath(xpath):
-            author['about'] += self.html_to_string(p).strip()
+        items = parsed_html.xpath(xpath)
+        author['about'] = self.clear_text(items)
 
 
         # Get Crunchbase url profile

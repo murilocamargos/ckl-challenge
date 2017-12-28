@@ -46,7 +46,7 @@ class TechCrunchScraperTestCase(TestCase):
         """Tests if an author's information can be found by his/her name."""
         mock_get.return_value.content = get_file('techcrunch_author.html')
 
-        result = self.ws.get_author('Jon Russell', '')
+        result = self.ws.get_author('Jon Russell')
 
         self.assertEqual(result['name'], 'Jon Russell')
 
