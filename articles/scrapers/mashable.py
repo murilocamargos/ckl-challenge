@@ -69,7 +69,12 @@ class Mashable(WebScraper):
 
 
         data['title'] = title
-        data['url'] = url
+        data['url'] = self.remove_query(url)
+
+
+        # Check if article already exists
+        if Article.objects.filter(url = data['url']).count() > 0:
+            return {}
         
 
         # Tries to parse date element

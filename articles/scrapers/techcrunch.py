@@ -77,6 +77,7 @@ class TechCrunch(WebScraper):
             author_names = self.get_text_or_attr(item, 'dc:creator').split(',')
             article['authors'] = []
             for author in author_names:
+                self.article_url = article['url']
                 article['authors'] += [self.get_author(author)]
             
 
@@ -173,7 +174,7 @@ class TechCrunch(WebScraper):
         # Check the article's page for his/her twitter if there is an
         # extract_twitter method.
         if not 'twitter' in author:
-            parsed = self.parse(article_url, self.article_page_type)
+            parsed = self.parse(self.article_url, self.article_page_type)
             author['twitter'] = self.extract_twitter(parsed, author_name)
 
 
