@@ -141,6 +141,17 @@ class WebScraperTestCase(TestCase):
             self.ws.check_data(self.article_data)
 
 
+    def test_webscraper_check_data_remove_author(self):
+        """Tests if data check raises exception after removing required."""
+        msg = 'You must provide all required parameters to add an article.'
+
+        # Remove authors (required)
+        self.article_data['authors'] = []
+
+        with self.assertRaisesMessage(ValueError, msg):
+            self.ws.check_data(self.article_data)
+
+
     def test_webscraper_check_data_add_unaccepted(self):
         """Tests if data check raises exception after adding unaccepted."""
         msg = 'There are unacceptable attributes on your request.'

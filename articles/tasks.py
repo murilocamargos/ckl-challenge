@@ -1,9 +1,15 @@
-# Create your tasks here
+"""
+This file contains the entries for article downloading though celery beat.
+The periodicity of each outlet is defined by the average posting frequency,
+computed by the standalone function `mtime.py`.
+"""
+
 from __future__ import absolute_import, unicode_literals
 
 from articles.scrapers.techcrunch import TechCrunch
 from articles.scrapers.cheesecakelabs import CheesecakeLabs
 from articles.scrapers.mashable import Mashable
+from articles.scrapers.engadget import Engadget
 
 from celery.task.schedules import crontab
 from celery.decorators import periodic_task
@@ -18,7 +24,7 @@ logger = get_task_logger(__name__)
 
 
 @periodic_task(
-    run_every=(crontab(hour='*/3')),
+    run_every=(crontab(hour='*/5')),
     name="fetch_techcrunch_articles",
     ignore_result=True
 )
@@ -31,7 +37,7 @@ def fetch_techcrunch_articles():
 
 
 @periodic_task(
-    run_every=(crontab(hour='*/12')),
+    run_every=(crontab(hour='*/14')),
     name="fetch_cheesecakelabs_articles",
     ignore_result=True
 )
@@ -44,7 +50,7 @@ def fetch_cheesecakelabs_articles():
 
 
 @periodic_task(
-    run_every=(crontab(hour='*/5')),
+    run_every=(crontab(hour='*/6')),
     name="fetch_mashable_articles",
     ignore_result=True
 )
@@ -53,3 +59,16 @@ def fetch_mashable_articles():
     ws = Mashable()
     ws.get_articles()
     logger.info("Mashable download finished.")
+
+
+
+@periodic_task(
+    run_every=(crontab(hour='*/1')),
+    name="fetch_engadget_articles",
+    ignore_result=True
+)
+def fetch_engadget_articles():
+    logger.info("Engadget download just started.")
+    ws = Engadget()
+    ws.get_articles()
+    logger.info("Engadget download finished.")

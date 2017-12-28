@@ -42,4 +42,9 @@ class CheesecakeLabsScraperTestCase(TestCase):
         self.assertEqual(len(articles_extracted), 20)
 
         # Check data integrity on the first article (mocking makes all equal)
-        self.assertEqual(self.ws.check_data(articles_extracted[0]), None)    
+        self.assertEqual(self.ws.check_data(articles_extracted[0]), None)
+
+
+    def test_import_task(self):
+        """Tries to import celery task function for CheesecakeLabs."""
+        from articles.tasks import fetch_cheesecakelabs_articles

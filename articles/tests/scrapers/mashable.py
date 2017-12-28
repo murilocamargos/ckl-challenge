@@ -64,7 +64,7 @@ class MashableScraperTestCase(TestCase):
         mock_get1.return_value.content = get_file('mashable_author.html')
         mock_get2.return_value.content = get_file('mashable_article.html')
 
-        # Parses and extract information from TechCrunch Articles XML feed
+        # Parses and extract information from Mashable Articles XML feed
         article_feed = parse_mocked('mashable_twitter', 'twitter')
         articles_extracted = list(self.ws.extract_articles(article_feed))
 
@@ -73,3 +73,8 @@ class MashableScraperTestCase(TestCase):
 
         # Check data integrity on the first article (mocking makes all equal)
         self.assertEqual(self.ws.check_data(articles_extracted[0]), None)
+
+
+    def test_import_task(self):
+        """Tries to import celery task function for Mashable."""
+        from articles.tasks import fetch_mashable_articles

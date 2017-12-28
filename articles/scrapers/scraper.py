@@ -121,7 +121,7 @@ class WebScraper(object):
 
         # Download and parse the articles' feed
         parsed = self.parse(self.feed_url, self.feed_type)
-        if not parsed:
+        if parsed is None:
             raise Exception(exceptions['not_parsed'])
 
 
@@ -346,6 +346,11 @@ class WebScraper(object):
                 raise ValueError(exceptions['required'])
 
 
+        # Check if there are any authors on data
+        if not 'authors' in data or len(data['authors']) == 0:
+            raise ValueError(exceptions['required'])
+
+
     @staticmethod
     def clear_text(items):
         """
@@ -361,11 +366,15 @@ class WebScraper(object):
         for item in items:
 
             # Convert lxml item in string with html tags
-            html = WebScraper.html_to_string(item)
+            if isinstance(item, html.HtmlElement):
+                item = WebScraper.html_to_string(item)
 
-            if html:
+            if item is not None:
                 # Remove html tags
-                content += strip_tags(html) + ' '
+                content += strip_tags(item) + ' '
+
+        # Remove break lines
+        content = re.sub('\n', '', content)
 
         # Remove double spaces
         return re.sub('[ ]{2,}', ' ', content).strip()
