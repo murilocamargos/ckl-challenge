@@ -23,18 +23,21 @@ class AuthorsRetrieveView(generics.ListAPIView):
     """This class handles the http GET, requests for showing all authors."""
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
+    filter_class = AuthorFilter
     
 
 class CategoriesRetrieveView(generics.ListAPIView):
     """This class handles the http GET, requests for showing all categories."""
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+    filter_class = CategoryFilter
 
 
 class OutletsRetrieveView(generics.ListAPIView):
     """This class handles the http GET, requests for showing all outlets."""
     queryset = Outlet.objects.all()
     serializer_class = OutletSerializer
+    filter_class = OutletFilter
 
 
 

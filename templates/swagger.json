@@ -22,9 +22,29 @@
         "produces": [
           "application/json"
         ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name__contains",
+            "type": "string",
+            "description": "Searches for outlets' names containing this parameter.\n**Example(s):**\n- ?name__contains=cheese"
+          },
+          {
+            "in": "query",
+            "name": "website__contains",
+            "type": "string",
+            "description": "Searches for outlets' websites containing this parameter.\n**Example(s):**\n- ?website__contains=cheese"
+          },
+          {
+            "in": "query",
+            "name": "description__contains",
+            "type": "string",
+            "description": "Searches for outlets' description containing this parameter.\n**Example(s):**\n- ?description__contains=cheese"
+          }
+        ],
         "responses": {
           "200": {
-            "description": "List with all stored outlets",
+            "description": "List with all stored outlets matching the given parameters",
             "schema": {
               "type": "array",
               "items": {
@@ -249,6 +269,56 @@
         "operationId": "get_authors",
         "produces": [
           "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name__contains",
+            "type": "string",
+            "description": "Searches for authors' names containing this parameter.\n**Example(s):**\n- ?name__contains=woz"
+          },
+          {
+            "in": "query",
+            "name": "about__contains",
+            "type": "string",
+            "description": "Searches for authors' about containing this parameter.\n**Example(s):**\n- ?about__contains=tech"
+          },
+          {
+            "in": "query",
+            "name": "twitter__contains",
+            "type": "string",
+            "description": "Searches for authors' twitter containing this parameter.\n**Example(s):**\n- ?twitter__contains=woz"
+          },
+          {
+            "in": "query",
+            "name": "facebook__contains",
+            "type": "string",
+            "description": "Searches for authors' facebook containing this parameter.\n**Example(s):**\n- ?facebook__contains=woz"
+          },
+          {
+            "in": "query",
+            "name": "linkedin__contains",
+            "type": "string",
+            "description": "Searches for authors' linkedin containing this parameter.\n**Example(s):**\n- ?linkedin__contains=woz"
+          },
+          {
+            "in": "query",
+            "name": "profile__contains",
+            "type": "string",
+            "description": "Searches for authors' profile containing this parameter.\n**Example(s):**\n- ?profile__contains=woz"
+          },
+          {
+            "in": "query",
+            "name": "website__contains",
+            "type": "string",
+            "description": "Searches for authors' website containing this parameter.\n**Example(s):**\n- ?website__contains=woz"
+          },
+          {
+            "in": "query",
+            "name": "outlet",
+            "type": "integer",
+            "description": "Search for articles served by this outlet. It is also possible to query multiple outlets.\n**Example(s):**\n- ?outlet=1\n- ?outlet=1&outlet=2 ..."
+          }
         ],
         "responses": {
           "200": {
@@ -477,6 +547,14 @@
         "operationId": "get_categories",
         "produces": [
           "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name__contains",
+            "type": "string",
+            "description": "Searches for categories' name containing this parameter.\n**Example(s):**\n- ?name__contains=tech"
+          }
         ],
         "responses": {
           "200": {
@@ -709,27 +787,27 @@
         "parameters": [
           {
             "in": "query",
-            "name": "title",
-            "type": "string",
-            "description": "Searches for articles with this exact title.\n**Example(s):**\n- ?title=Edward Snowden’s new app turns any Android phone into a surveillance system"
-          },
-          {
-            "in": "query",
             "name": "title__contains",
             "type": "string",
-            "description": "Searches for articles containing this string inside its titles.\n**Example(s):**\n- ?title__contains=snowden"
+            "description": "Searches for articles' titles containing this parameter.\n**Example(s):**\n- ?title__contains=snowden"
           },
           {
             "in": "query",
             "name": "title__startswith",
             "type": "string",
-            "description": "Searches for articles whose titles starts with this string.\n**Example(s):**\n- ?title__startswith=edward"
+            "description": "Searches for articles' titles starting with this parameter.\n**Example(s):**\n- ?title__startswith=edward"
           },
           {
             "in": "query",
             "name": "title__endswith",
             "type": "string",
-            "description": "Searches for articles whose titles ends with this string.\n**Example(s):**\n- ?title__endswith=system"
+            "description": "Searches for articles' titles ending with this parameter.\n**Example(s):**\n- ?title__endswith=system"
+          },
+          {
+            "in": "query",
+            "name": "outlet",
+            "type": "integer",
+            "description": "Search for articles served by this outlet. It is also possible to query multiple outlets.\n**Example(s):**\n- ?outlet=1\n- ?outlet=1&outlet=2 ..."
           },
           {
             "in": "query",
@@ -750,12 +828,6 @@
             "name": "authors",
             "type": "integer",
             "description": "Search for articles written by this author. It is also possible to query multiple authors.\n**Example(s):**\n- ?authors=1\n- ?authors=1&authors=2&authors=5 ..."
-          },
-          {
-            "in": "query",
-            "name": "outlet",
-            "type": "integer",
-            "description": "Search for articles served by this outlet. It is also possible to query multiple outlets.\n**Example(s):**\n- ?outlet=1\n- ?outlet=1&outlet=2 ..."
           },
           {
             "in": "query",
@@ -993,9 +1065,6 @@
         "name": {
           "type": "string"
         },
-        "slug": {
-          "type": "string"
-        },
         "website": {
           "type": "string"
         },
@@ -1004,14 +1073,6 @@
         },
         "active": {
           "type": "boolean"
-        },
-        "created_at": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "updated_at": {
-          "type": "string",
-          "format": "date-time"
         }
       },
       "xml": {
@@ -1030,14 +1091,6 @@
         },
         "slug": {
           "type": "string"
-        },
-        "created_at": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "updated_at": {
-          "type": "string",
-          "format": "date-time"
         }
       },
       "xml": {
@@ -1055,9 +1108,6 @@
           "$ref": "#/definitions/Outlet"
         },
         "name": {
-          "type": "string"
-        },
-        "slug": {
           "type": "string"
         },
         "profile": {
@@ -1080,14 +1130,6 @@
         },
         "about": {
           "type": "string"
-        },
-        "created_at": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "updated_at": {
-          "type": "string",
-          "format": "date-time"
         }
       }
     },
@@ -1128,14 +1170,6 @@
         },
         "content": {
           "type": "string"
-        },
-        "created_at": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "updated_at": {
-          "type": "string",
-          "format": "date-time"
         }
       },
       "xml": {

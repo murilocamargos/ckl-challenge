@@ -16,6 +16,8 @@
         <button class="close-button" aria-label="Close menu" type="button" data-drawer-close>
           <span aria-hidden="true">×</span>
         </button>
+        <div id="logo">
+          <img src="{% static 'images/logo.png' %}" title="CKLabs" /> </div>
         <nav id="nav" role="navigation">
           <h5>API Reference</h5>
           <a href="#introduction">Introduction</a>
@@ -200,7 +202,82 @@
               </div>
             </div>
             <div class="doc-row">
-              <div class="doc-copy"> </div>
+              <div class="doc-copy">
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">name__contains</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Searches for outlets&#39; names containing this parameter.
+                        <strong>Example(s):</strong>
+                      </p>
+                      <ul>
+                        <li>?name__contains=cheese</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">type</div>
+                    <div class="prop-value">
+                      <span class="json-property-type">string</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">in</div>
+                    <div class="prop-value">query</div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">website__contains</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Searches for outlets&#39; websites containing this parameter.
+                        <strong>Example(s):</strong>
+                      </p>
+                      <ul>
+                        <li>?website__contains=cheese</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">type</div>
+                    <div class="prop-value">
+                      <span class="json-property-type">string</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">in</div>
+                    <div class="prop-value">query</div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">description__contains</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Searches for outlets&#39; description containing this parameter.
+                        <strong>Example(s):</strong>
+                      </p>
+                      <ul>
+                        <li>?description__contains=cheese</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">type</div>
+                    <div class="prop-value">
+                      <span class="json-property-type">string</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">in</div>
+                    <div class="prop-value">query</div>
+                  </div>
+                </section>
+              </div>
               <div class="doc-examples"></div>
             </div>
             <div class="doc-row">
@@ -217,7 +294,7 @@
                       <!-- <span class="swagger-global"></span> <span class="json-schema-reference"><a href=""></a></span> -->
                     </div>
                     <div class="prop-value">
-                      <p>List with all stored outlets</p>
+                      <p>List with all stored outlets matching the given parameters</p>
                     </div>
                   </div>
                 </section>
@@ -234,12 +311,9 @@
   {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-    <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-    <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
   }
 ]
 </code></pre>
@@ -303,12 +377,9 @@
                   <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -361,12 +432,9 @@
                   <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -467,12 +535,9 @@
                   <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -558,12 +623,9 @@
                   <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -624,12 +686,9 @@
                   <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -715,12 +774,9 @@
                   <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -773,12 +829,9 @@
                   <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -906,7 +959,203 @@
               </div>
             </div>
             <div class="doc-row">
-              <div class="doc-copy"> </div>
+              <div class="doc-copy">
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">name__contains</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Searches for authors&#39; names containing this parameter.
+                        <strong>Example(s):</strong>
+                      </p>
+                      <ul>
+                        <li>?name__contains=woz</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">type</div>
+                    <div class="prop-value">
+                      <span class="json-property-type">string</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">in</div>
+                    <div class="prop-value">query</div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">about__contains</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Searches for authors&#39; about containing this parameter.
+                        <strong>Example(s):</strong>
+                      </p>
+                      <ul>
+                        <li>?about__contains=tech</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">type</div>
+                    <div class="prop-value">
+                      <span class="json-property-type">string</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">in</div>
+                    <div class="prop-value">query</div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">twitter__contains</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Searches for authors&#39; twitter containing this parameter.
+                        <strong>Example(s):</strong>
+                      </p>
+                      <ul>
+                        <li>?twitter__contains=woz</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">type</div>
+                    <div class="prop-value">
+                      <span class="json-property-type">string</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">in</div>
+                    <div class="prop-value">query</div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">facebook__contains</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Searches for authors&#39; facebook containing this parameter.
+                        <strong>Example(s):</strong>
+                      </p>
+                      <ul>
+                        <li>?facebook__contains=woz</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">type</div>
+                    <div class="prop-value">
+                      <span class="json-property-type">string</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">in</div>
+                    <div class="prop-value">query</div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">linkedin__contains</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Searches for authors&#39; linkedin containing this parameter.
+                        <strong>Example(s):</strong>
+                      </p>
+                      <ul>
+                        <li>?linkedin__contains=woz</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">type</div>
+                    <div class="prop-value">
+                      <span class="json-property-type">string</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">in</div>
+                    <div class="prop-value">query</div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">profile__contains</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Searches for authors&#39; profile containing this parameter.
+                        <strong>Example(s):</strong>
+                      </p>
+                      <ul>
+                        <li>?profile__contains=woz</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">type</div>
+                    <div class="prop-value">
+                      <span class="json-property-type">string</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">in</div>
+                    <div class="prop-value">query</div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">website__contains</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Searches for authors&#39; website containing this parameter.
+                        <strong>Example(s):</strong>
+                      </p>
+                      <ul>
+                        <li>?website__contains=woz</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">type</div>
+                    <div class="prop-value">
+                      <span class="json-property-type">string</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">in</div>
+                    <div class="prop-value">query</div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">outlet</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Search for articles served by this outlet. It is also possible to query multiple outlets.
+                        <strong>Example(s):</strong>
+                      </p>
+                      <ul>
+                        <li>?outlet=1</li>
+                        <li>?outlet=1&amp;outlet=2 ...</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">type</div>
+                    <div class="prop-value">
+                      <span class="json-property-type">integer</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">in</div>
+                    <div class="prop-value">query</div>
+                  </div>
+                </section>
+              </div>
               <div class="doc-examples"></div>
             </div>
             <div class="doc-row">
@@ -942,24 +1191,18 @@
     <span class="hljs-attr">&quot;outlet&quot;</span>: {
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-      <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-      <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+      <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
     },
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;profile&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;twitter&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;linkedin&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;facebook&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-    <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+    <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
   }
 ]
 </code></pre>
@@ -1025,24 +1268,18 @@
   <span class="hljs-attr">&quot;outlet&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-    <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-    <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
   },
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;profile&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;twitter&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;linkedin&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;facebook&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -1097,24 +1334,18 @@
   <span class="hljs-attr">&quot;outlet&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-    <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-    <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
   },
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;profile&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;twitter&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;linkedin&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;facebook&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -1217,24 +1448,18 @@
   <span class="hljs-attr">&quot;outlet&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-    <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-    <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
   },
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;profile&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;twitter&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;linkedin&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;facebook&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -1322,24 +1547,18 @@
   <span class="hljs-attr">&quot;outlet&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-    <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-    <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
   },
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;profile&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;twitter&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;linkedin&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;facebook&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -1402,24 +1621,18 @@
   <span class="hljs-attr">&quot;outlet&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-    <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-    <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
   },
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;profile&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;twitter&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;linkedin&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;facebook&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -1507,24 +1720,18 @@
   <span class="hljs-attr">&quot;outlet&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-    <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-    <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
   },
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;profile&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;twitter&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;linkedin&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;facebook&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -1579,24 +1786,18 @@
   <span class="hljs-attr">&quot;outlet&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-    <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-    <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
   },
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;profile&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;twitter&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;linkedin&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;facebook&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -1724,7 +1925,34 @@
               </div>
             </div>
             <div class="doc-row">
-              <div class="doc-copy"> </div>
+              <div class="doc-copy">
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">name__contains</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Searches for categories&#39; name containing this parameter.
+                        <strong>Example(s):</strong>
+                      </p>
+                      <ul>
+                        <li>?name__contains=tech</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">type</div>
+                    <div class="prop-value">
+                      <span class="json-property-type">string</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">in</div>
+                    <div class="prop-value">query</div>
+                  </div>
+                </section>
+              </div>
               <div class="doc-examples"></div>
             </div>
             <div class="doc-row">
@@ -1758,9 +1986,7 @@
   {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-    <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+    <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
   }
 ]
 </code></pre>
@@ -1824,9 +2050,7 @@
                   <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -1879,9 +2103,7 @@
                   <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -1982,9 +2204,7 @@
                   <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -2070,9 +2290,7 @@
                   <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -2133,9 +2351,7 @@
                   <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -2221,9 +2437,7 @@
                   <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -2276,9 +2490,7 @@
                   <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -2410,34 +2622,10 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">title</div>
-                    </div>
-                    <div class="prop-value">
-                      <p>Searches for articles with this exact title.
-                        <strong>Example(s):</strong>
-                      </p>
-                      <ul>
-                        <li>?title=Edward Snowden’s new app turns any Android phone into a surveillance system</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="prop-row prop-inner">
-                    <div class="prop-name param-label">type</div>
-                    <div class="prop-value">
-                      <span class="json-property-type">string</span>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </div>
-                  </div>
-                  <div class="prop-row prop-inner">
-                    <div class="prop-name param-label">in</div>
-                    <div class="prop-value">query</div>
-                  </div>
-                  <div class="prop-row prop-group">
-                    <div class="prop-name">
                       <div class="prop-title">title__contains</div>
                     </div>
                     <div class="prop-value">
-                      <p>Searches for articles containing this string inside its titles.
+                      <p>Searches for articles&#39; titles containing this parameter.
                         <strong>Example(s):</strong>
                       </p>
                       <ul>
@@ -2461,7 +2649,7 @@
                       <div class="prop-title">title__startswith</div>
                     </div>
                     <div class="prop-value">
-                      <p>Searches for articles whose titles starts with this string.
+                      <p>Searches for articles&#39; titles starting with this parameter.
                         <strong>Example(s):</strong>
                       </p>
                       <ul>
@@ -2485,7 +2673,7 @@
                       <div class="prop-title">title__endswith</div>
                     </div>
                     <div class="prop-value">
-                      <p>Searches for articles whose titles ends with this string.
+                      <p>Searches for articles&#39; titles ending with this parameter.
                         <strong>Example(s):</strong>
                       </p>
                       <ul>
@@ -2497,6 +2685,31 @@
                     <div class="prop-name param-label">type</div>
                     <div class="prop-value">
                       <span class="json-property-type">string</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">in</div>
+                    <div class="prop-value">query</div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">outlet</div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Search for articles served by this outlet. It is also possible to query multiple outlets.
+                        <strong>Example(s):</strong>
+                      </p>
+                      <ul>
+                        <li>?outlet=1</li>
+                        <li>?outlet=1&amp;outlet=2 ...</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name param-label">type</div>
+                    <div class="prop-value">
+                      <span class="json-property-type">integer</span>
                       <span class="json-property-range" title="Value limits"></span>
                     </div>
                   </div>
@@ -2585,31 +2798,6 @@
                   </div>
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">outlet</div>
-                    </div>
-                    <div class="prop-value">
-                      <p>Search for articles served by this outlet. It is also possible to query multiple outlets.
-                        <strong>Example(s):</strong>
-                      </p>
-                      <ul>
-                        <li>?outlet=1</li>
-                        <li>?outlet=1&amp;outlet=2 ...</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="prop-row prop-inner">
-                    <div class="prop-name param-label">type</div>
-                    <div class="prop-value">
-                      <span class="json-property-type">integer</span>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </div>
-                  </div>
-                  <div class="prop-row prop-inner">
-                    <div class="prop-name param-label">in</div>
-                    <div class="prop-value">query</div>
-                  </div>
-                  <div class="prop-row prop-group">
-                    <div class="prop-name">
                       <div class="prop-title">categories</div>
                     </div>
                     <div class="prop-value">
@@ -2670,20 +2858,15 @@
     <span class="hljs-attr">&quot;outlet&quot;</span>: {
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-      <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-      <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+      <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
     },
     <span class="hljs-attr">&quot;categories&quot;</span>: [
       {
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
         <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-        <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+        <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
       }
     ],
     <span class="hljs-attr">&quot;authors&quot;</span>: [
@@ -2692,33 +2875,25 @@
         <span class="hljs-attr">&quot;outlet&quot;</span>: {
           <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
           <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-          <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-          <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+          <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
         },
         <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;profile&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;twitter&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;linkedin&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;facebook&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-        <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+        <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
       }
     ],
     <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;date&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
     <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;thumb&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;content&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-    <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+    <span class="hljs-attr">&quot;content&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
   }
 ]
 </code></pre>
@@ -2784,20 +2959,15 @@
   <span class="hljs-attr">&quot;outlet&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-    <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-    <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
   },
   <span class="hljs-attr">&quot;categories&quot;</span>: [
     {
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-      <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   ],
   <span class="hljs-attr">&quot;authors&quot;</span>: [
@@ -2806,33 +2976,25 @@
       <span class="hljs-attr">&quot;outlet&quot;</span>: {
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
         <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-        <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-        <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+        <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
       },
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;profile&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;twitter&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;linkedin&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;facebook&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-      <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+      <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   ],
   <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;date&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
   <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;thumb&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;content&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;content&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -2887,20 +3049,15 @@
   <span class="hljs-attr">&quot;outlet&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-    <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-    <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
   },
   <span class="hljs-attr">&quot;categories&quot;</span>: [
     {
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-      <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   ],
   <span class="hljs-attr">&quot;authors&quot;</span>: [
@@ -2909,33 +3066,25 @@
       <span class="hljs-attr">&quot;outlet&quot;</span>: {
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
         <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-        <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-        <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+        <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
       },
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;profile&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;twitter&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;linkedin&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;facebook&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-      <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+      <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   ],
   <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;date&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
   <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;thumb&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;content&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;content&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -3038,20 +3187,15 @@
   <span class="hljs-attr">&quot;outlet&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-    <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-    <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
   },
   <span class="hljs-attr">&quot;categories&quot;</span>: [
     {
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-      <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   ],
   <span class="hljs-attr">&quot;authors&quot;</span>: [
@@ -3060,33 +3204,25 @@
       <span class="hljs-attr">&quot;outlet&quot;</span>: {
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
         <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-        <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-        <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+        <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
       },
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;profile&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;twitter&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;linkedin&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;facebook&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-      <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+      <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   ],
   <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;date&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
   <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;thumb&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;content&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;content&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -3174,20 +3310,15 @@
   <span class="hljs-attr">&quot;outlet&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-    <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-    <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
   },
   <span class="hljs-attr">&quot;categories&quot;</span>: [
     {
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-      <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   ],
   <span class="hljs-attr">&quot;authors&quot;</span>: [
@@ -3196,33 +3327,25 @@
       <span class="hljs-attr">&quot;outlet&quot;</span>: {
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
         <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-        <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-        <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+        <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
       },
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;profile&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;twitter&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;linkedin&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;facebook&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-      <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+      <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   ],
   <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;date&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
   <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;thumb&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;content&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;content&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -3285,20 +3408,15 @@
   <span class="hljs-attr">&quot;outlet&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-    <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-    <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
   },
   <span class="hljs-attr">&quot;categories&quot;</span>: [
     {
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-      <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   ],
   <span class="hljs-attr">&quot;authors&quot;</span>: [
@@ -3307,33 +3425,25 @@
       <span class="hljs-attr">&quot;outlet&quot;</span>: {
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
         <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-        <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-        <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+        <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
       },
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;profile&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;twitter&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;linkedin&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;facebook&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-      <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+      <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   ],
   <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;date&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
   <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;thumb&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;content&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;content&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -3421,20 +3531,15 @@
   <span class="hljs-attr">&quot;outlet&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-    <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-    <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
   },
   <span class="hljs-attr">&quot;categories&quot;</span>: [
     {
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-      <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   ],
   <span class="hljs-attr">&quot;authors&quot;</span>: [
@@ -3443,33 +3548,25 @@
       <span class="hljs-attr">&quot;outlet&quot;</span>: {
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
         <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-        <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-        <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+        <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
       },
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;profile&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;twitter&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;linkedin&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;facebook&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-      <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+      <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   ],
   <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;date&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
   <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;thumb&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;content&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;content&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -3524,20 +3621,15 @@
   <span class="hljs-attr">&quot;outlet&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-    <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-    <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
   },
   <span class="hljs-attr">&quot;categories&quot;</span>: [
     {
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-      <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   ],
   <span class="hljs-attr">&quot;authors&quot;</span>: [
@@ -3546,33 +3638,25 @@
       <span class="hljs-attr">&quot;outlet&quot;</span>: {
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
         <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-        <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-        <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+        <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
       },
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;profile&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;twitter&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;linkedin&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;facebook&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-      <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+      <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   ],
   <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;date&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
   <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;thumb&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;content&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;content&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -3696,11 +3780,6 @@
                       <span class="json-property-type">string</span>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="slug">
-                      <span class="json-property-name">slug:</span>
-                      <span class="json-property-type">string</span>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </dt>
                     <dt data-property-name="website">
                       <span class="json-property-name">website:</span>
                       <span class="json-property-type">string</span>
@@ -3716,18 +3795,6 @@
                       <span class="json-property-type">boolean</span>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="created_at">
-                      <span class="json-property-name">created_at:</span>
-                      <span class="json-property-type">string</span>
-                      <span class="json-property-format">(date-time)</span>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </dt>
-                    <dt data-property-name="updated_at">
-                      <span class="json-property-name">updated_at:</span>
-                      <span class="json-property-type">string</span>
-                      <span class="json-property-format">(date-time)</span>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </dt>
                   </dl>
                 </section>
               </div>
@@ -3737,12 +3804,9 @@
                   <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -3779,18 +3843,6 @@
                       <span class="json-property-type">string</span>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="created_at">
-                      <span class="json-property-name">created_at:</span>
-                      <span class="json-property-type">string</span>
-                      <span class="json-property-format">(date-time)</span>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </dt>
-                    <dt data-property-name="updated_at">
-                      <span class="json-property-name">updated_at:</span>
-                      <span class="json-property-type">string</span>
-                      <span class="json-property-format">(date-time)</span>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </dt>
                   </dl>
                 </section>
               </div>
@@ -3800,9 +3852,7 @@
                   <!-- <div class="hljs"> --><pre><code class="hljs lang-json">{
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -3843,11 +3893,6 @@
                       <span class="json-property-type">string</span>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="slug">
-                      <span class="json-property-name">slug:</span>
-                      <span class="json-property-type">string</span>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </dt>
                     <dt data-property-name="profile">
                       <span class="json-property-name">profile:</span>
                       <span class="json-property-type">string</span>
@@ -3883,18 +3928,6 @@
                       <span class="json-property-type">string</span>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="created_at">
-                      <span class="json-property-name">created_at:</span>
-                      <span class="json-property-type">string</span>
-                      <span class="json-property-format">(date-time)</span>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </dt>
-                    <dt data-property-name="updated_at">
-                      <span class="json-property-name">updated_at:</span>
-                      <span class="json-property-type">string</span>
-                      <span class="json-property-format">(date-time)</span>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </dt>
                   </dl>
                 </section>
               </div>
@@ -3906,24 +3939,18 @@
   <span class="hljs-attr">&quot;outlet&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-    <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-    <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
   },
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;profile&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;twitter&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;linkedin&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;facebook&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
@@ -4003,18 +4030,6 @@
                       <span class="json-property-type">string</span>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="created_at">
-                      <span class="json-property-name">created_at:</span>
-                      <span class="json-property-type">string</span>
-                      <span class="json-property-format">(date-time)</span>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </dt>
-                    <dt data-property-name="updated_at">
-                      <span class="json-property-name">updated_at:</span>
-                      <span class="json-property-type">string</span>
-                      <span class="json-property-format">(date-time)</span>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </dt>
                   </dl>
                 </section>
               </div>
@@ -4026,20 +4041,15 @@
   <span class="hljs-attr">&quot;outlet&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-    <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-    <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+    <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
   },
   <span class="hljs-attr">&quot;categories&quot;</span>: [
     {
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-      <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   ],
   <span class="hljs-attr">&quot;authors&quot;</span>: [
@@ -4048,33 +4058,25 @@
       <span class="hljs-attr">&quot;outlet&quot;</span>: {
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;integer (int64)&quot;</span>,
         <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-        <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-        <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+        <span class="hljs-attr">&quot;active&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
       },
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;slug&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;profile&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;twitter&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;linkedin&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;facebook&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;website&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;avatar&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-      <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+      <span class="hljs-attr">&quot;about&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   ],
   <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;date&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
   <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;thumb&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;content&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;created_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>,
-  <span class="hljs-attr">&quot;updated_at&quot;</span>: <span class="hljs-string">&quot;string (date-time)&quot;</span>
+  <span class="hljs-attr">&quot;content&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre>
                   <!-- </div> -->
