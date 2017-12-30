@@ -98,9 +98,9 @@ class TechCrunch(WebScraper):
             # feed, they are separated by a comma.
             author_names = self.get_text_or_attr(item, 'dc:creator').split(',')
             article['authors'] = []
-            for author in author_names:
+            for i in range(len(author_names)):
                 self.article_page = article['url']
-                article['authors'] += [self.get_author(author)]
+                article['authors'] += [self.get_author(author_names[i], i)]
             
 
             # Tries to find the article's thumbnail url
@@ -120,7 +120,7 @@ class TechCrunch(WebScraper):
             yield article
 
     
-    def extract_author_from_page(self, parsed, author_name = ''):
+    def extract_author_from_page(self, parsed, author_idx = 0):
         """
         This method goes back in the article's page and tries to find at the
         author's profile page and twitter handle. This happens because there
@@ -130,27 +130,17 @@ class TechCrunch(WebScraper):
 
         author = {}
 
-        # In case there's more than one author in the page, we just focus on 
-        # the author given by the parameter `author_name`.
-        idx = 0
-
-
         author_url = parsed.xpath('//a[@rel="author"]')
-        if author_url:
+        if author_url and len(author_url) > author_idx:
             author['profile'] = 'https://techcrunch.com'
-
-            # Look for the wanted author
-            for idx in range(len(author_url)):
-                if author_url[idx].text == author_name or author_name == '':
-                    author['profile'] += author_url[idx].get('href')
-                    break
+            author['profile'] += author_url[author_idx].get('href')
         
 
         # Find the twitter handle associated with the i-th author
         twitter_handle = parsed.xpath('//span[@class="twitter-handle"]/a')
-        if twitter_handle and len(twitter_handle) > idx:
+        if twitter_handle and len(twitter_handle) > author_idx:
             author['twitter'] = 'https://twitter.com/'
-            author['twitter'] += twitter_handle[idx].get('href')
+            author['twitter'] += twitter_handle[author_idx].get('href')
 
 
         # Parse the new author's page and send it back to `extract_author`.
@@ -161,11 +151,11 @@ class TechCrunch(WebScraper):
 
         parsed = self.parse(author['profile'], self.author_page_type)
 
-        return self.extract_author(parsed, author_name, author)
+        return self.extract_author(parsed, author_idx, author)
 
 
     
-    def extract_author(self, parsed_html, author_name = '', author = {}):
+    def extract_author(self, parsed_html, author_idx = 0, author = {}):
         """
         This method extract all important informations about an author. These
         informations can be found by its xpath.
@@ -209,6 +199,14 @@ class TechCrunch(WebScraper):
             author['avatar'] = avatar[0].get('src')
 
 
+        # Tries to get the author's profile url
+        if 'profile' not in author:
+            xpath = 'meta[@property="og:url"]'
+            author['profile'] = self.get_text_or_attr(
+                parsed_html, xpath, 'content'
+            )
+
+
         # If the author cannot be fetched from his generated url, we have to
         # check the article's page in order to find him/her. If the page title 
         # is equal to `TechCrunch` it means that the fetched page may not exist.
@@ -217,7 +215,7 @@ class TechCrunch(WebScraper):
         if title and title[0][:10] == 'TechCrunch' and 'flag' not in author:
 
             parsed = self.parse(self.article_page, self.article_page_type)
-            return self.extract_author_from_page(parsed, author_name)
+            return self.extract_author_from_page(parsed, author_idx)
 
 
         if 'flag' in author:

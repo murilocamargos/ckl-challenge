@@ -137,7 +137,7 @@ class WebScraper(object):
         return results
 
 
-    def get_author(self, author_name):
+    def get_author(self, author_name, author_idx = 0):
         """
         This method fetches an author's information by his/her name. If this
         author is already stored, there is no necessity of looking its profile
@@ -171,7 +171,7 @@ class WebScraper(object):
             parsed = self.parse(author_url, self.author_page_type)
 
             # Extract wanted information from his/her page
-            author = self.extract_author(parsed, author_name)
+            author = self.extract_author(parsed, author_idx)
 
 
         author['name'] = author_name
