@@ -46,7 +46,7 @@ class ArticleSerializer(serializers.ModelSerializer):
     categories = serializers.PrimaryKeyRelatedField(
         many = True,
         queryset = Category.objects.all(),
-        required = False
+        required = False,
     )
 
     authors = serializers.PrimaryKeyRelatedField(
@@ -59,6 +59,24 @@ class ArticleSerializer(serializers.ModelSerializer):
         many = False,
         queryset = Outlet.objects.all()
     )
+
+    class Meta:
+        """Meta class to map serializer's fields with the model fields."""
+        model = Article
+        fields = ('id', 'title', 'date', 'url', 'thumb', 'content', 'authors',
+            'outlet', 'categories')
+
+
+
+class ArticleRetrieveSerializer(serializers.ModelSerializer):
+    """
+    This serializer is only for retrieving articles. We wanted to show the
+    nested information of outlet, authors and categories along the article's.
+    """
+
+    categories = CategorySerializer(many = True)
+    authors = AuthorSerializer(many = True)
+    outlet = OutletSerializer(many = False)
 
     class Meta:
         """Meta class to map serializer's fields with the model fields."""

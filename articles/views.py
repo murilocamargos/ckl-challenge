@@ -15,7 +15,7 @@ def api(request):
 class ArticlesRetrieveView(generics.ListAPIView):
     """This class handles the http GET, requests for showing all articles."""
     queryset = Article.objects.all().order_by('-date')
-    serializer_class = ArticleSerializer
+    serializer_class = ArticleRetrieveSerializer
     filter_class = ArticleFilter
 
 
@@ -50,6 +50,12 @@ class ArticleRUDView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
     permission_classes = (IsAdminForUpdateAndDelete,)
+
+    def get_serializer_class(self):
+        """If the user tries to retrieve an article, use specific serializer."""
+        if self.request.method == 'GET':
+            return ArticleRetrieveSerializer
+        return ArticleSerializer
 
 
 class AuthorRUDView(generics.RetrieveUpdateDestroyAPIView):
