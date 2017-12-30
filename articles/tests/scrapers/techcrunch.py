@@ -17,7 +17,7 @@ class TechCrunchScraperTestCase(TestCase):
         self.ws = TechCrunch()
 
         self.expected = {
-            'profile': 'https://techcrunch.com/author/jon-russell/',
+            'profile': 'http://social.techcrunch.com/author/jon-russell/',
             'website': 'https://www.crunchbase.com/person/jon-russell-2',
             'twitter': 'http://twitter.com/jonrussell',
             'linkedin': 'http://th.linkedin.com/in/jmarussell',

@@ -162,7 +162,9 @@ class WebScraper(object):
         ).count()
 
 
-        author = {}
+        author = {
+            'name': author_name,
+        }
         
 
         if search == 0:
@@ -171,10 +173,8 @@ class WebScraper(object):
             parsed = self.parse(author_url, self.author_page_type)
 
             # Extract wanted information from his/her page
-            author = self.extract_author(parsed, author_idx)
+            author.update(self.extract_author(parsed, author_idx))
 
-
-        author['name'] = author_name
 
         return author
 

@@ -151,6 +151,7 @@ if not DEBUG:
     BROKER_TRANSPORT = 'sqs'
     BROKER_TRANSPORT_OPTIONS = {
         'region': 'us-east-2',
+        'visibility_timeout': 18000
     }
     BROKER_USER = os.environ.get('AWS_ACCESS_KEY_ID')
     BROKER_PASSWORD = os.environ.get('AWS_SECRET_ACCESS_KEY')

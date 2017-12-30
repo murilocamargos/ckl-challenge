@@ -9,6 +9,19 @@ class CheesecakeLabs(WebScraper):
     """
     This class provides the required methods to scrape an article from
     CheesecakeLabs outlet. The articles are fetched from their Google+ account.
+    Fetching an article from CheesecakeLabs follows the above steps:
+
+    1) Download the CheesecakeLabs JSON feed at their google plus page. We
+       chose g+ because they only use it to post the newest articles.
+
+    2) Go through every item on this feed getting only the article's url.
+
+    3) Fetch the article url to extract informations such as title, url,
+       pub_date, categories, content, thumb and authors.
+
+    3) Luckily, all the article's AND the author's information can be fetched
+       from this source (article's page);
+
     """
 
     def __init__(self):
@@ -23,6 +36,7 @@ class CheesecakeLabs(WebScraper):
 
     @staticmethod
     def get_feed_url():
+        """Just get the feed url with the correct parameters."""
         api_url = 'https://www.googleapis.com/plus/v1'
         endpoint = '/people/117441029475835978521/activities/public/'
         api_key = 'AIzaSyDlMlRdHLNCDQESKRt6o67jyCmRA1HlGmQ'
@@ -32,8 +46,8 @@ class CheesecakeLabs(WebScraper):
     def article_info(self, parsed):
         """
         All the information needed do add an article can be found in the
-        article's page itself. This method extracts these informations using the 
-        xpath.
+        article's page itself. This method extracts these informations using
+        the xpath.
         """
 
         data = {}
@@ -41,15 +55,20 @@ class CheesecakeLabs(WebScraper):
 
         # If there is no title, it is possible that we're parsing the wrong
         # page (e.g. Youtube's)
-        data['title'] = self.get_text_or_attr(parsed, 'h1[@class="entry__title"]')
-        if data['title'] == []:
+        title = self.get_text_or_attr(parsed, 'h1[@class="entry__title"]')
+        
+        if not title:
             return {}
 
+        data['title'] = title
 
+
+        # Get the categories in which the article was posted
         xpath = 'div[@class="post-categories"]/a'
         data['categories'] = self.get_text_or_attr(parsed, xpath)
         
 
+        # Try to find a thumbnail for the article
         xpath = 'img[@class="cover-media"]'
         data['thumb'] = self.get_text_or_attr(parsed, xpath, 'src')
 
@@ -76,6 +95,7 @@ class CheesecakeLabs(WebScraper):
         about_xpath = './/div[@class="author-description"]/p[2]'
         about = self.get_text_or_attr(parsed, about_xpath)
         
+        # For each found author, get his/her information
         for author in authors:
             data['authors'].append({
                 'profile': self.get_text_or_attr(author, 'a', 'href'),

@@ -7,8 +7,19 @@ import re, dateutil.parser
 
 class Mashable(WebScraper):
     """
-    This class provides the required methods to scrape an article from
-    Mashable outlet.
+    This class provides the required methods to scrape an article from Mashable
+    outlet. Fetching an article from Mashable follows the above steps:
+
+    1) Get the twitter feed from `mashabletech` account. We could just use
+       their XML rss feed, but this contains articles of all categories and we
+       want to focus on tech related articles.
+
+    2) Find all links leading to Mashable website; these are the articles'
+       pages themselves. We parse these pages looking for article information
+       and something that could lead us to the author's profile page.
+
+    3) If we find the author's page, we parse it and store the information.
+    
     """
     
     def __init__(self):
@@ -61,46 +72,52 @@ class Mashable(WebScraper):
 
 
         author_xpath = 'meta[@name="author"]'
-        author = self.get_text_or_attr(parsed, author_xpath, 'content')
+        author_name = self.get_text_or_attr(parsed, author_xpath, 'content')
 
 
-        if not title or not url or not date or not author:
+        if not title or not url or not date or not author_name:
             return {}
 
 
         data['title'] = title
         data['url'] = self.remove_query(url)
+        self.article_page = data['url']
 
 
-        # Check if article already exists
+        # If article's URL is already stored, don't parse it again
         if Article.objects.filter(url = data['url']).count() > 0:
             return {}
         
 
-        # Tries to parse date element
+        # It is interesting to have the publication date as a `dateutil`
+        # object, so we can do whatever manipulation we want.
         try:
             data['date'] = dateutil.parser.parse(date)
         except:
             pass
 
 
+        # Get the article's thumbnail
         thumb_xpath = 'meta[@property="og:image"]'
         thumb = self.get_text_or_attr(parsed, thumb_xpath, 'content')
         if thumb:
             data['thumb'] = thumb
         
 
-        categories_xpath = 'meta[@name="keywords"]'
-        categories = self.get_text_or_attr(parsed, categories_xpath, 'content')
-        if categories:
-            data['categories'] = [filters.title(c) for c in categories.split(', ')]
+        # Get the article's categories as a list
+        cats_xpath = 'meta[@name="keywords"]'
+        cats = self.get_text_or_attr(parsed, cats_xpath, 'content')
+        if cats:
+            data['categories'] = [filters.title(c) for c in cats.split(', ')]
 
 
-        # Add an author name to the list of authors
-        data['authors'] = [{
-            'name': author
-        }]
 
+        # At this point, there is no Mashable article with more than one author
+        # we know about. When this case comes up, we need to deal with it here.
+        # A for loop should suffice.
+        author = {
+            'name': author_name
+        }
 
         # Tries to find his/her profile page
         page_xpath = 'span[@class="author_name"]/a'
@@ -109,13 +126,16 @@ class Mashable(WebScraper):
         if page:
             page = 'http://mashable.com' + page
         else:
-            page = 'http://mashable.com/author/' + filters.slugify(author)
+            page = 'http://mashable.com/author/' + filters.slugify(author_name)
 
         # Set his profile page as the url to be fetched by `get_author`
         self.author_url = page
-        author = self.get_author(author)
+        author.update(self.get_author(author_name, 0))
 
-        data['authors'][0].update(author)
+
+
+        # Add author to the list
+        data['authors'] = [author]
 
 
         # Get article's content
@@ -168,7 +188,7 @@ class Mashable(WebScraper):
             yield article
 
 
-    def extract_author(self, parsed, author_name = ''):
+    def extract_author(self, parsed, author_idx = 0):
         """
         This method extract all important informations about an author. These
         informations can be found by its xpath.

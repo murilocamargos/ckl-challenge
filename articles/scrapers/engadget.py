@@ -7,8 +7,21 @@ import re, dateutil.parser, urllib.parse
 
 class Engadget(WebScraper):
     """
-    This class provides the required methods to scrape an article from
-    Engadget outlet.
+    This class provides the required methods to scrape an article from Engadget
+    outlet. Fetching an article from Engadget follows the above steps:
+
+    1) Download the Engadget XML feed at `feed_url`
+
+    2) Go through every item on this feed and for each one extract informations
+       such as title, url, pub_date, categories, content, thumb and authors.
+
+    3) Luckily, all the article's information can be fetched from this source;
+       but not the author's. Step 3 is called inside step's 2 method to get
+       information about the author(s).
+
+    4) If the author's twitter handle can't be found at hist page, we go back
+       to the article's page and try to find it there.
+
     """
     
     def __init__(self):
@@ -75,8 +88,7 @@ class Engadget(WebScraper):
 
 
             # Get the author attribute and tries to fetch informations about
-            # him/her. An article can have more than one author; on techcrunch's
-            # feed, they are separated by a comma.
+            # him/her. An article can have more than one author
             author_names = self.get_text_or_attr(item, 'dc:creator')
 
             if type(author_names) == str:
@@ -84,9 +96,9 @@ class Engadget(WebScraper):
 
             article['authors'] = []
 
-            for author in author_names:
+            for i in range(len(author_names)):
                 self.article_url = article['url']
-                article['authors'] += [self.get_author(author)]
+                article['authors'] += [self.get_author(author_names[i], i)]
             
 
             # Gets the article's description and strip all html tags from it
@@ -108,7 +120,7 @@ class Engadget(WebScraper):
             yield article
 
 
-    def extract_twitter(self, parsed_html, author_name = ''):
+    def extract_twitter(self, parsed_html, author_idx = 0):
         """
         This method extract the twitter username following the author's name
         from an article page.
@@ -121,14 +133,10 @@ class Engadget(WebScraper):
             return 'https://twitter.com/' + handle[1:]
 
 
-    def extract_author(self, parsed, author_name = ''):
+    def extract_author(self, parsed, author_idx = 0):
         """
         This method extract all important informations about an author. These
         informations can be found by its xpath.
-        
-        A simple way to find the xpath of a given element is using the browser's
-        inspection mode. Chrome has a feature of copying the inspected element's
-        xpath.
         """
 
         author = {}
@@ -166,7 +174,7 @@ class Engadget(WebScraper):
         # extract_twitter method.
         if not 'twitter' in author:
             parsed = self.parse(self.article_url, self.article_page_type)
-            author['twitter'] = self.extract_twitter(parsed, author_name)
+            author['twitter'] = self.extract_twitter(parsed, author_idx)
 
 
         return author

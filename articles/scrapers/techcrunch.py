@@ -77,6 +77,7 @@ class TechCrunch(WebScraper):
 
             url = self.get_text_or_attr(item, 'feedburner:origLink')
             article['url'] = self.remove_query(url)
+            self.article_page = article['url']
 
 
             # If article's URL is already stored, don't parse it again
@@ -99,7 +100,6 @@ class TechCrunch(WebScraper):
             author_names = self.get_text_or_attr(item, 'dc:creator').split(',')
             article['authors'] = []
             for i in range(len(author_names)):
-                self.article_page = article['url']
                 article['authors'] += [self.get_author(author_names[i], i)]
             
 
@@ -139,8 +139,7 @@ class TechCrunch(WebScraper):
         # Find the twitter handle associated with the i-th author
         twitter_handle = parsed.xpath('//span[@class="twitter-handle"]/a')
         if twitter_handle and len(twitter_handle) > author_idx:
-            author['twitter'] = 'https://twitter.com/'
-            author['twitter'] += twitter_handle[author_idx].get('href')
+            author['twitter'] = twitter_handle[author_idx].get('href')
 
 
         # Parse the new author's page and send it back to `extract_author`.
@@ -164,6 +163,9 @@ class TechCrunch(WebScraper):
         inspection mode. Chrome has a feature of copying the inspected element's
         xpath.
         """
+
+        if not 'flag' in author:
+            author = {}
 
 
         # Find all links with this xpath and tries to classify them
@@ -200,19 +202,16 @@ class TechCrunch(WebScraper):
 
 
         # Tries to get the author's profile url
-        if 'profile' not in author:
-            xpath = 'meta[@property="og:url"]'
-            author['profile'] = self.get_text_or_attr(
-                parsed_html, xpath, 'content'
-            )
+        xpath = 'meta[@property="og:url"]'
+        author['profile'] = self.get_text_or_attr(
+            parsed_html, xpath, 'content'
+        )
 
 
         # If the author cannot be fetched from his generated url, we have to
-        # check the article's page in order to find him/her. If the page title 
-        # is equal to `TechCrunch` it means that the fetched page may not exist.
-        title = parsed_html.xpath('//title/text()')
+        # check the article's page in order to find him/her.
 
-        if title and title[0][:10] == 'TechCrunch' and 'flag' not in author:
+        if 'twitter' not in author and 'flag' not in author:
 
             parsed = self.parse(self.article_page, self.article_page_type)
             return self.extract_author_from_page(parsed, author_idx)
