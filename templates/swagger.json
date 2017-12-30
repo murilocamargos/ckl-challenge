@@ -753,9 +753,9 @@
           },
           {
             "in": "query",
-            "name": "outlets",
+            "name": "outlet",
             "type": "integer",
-            "description": "Search for articles served by this outlet. It is also possible to query multiple outlets.\n**Example(s):**\n- ?outlets=1\n- ?outlets=1&outlets=2 ..."
+            "description": "Search for articles served by this outlet. It is also possible to query multiple outlets.\n**Example(s):**\n- ?outlet=1\n- ?outlet=1&outlet=2 ..."
           },
           {
             "in": "query",

@@ -13,12 +13,12 @@ class CheesecakeLabs(WebScraper):
 
     def __init__(self):
         """Some initial parameters for scraping articles and authors"""
-        self.outlet_slug = 'cheesecake-labs'
+        self.outlet_name = 'Cheesecake Labs'
         self.feed_url = self.get_feed_url()
         self.feed_type = 'json'
         self.article_page_type = 'html'
 
-        super(CheesecakeLabs, self).__init__(self.outlet_slug)
+        super(CheesecakeLabs, self).__init__(self.outlet_name)
 
 
     @staticmethod
@@ -74,14 +74,21 @@ class CheesecakeLabs(WebScraper):
         data['authors'] = []
         authors = parsed.xpath('.//span[@class="author vcard"]')
         about_xpath = './/div[@class="author-description"]/p[2]'
+        about = self.get_text_or_attr(parsed, about_xpath)
         
         for author in authors:
             data['authors'].append({
                 'profile': self.get_text_or_attr(author, 'a', 'href'),
                 'avatar': self.get_text_or_attr(author, 'img', 'src'),
-                'name': self.get_text_or_attr(author, 'img', 'alt'),
-                'about': self.get_text_or_attr(parsed, about_xpath)
             })
+
+            name = self.get_text_or_attr(author, 'span')
+            if name and len(name) == 2:
+                data['authors'][0]['name'] = name[1]
+
+            about = parsed.xpath(about_xpath)
+            if about:
+                data['authors'][0]['about'] = self.clear_text(about)
 
 
         return data

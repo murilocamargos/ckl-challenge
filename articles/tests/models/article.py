@@ -26,10 +26,12 @@ class ArticleModelTestCase(TestCase):
 
         self.categories = [
             Category.objects.create(
-                name = 'Culture'
+                name = 'Culture',
+                slug = 'culture'
             ),
             Category.objects.create(
-                name = 'Finance'
+                name = 'Finance',
+                slug = 'finance'
             ),
         ]
 

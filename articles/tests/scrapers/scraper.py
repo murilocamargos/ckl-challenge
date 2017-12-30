@@ -6,7 +6,7 @@ from articles.scrapers.scraper import WebScraper
 
 from mock import patch
 from lxml import html, etree
-import dateutil.parser
+import dateutil.parser, json
 
 class WebScraperTestCase(TestCase):
     """This class defines the test suite for the web scrapers."""
@@ -32,7 +32,10 @@ class WebScraperTestCase(TestCase):
                 {'name': 'Francieli Lima'}
             ],
 
-            'categories': ['Front-end', 'Design']
+            'categories': [
+                {'name': 'Front-end'},
+                {'name': 'Design'}
+            ]
         }
 
 
@@ -70,7 +73,7 @@ class WebScraperTestCase(TestCase):
 
 
     def test_webscraper_classify_links(self):
-        """Tests links social network links classification."""
+        """Tests link cleaning."""
         links = [
             'http://www.facebook.com/matthew.panzarino',
             'http://twitter.com/Panzer',
@@ -145,8 +148,14 @@ class WebScraperTestCase(TestCase):
         """Tests if data check raises exception after removing required."""
         msg = 'You must provide all required parameters to add an article.'
 
-        # Remove authors (required)
+        # Empty author list
         self.article_data['authors'] = []
+
+        with self.assertRaisesMessage(ValueError, msg):
+            self.ws.check_data(self.article_data)
+
+        # Remove author list from dictionary
+        del self.article_data['authors']
 
         with self.assertRaisesMessage(ValueError, msg):
             self.ws.check_data(self.article_data)
@@ -225,7 +234,6 @@ class WebScraperTestCase(TestCase):
         
         author_data = {
             'profile': 'https://cheesecakelabs.com/br/blog/author/danilo',
-            'twitter': 'https://github.com/danilowoz',
             'linkedin': 'https://br.linkedin.com/in/danilowoz',
             'facebook': 'https://www.facebook.com/danilowoz',
             'website': 'https://www.behance.net/danilowoz',
@@ -262,7 +270,6 @@ class WebScraperTestCase(TestCase):
 
         # Clear text from them
         cleared = self.ws.clear_text(tf)
-
 
         content = 'This is all reflected in our great ratings and reviews featured on Cheesecake Labs profile on Clutch with client reviews. The B2B research platform&#8217;s ratings and reviews include a combination of metrics, ranging from experience in the sector and market presence to types of clients and ability to deliver awesome results delivered to clients. Furthermore, Clutch&#8217;s dedicated analysts interviewed our current and past clients to accurately portray our strengths on our profile. We are excited to celebrate these accomplishments and our great clients who showed their appreciation for our work. These honors would not have been possible without the time they took to provide their detailed client reviews.'
 

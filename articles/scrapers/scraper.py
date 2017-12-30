@@ -22,10 +22,10 @@ exceptions = {
 class WebScraper(object):
     """This class provides some helpful method to scraping web content."""
 
-    def __init__(self, slug = None):
-        # Find current outlet by given slug
-        if slug:
-            self.outlet = Outlet.objects.filter(slug = slug).first()
+    def __init__(self, name = None):
+        # Find current outlet by given name
+        if name:
+            self.outlet = Outlet.objects.filter(name = name).first()
 
 
     def create_article(self, data):
@@ -243,7 +243,7 @@ class WebScraper(object):
     def parse(url, content_type = 'xml'):
         """This method downloads and parses a url with a given type."""
         tree = None
-
+        
         if content_type == 'xml':
             response = requests.get(url)
             return etree.fromstring(response.content)
@@ -311,8 +311,8 @@ class WebScraper(object):
 
         accepted = {
             'article': required['article'] + ['categories', 'thumb'],
-            'authors': required['authors'] + ['twitter', 'slug', 'avatar',
-                'facebook', 'linkedin', 'about', 'profile', 'website']
+            'authors': required['authors'] + ['twitter', 'avatar', 'facebook',
+                'linkedin', 'about', 'profile', 'website']
         }
 
 
@@ -358,7 +358,7 @@ class WebScraper(object):
         from a given xpath items.
         """
 
-        if type(items) == str:
+        if type(items) != list:
             items = [items]
 
         content = ''
@@ -369,12 +369,17 @@ class WebScraper(object):
             if isinstance(item, html.HtmlElement):
                 item = WebScraper.html_to_string(item)
 
+            if isinstance(item, etree._Element):
+                item = item.text
+
             if item is not None:
                 # Remove html tags
                 content += strip_tags(item) + ' '
 
         # Remove break lines
-        content = re.sub('\n', '', content)
+        content = re.sub('[\n\t]', '', content)
 
         # Remove double spaces
-        return re.sub('[ ]{2,}', ' ', content).strip()
+        content = re.sub('[ ]{2,}', ' ', content).strip()
+
+        return content

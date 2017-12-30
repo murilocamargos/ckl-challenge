@@ -16,11 +16,8 @@ class AuthorSerializer(serializers.ModelSerializer):
     class Meta:
         """Meta class to map serializer's fields with the model fields."""
         model = Author
-        fields = ('id', 'name', 'slug', 'outlet', 'profile', 'twitter',
-            'linkedin', 'facebook', 'website', 'avatar', 'about',
-            'created_at', 'updated_at')
-        read_only_fields = ('created_at', 'updated_at')
-
+        fields = ('id', 'name', 'outlet', 'avatar', 'about', 'twitter',
+            'facebook', 'linkedin', 'profile', 'website')
 
 
 class OutletSerializer(serializers.ModelSerializer):
@@ -29,9 +26,7 @@ class OutletSerializer(serializers.ModelSerializer):
     class Meta:
         """Meta class to map serializer's fields with the model fields."""
         model = Outlet
-        fields = ('id', 'name', 'slug', 'website', 'description', 'created_at',
-            'updated_at')
-        read_only_fields = ('created_at', 'updated_at')
+        fields = ('id', 'name', 'website', 'description')
 
 
 
@@ -41,8 +36,7 @@ class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         """Meta class to map serializer's fields with the model fields."""
         model = Category
-        fields = ('id', 'name', 'slug', 'created_at', 'updated_at')
-        read_only_fields = ('slug', 'created_at', 'updated_at')
+        fields = ('id', 'name', 'slug')
 
 
 
@@ -70,5 +64,4 @@ class ArticleSerializer(serializers.ModelSerializer):
         """Meta class to map serializer's fields with the model fields."""
         model = Article
         fields = ('id', 'title', 'date', 'url', 'thumb', 'content', 'authors',
-            'outlet', 'categories', 'created_at', 'updated_at')
-        read_only_fields = ('created_at', 'updated_at')
+            'outlet', 'categories')

@@ -24,55 +24,31 @@ logger = get_task_logger(__name__)
 
 
 @periodic_task(
-    run_every=(crontab(hour='*/5')),
-    name="fetch_techcrunch_articles",
+    run_every=(crontab(hour='*/4')),
+    name="fetch_articles",
     ignore_result=True
 )
-def fetch_techcrunch_articles():
-    logger.info("TechCrunch download just started.")
+def fetch_articles():
     ws = TechCrunch()
     if ws.outlet.active:
+        logger.info("TechCrunch download just started.")
         ws.get_articles()
-    logger.info("TechCrunch download finished.")
+        logger.info("TechCrunch download finished.")
 
-
-
-@periodic_task(
-    run_every=(crontab(hour='*/14')),
-    name="fetch_cheesecakelabs_articles",
-    ignore_result=True
-)
-def fetch_cheesecakelabs_articles():
-    logger.info("CheesecakeLabs download just started.")
     ws = CheesecakeLabs()
     if ws.outlet.active:
+        logger.info("CheesecaekLabs download just started.")
         ws.get_articles()
-    logger.info("CheesecakeLabs download finished.")
+        logger.info("CheesecakeLabs download finished.")
 
-
-
-@periodic_task(
-    run_every=(crontab(hour='*/6')),
-    name="fetch_mashable_articles",
-    ignore_result=True
-)
-def fetch_mashable_articles():
-    logger.info("Mashable download just started.")
     ws = Mashable()
     if ws.outlet.active:
+        logger.info("Mashable download just started.")
         ws.get_articles()
-    logger.info("Mashable download finished.")
+        logger.info("Mashable download finished.")
 
-
-
-@periodic_task(
-    run_every=(crontab(hour='*/1')),
-    name="fetch_engadget_articles",
-    ignore_result=True
-)
-def fetch_engadget_articles():
-    logger.info("Engadget download just started.")
     ws = Engadget()
     if ws.outlet.active:
+        logger.info("Engadget download just started.")
         ws.get_articles()
-    logger.info("Engadget download finished.")
+        logger.info("Engadget download finished.")

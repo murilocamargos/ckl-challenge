@@ -7,7 +7,10 @@ class CategoryModelTestCase(TestCase):
     def setUp(self):
         """Defines the test client and other test variables."""
         self.name = "CKL Rocks"
-        self.category = Category(name = self.name)
+        self.category = Category(
+            name = self.name,
+            slug = 'ckl-rocks'
+        )
 
 
     def test_category_can_create(self):
@@ -23,14 +26,20 @@ class CategoryModelTestCase(TestCase):
         self.assertEqual(str(self.category), self.name)
 
 
-    def test_category_default_slug(self):
-        """Tests if the category's name is slugified by default."""
+    def test_category_can_update_patched(self):
+        """Tests if a category can be updated or patched."""
         self.category.save()
-        self.assertEqual(self.category.slug, 'ckl-rocks')
+
+        self.category.slug = 'ckl'
+        self.category.save()
+
+        search = Category.objects.filter(slug = 'ckl').count()
+        self.assertEqual(search, 1)
 
 
-    def test_category_defined_slug(self):
-        """Tests if the model accepts a user defined slug."""
-        self.category.slug = 'cheesecake'
+    def test_category_can_delete(self):
+        """Tests if a category can be deleted."""
         self.category.save()
-        self.assertEqual(self.category.slug, 'cheesecake')
+        self.category.delete()
+        search = Category.objects.filter(name = self.name).count()
+        self.assertEqual(search, 0)

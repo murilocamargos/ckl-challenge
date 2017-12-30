@@ -8,18 +8,40 @@ import re, dateutil.parser
 class TechCrunch(WebScraper):
     """
     This class provides the required methods to scrape an article from
-    TechCrunch outlet.
+    TechCrunch outlet. Fetching an article from TechCrunch follows the above
+    steps:
+
+    1) Download the TechCrunch XML feed at `feed_url`
+
+    2) Go through every item on this feed and for each one extract informations
+       such as title, url, pub_date, categories, content, thumb and authors.
+
+    3) Luckily, all the article's information can be fetched from this source;
+       but not the author's. Step 3 is called inside step's 2 method to get
+       information about the author(s).
+
+    4) The author profile page is given by slugification at `get_authors_page`.
+       This page is parsed and his/her information may or may not be there.
+       Generally it is, but if it's not, it can be that just slugifying his/her
+       name and appending to a prefix is not good enough; so we go back to the
+       article's page to try to find the authors.
+
+    5) Generally at the article's page we can find the author's name, profile
+       and twitter handle. So we go back to the found profile page to try to
+       find more information such as their avatar, other social medias and text
+       written by them.
+
     """
     
     def __init__(self):
         # Some initial parameters for scraping articles and authors
-        self.outlet_slug = 'techcrunch'
+        self.outlet_name = 'TechCrunch'
         self.feed_url = 'http://feeds.feedburner.com/TechCrunch/'
         self.feed_type = 'xml'
         self.author_page_type = 'html'
         self.article_page_type = 'html'
 
-        super(TechCrunch, self).__init__(self.outlet_slug)
+        super(TechCrunch, self).__init__(self.outlet_name)
 
     
     def get_authors_page(self, author_name):
@@ -77,7 +99,7 @@ class TechCrunch(WebScraper):
             author_names = self.get_text_or_attr(item, 'dc:creator').split(',')
             article['authors'] = []
             for author in author_names:
-                self.article_url = article['url']
+                self.article_page = article['url']
                 article['authors'] += [self.get_author(author)]
             
 
@@ -98,34 +120,52 @@ class TechCrunch(WebScraper):
             yield article
 
     
-    def extract_twitter(self, parsed_html, author_name = ''):
+    def extract_author_from_page(self, parsed, author_name = ''):
         """
-        This method extract the twitter username following the author's name
-        from an article page.
+        This method goes back in the article's page and tries to find at the
+        author's profile page and twitter handle. This happens because there
+        are times when the XML feed gives a name that can't be correctly
+        transformed in the author's page url by slugification.
         """
-        meta = parsed_html.xpath("/html/head/meta[@name='sailthru.author']")
 
-        # Regex to match twitter usernames
-        regex = '(?<=^|(?<=[^a-zA-Z0-9-_\.]))@([A-Za-z]+[A-Za-z0-9]+)'
+        author = {}
 
-        if meta:
-            content = meta[0].get('content')
-            found, twitter = None, None
-            
-            for author in content.split('/span')[:-1]:
-
-                if author_name in author or author_name == '':
-                    found = author
-                    twitter = re.findall(regex, author)
-
-            if found and twitter:
-                return 'https://twitter.com/' + twitter[0]
+        # In case there's more than one author in the page, we just focus on 
+        # the author given by the parameter `author_name`.
+        idx = 0
 
 
-        return ''
+        author_url = parsed.xpath('//a[@rel="author"]')
+        if author_url:
+            author['profile'] = 'https://techcrunch.com'
+
+            # Look for the wanted author
+            for idx in range(len(author_url)):
+                if author_url[idx].text == author_name or author_name == '':
+                    author['profile'] += author_url[idx].get('href')
+                    break
+        
+
+        # Find the twitter handle associated with the i-th author
+        twitter_handle = parsed.xpath('//span[@class="twitter-handle"]/a')
+        if twitter_handle and len(twitter_handle) > idx:
+            author['twitter'] = 'https://twitter.com/'
+            author['twitter'] += twitter_handle[idx].get('href')
+
+
+        # Parse the new author's page and send it back to `extract_author`.
+        # In case the profile page found on article's page does not exist as
+        # well, this will be going back and forth on an infinite basis. To exit
+        # this loop, we added a flag on the author dict.
+        author['flag'] = 'exit'
+
+        parsed = self.parse(author['profile'], self.author_page_type)
+
+        return self.extract_author(parsed, author_name, author)
+
 
     
-    def extract_author(self, parsed_html, author_name = ''):
+    def extract_author(self, parsed_html, author_name = '', author = {}):
         """
         This method extract all important informations about an author. These
         informations can be found by its xpath.
@@ -135,12 +175,10 @@ class TechCrunch(WebScraper):
         xpath.
         """
 
-        author = {}
-
 
         # Find all links with this xpath and tries to classify them
         links = []
-        xpath = '/html/body/div[4]/div[2]/div[1]/div/div[1]/div[1]/ul/li/a'
+        xpath = '//div[@class="profile cf"]/div/ul/li/a'
 
         for a in parsed_html.xpath(xpath):
             links += [a.get('href')]
@@ -150,32 +188,40 @@ class TechCrunch(WebScraper):
 
 
         # Get description text provided by the author
-        xpath = '/html/body/div[4]/div[2]/div[1]/div/div[1]/div[2]/p'
+        xpath = '//div[contains(@class, "profile-text")]/p'
         items = parsed_html.xpath(xpath)
         author['about'] = self.clear_text(items)
 
 
         # Get Crunchbase url profile
-        xpath = '/html/body/div[4]/div[2]/div[1]/div/div[1]/div[2]/a'
-        profile = parsed_html.xpath(xpath)
+        xpath = '//div[contains(@class, "profile-text")]/a'
+        website = parsed_html.xpath(xpath)
 
-        if profile:
-            author['profile'] = profile[0].get('href')
+        if website:
+            author['website'] = website[0].get('href')
 
 
         # Get his/her avatar url
-        xpath = '/html/body/div[4]/div[2]/div[1]/div/div[1]/div[1]/img'
+        xpath = '//div[@class="profile cf"]/div/img'
         avatar = parsed_html.xpath(xpath)
 
         if avatar:
             author['avatar'] = avatar[0].get('src')
 
 
-        # Check the article's page for his/her twitter if there is an
-        # extract_twitter method.
-        if not 'twitter' in author:
-            parsed = self.parse(self.article_url, self.article_page_type)
-            author['twitter'] = self.extract_twitter(parsed, author_name)
+        # If the author cannot be fetched from his generated url, we have to
+        # check the article's page in order to find him/her. If the page title 
+        # is equal to `TechCrunch` it means that the fetched page may not exist.
+        title = parsed_html.xpath('//title/text()')
+
+        if title and title[0][:10] == 'TechCrunch' and 'flag' not in author:
+
+            parsed = self.parse(self.article_page, self.article_page_type)
+            return self.extract_author_from_page(parsed, author_name)
+
+
+        if 'flag' in author:
+            del author['flag']
 
 
         return author

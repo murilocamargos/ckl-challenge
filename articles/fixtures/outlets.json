@@ -4,11 +4,8 @@
         "pk": 1,
         "fields": {
             "name": "TechCrunch",
-            "slug": "techcrunch",
             "website": "https://techcrunch.com/",
-            "description": "TechCrunch is a leading technology media property, dedicated to obsessively profiling startups, reviewing new Internet products, and breaking tech news.\n\nFounded in June 2005, TechCrunch and its network of websites now reach over 12 million unique visitors and draw more than 37 million page views per month. The TechCrunch community includes more than 2 million friends and followers on Twitter, Facebook, LinkedIn, Google and other social media.\n\nCrunchbase, TechCrunch's open database about start-up companies, people and investors, has become the leading statistical resource for technology companies and transactions.\n\nThe company hosts major conferences and events, including the Disrupt series, The Crunchies Awards, and various meet-ups worldwide serving as community platforms for industry conversation and collaboration.\n\nHead over to our Advertise page to learn more about how you can get involved with our amazing community of readers.",
-            "created_at": "2017-12-22T00:00:00+00:00",
-            "updated_at": "2017-12-22T00:00:00+00:00"
+            "description": "TechCrunch is a leading technology media property, dedicated to obsessively profiling startups, reviewing new Internet products, and breaking tech news.\n\nFounded in June 2005, TechCrunch and its network of websites now reach over 12 million unique visitors and draw more than 37 million page views per month. The TechCrunch community includes more than 2 million friends and followers on Twitter, Facebook, LinkedIn, Google and other social media.\n\nCrunchbase, TechCrunch's open database about start-up companies, people and investors, has become the leading statistical resource for technology companies and transactions.\n\nThe company hosts major conferences and events, including the Disrupt series, The Crunchies Awards, and various meet-ups worldwide serving as community platforms for industry conversation and collaboration.\n\nHead over to our Advertise page to learn more about how you can get involved with our amazing community of readers."
         }
     },
     {
@@ -16,11 +13,8 @@
         "pk": 2,
         "fields": {
             "name": "Cheesecake Labs",
-            "slug": "cheesecake-labs",
             "website": "https://cheesecakelabs.com/",
-            "description": "A Cheesecake Labs foi fundada em dezembro de 2013 por quatro grandes amigos que estavam trabalhando juntos desde 2008. Depois de se mudarem para a mesma casa em 2012 para trabalhar em um projeto divertido de iOS chamado Dyfocus, Alexandre, Cássio, Marcelo e Victor conseguiram a marca de 10 mil usuários registrados em menos de um ano. Já que os fundadores realmente gostavam de trabalhar juntos, eles optaram por pivotar para um negócio mais sólido, em uma área na qual conseguiam bolar uma estratégia de monetização mais clara. Como Victor foi um dos primeiros desenvolvedores da Uber e tinha alguns ótimos contatos no Vale do Silício, os quatro fundadores decidiram começar a desenvolver produtos para empresas dos EUA.",
-            "created_at": "2017-12-22T00:00:00+00:00",
-            "updated_at": "2017-12-22T00:00:00+00:00"
+            "description": "A Cheesecake Labs foi fundada em dezembro de 2013 por quatro grandes amigos que estavam trabalhando juntos desde 2008. Depois de se mudarem para a mesma casa em 2012 para trabalhar em um projeto divertido de iOS chamado Dyfocus, Alexandre, Cássio, Marcelo e Victor conseguiram a marca de 10 mil usuários registrados em menos de um ano. Já que os fundadores realmente gostavam de trabalhar juntos, eles optaram por pivotar para um negócio mais sólido, em uma área na qual conseguiam bolar uma estratégia de monetização mais clara. Como Victor foi um dos primeiros desenvolvedores da Uber e tinha alguns ótimos contatos no Vale do Silício, os quatro fundadores decidiram começar a desenvolver produtos para empresas dos EUA."
         }
     },
     {
@@ -28,11 +22,8 @@
         "pk": 3,
         "fields": {
             "name": "Mashable",
-            "slug": "mashable",
             "website": "https://mashable.com/",
-            "description": "Mashable is a global, multi-platform media and entertainment company. Powered by its own proprietary technology, Mashable is the go-to source for tech, digital culture and entertainment content for its dedicated and influential audience around the globe.",
-            "created_at": "2017-12-22T00:00:00+00:00",
-            "updated_at": "2017-12-22T00:00:00+00:00"
+            "description": "Mashable is a global, multi-platform media and entertainment company. Powered by its own proprietary technology, Mashable is the go-to source for tech, digital culture and entertainment content for its dedicated and influential audience around the globe."
         }
     },
     {
@@ -40,11 +31,8 @@
         "pk": 4,
         "fields": {
             "name": "Engadget",
-            "slug": "engadget",
             "website": "https://engadget.com/",
-            "description": "Engadget is the original home for technology news and reviews. Since our founding in 2004, we've grown from an exhaustive source for consumer tech news to a global multimedia organization covering the intersection of technology, gaming and entertainment. Today, Engadget hosts the archives and expertise of early digital publishing players like Joystiq, TUAW and gdgt, and produces the Internet's most compelling videos, reviews, features and breaking news about the people, products and ideas shaping our world.\n\nAfter 13 years in the game, we're leveraging our history to bring the future into focus.",
-            "created_at": "2017-12-22T00:00:00+00:00",
-            "updated_at": "2017-12-22T00:00:00+00:00"
+            "description": "Engadget is the original home for technology news and reviews. Since our founding in 2004, we've grown from an exhaustive source for consumer tech news to a global multimedia organization covering the intersection of technology, gaming and entertainment. Today, Engadget hosts the archives and expertise of early digital publishing players like Joystiq, TUAW and gdgt, and produces the Internet's most compelling videos, reviews, features and breaking news about the people, products and ideas shaping our world.\n\nAfter 13 years in the game, we're leveraging our history to bring the future into focus."
         }
     }
 ]

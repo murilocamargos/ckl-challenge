@@ -15,6 +15,8 @@ of them.
 
 from articles.models import Outlet, Article
 
+all_deltas = []
+
 for outlet in Outlet.objects.all():
 
     articles = Article.objects.filter(outlet_id = outlet.id)\
@@ -28,7 +30,11 @@ for outlet in Outlet.objects.all():
         deltas += [delta.seconds]
 
 
+    all_deltas += deltas
+
+
     hours = (sum(deltas)/len(deltas))/60/60
-
-
     print(outlet.name + ': ' + str(hours))
+
+hours = (sum(all_deltas)/len(all_deltas))/60/60
+print('Total: ' + str(hours))

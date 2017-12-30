@@ -30,8 +30,7 @@ class AuthorViewTestCase(TestCase):
     def test_api_add_author_unlogged(self):
         """Test if an unlogged user can add an author."""
         data = {
-            'name': 'Linus Torvalds',
-            'slug': 'linus-torvalds'
+            'name': 'Linus Torvalds'
         }
 
         request = self.client.post(reverse('author-create'), data)
@@ -80,7 +79,6 @@ class AuthorViewTestCase(TestCase):
 
         data = {
             'name': 'Donald Knuth',
-            'slug': 'donald-knuth'
         }
 
         request = self.client.post(reverse('author-create'), data)

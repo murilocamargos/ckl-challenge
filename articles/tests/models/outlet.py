@@ -23,14 +23,21 @@ class OutletModelTestCase(TestCase):
         self.assertEqual(str(self.outlet), self.name)
 
 
-    def test_outlet_default_slug(self):
-        """Tests if the outlet's name is slugified by default."""
+    def test_outlet_can_update_patched(self):
+        """Tests if an outlet can be updated or patched."""
         self.outlet.save()
-        self.assertEqual(self.outlet.slug, 'tech-crunch')
+
+        self.outlet.website = 'tcrunch.com'
+        self.outlet.save()
+
+        search = Outlet.objects.filter(website = 'tcrunch.com').count()
+        self.assertEqual(search, 1)
 
 
-    def test_outlet_defined_slug(self):
-        """Tests if the model accepts a user defined slug."""
-        self.outlet.slug = 'tcrunch'
+    def test_outlet_can_delete(self):
+        """Tests if an outlet can be hard deleted."""
         self.outlet.save()
-        self.assertEqual(self.outlet.slug, 'tcrunch')
+        self.outlet.delete()
+        search = Outlet.objects.filter(name = self.name)
+        self.assertEqual(search.count(), 1)
+        self.assertEqual(search.first().active, False)

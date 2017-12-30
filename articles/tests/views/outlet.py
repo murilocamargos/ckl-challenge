@@ -30,7 +30,6 @@ class OutletViewTestCase(TestCase):
         """Test if an unlogged user can add an outlet."""
         data = {
             'name': 'Mashable',
-            'slug': 'mashable',
             'website': 'mashable.com',
         }
 
@@ -80,7 +79,6 @@ class OutletViewTestCase(TestCase):
 
         data = {
             'name': 'SiliconBeat',
-            'slug': 'siliconbeat',
             'website': 'siliconbeat.com',
         }
 

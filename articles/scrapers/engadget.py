@@ -13,7 +13,7 @@ class Engadget(WebScraper):
     
     def __init__(self):
         # Some initial parameters for scraping articles and authors
-        self.outlet_slug = 'engadget'
+        self.outlet_name = 'Engadget'
         self.feed_url = 'http://www.engadget.com/rss.xml'
         self.feed_type = 'xml'
         self.author_page_type = 'html'
@@ -22,7 +22,7 @@ class Engadget(WebScraper):
         # On Engadget's XML, the dc namespace has https over http
         self.nsmap = {'dc': 'https://purl.org/dc/elements/1.1/'}
 
-        super(Engadget, self).__init__(self.outlet_slug)
+        super(Engadget, self).__init__(self.outlet_name)
 
     
     def get_authors_page(self, author_name):
@@ -143,7 +143,7 @@ class Engadget(WebScraper):
 
 
         # Get description text provided by the author
-        xpath = './/div/div/div/p'
+        xpath = './/div[@class="t-d3"]'
         items = parsed.xpath(xpath)
         author['about'] = self.clear_text(items)
 

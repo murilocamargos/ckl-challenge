@@ -13,13 +13,13 @@ class Mashable(WebScraper):
     
     def __init__(self):
         # Some initial parameters for scraping articles and authors
-        self.outlet_slug = 'mashable'
+        self.outlet_name = 'Mashable'
         self.feed_url = 'mashabletech'
         self.feed_type = 'twitter'
         self.author_page_type = 'html'
         self.article_page_type = 'html'
 
-        super(Mashable, self).__init__(self.outlet_slug)
+        super(Mashable, self).__init__(self.outlet_name)
 
 
     def get_authors_page(self, author_name):
@@ -102,12 +102,12 @@ class Mashable(WebScraper):
         }]
 
 
-        # Tries to find his profile page
+        # Tries to find his/her profile page
         page_xpath = 'span[@class="author_name"]/a'
         page = self.get_text_or_attr(parsed, page_xpath, 'href')
 
         if page:
-            page = 'http://mashable.com/' + page
+            page = 'http://mashable.com' + page
         else:
             page = 'http://mashable.com/author/' + filters.slugify(author)
 
@@ -183,6 +183,9 @@ class Mashable(WebScraper):
         # Find all links with this xpath and tries to classify them
         links_xpath = 'div[@class="profile-networks"]/a'
         links = self.get_text_or_attr(parsed, links_xpath, 'href')
+        
+        if type(links) == str:
+            links = [links]
         
         for social in self.classify_links(links):
             author[social[0]] = social[1]
