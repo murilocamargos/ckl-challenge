@@ -24,7 +24,7 @@ logger = get_task_logger(__name__)
 
 
 @periodic_task(
-    run_every=(crontab(hour='*/4')),
+    run_every=(crontab(minute=0,hour='0,6,8,10,12,14,16,18,20,22')),
     name="fetch_articles",
     ignore_result=True
 )
