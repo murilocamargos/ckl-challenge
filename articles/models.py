@@ -1,12 +1,11 @@
 from django.db import models
-from django.template.defaultfilters import slugify
 
 
-
-class CustomQuerySet(models.QuerySet):
+class ActiveQuerySet(models.QuerySet): #pylint: disable=too-few-public-methods
     """This class handles queryset model soft delete."""
     def delete(self):
-        self.update(active = False)
+        """Handles soft deletion by just setting activation flag to False."""
+        self.update(active=False)
 
 
 
@@ -14,10 +13,11 @@ class ActiveManager(models.Manager):
     """This class manages models that cannot be hard delete."""
     def active(self):
         """Get all active objects of a given model."""
-        return self.model.objects.filter(active = True)
+        return self.model.objects.filter(active=True)
 
     def get_queryset(self):
-        return CustomQuerySet(self.model, using=self._db)
+        """Use queryset designed for soft deletion."""
+        return ActiveQuerySet(self.model, using=self._db)
 
 
 

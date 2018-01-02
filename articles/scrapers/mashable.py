@@ -3,7 +3,6 @@ import django.template.defaultfilters as filters
 from articles.scrapers.scraper import WebScraper
 from articles.models import Article
 
-import re, dateutil.parser
 
 class Mashable(WebScraper):
     """
@@ -19,18 +18,17 @@ class Mashable(WebScraper):
        and something that could lead us to the author's profile page.
 
     3) If we find the author's page, we parse it and store the information.
-    
     """
-    
+
     def __init__(self):
         # Some initial parameters for scraping articles and authors
-        self.outlet_name = 'Mashable'
+        super(Mashable, self).__init__('Mashable')
+
         self.feed_url = 'mashabletech'
         self.feed_type = 'twitter'
         self.author_page_type = 'html'
         self.article_page_type = 'html'
-
-        super(Mashable, self).__init__(self.outlet_name)
+        self.author_url = None
 
 
     def get_authors_page(self, author_name):
@@ -39,9 +37,9 @@ class Mashable(WebScraper):
         previously at the `author_url` attribute; but it can only be used once.
         """
 
-        if hasattr(self, 'author_url') and self.author_url != '':
+        if self.author_url:
             # Use and remove `author_url`
-            url, self.author_url = self.author_url, ''
+            url, self.author_url = self.author_url, None
 
             return url
 
@@ -58,55 +56,45 @@ class Mashable(WebScraper):
         data = {}
 
 
-        # Gets the title, url, pub_date and author's name in the metatags
-        title_xpath = 'meta[@property="og:title"]'
-        title = self.get_text_or_attr(parsed, title_xpath, 'content')
+        # Gets the title, url and pub_date in the metatags
+        data['title'] = self.get_text_or_attr(parsed, \
+            'meta[@property="og:title"]', 'content')
+
+        data['url'] = self.remove_query(self.get_text_or_attr(parsed, \
+            'meta[@property="og:url"]', 'content'))
+
+        data['date'] = self.get_text_or_attr(parsed, \
+            'meta[@property="og:article:published_time"]', 'content')
+
+        data['date'] = self.parse_datetime_passing_errors(data['date'])
 
 
-        url_xpath = 'meta[@property="og:url"]'
-        url = self.get_text_or_attr(parsed, url_xpath, 'content')
-
-
-        date_xpath = 'meta[@property="og:article:published_time"]'
-        date = self.get_text_or_attr(parsed, date_xpath, 'content')
-
-
-        author_xpath = 'meta[@name="author"]'
-        author_name = self.get_text_or_attr(parsed, author_xpath, 'content')
-
-
-        if not title or not url or not date or not author_name:
+        if not data['title'] or not data['url'] or not data['date']:
             return {}
 
 
-        data['title'] = title
-        data['url'] = self.remove_query(url)
-        self.article_page = data['url']
+        # Tries to get the author's name
+        author_name = self.get_text_or_attr(parsed, 'meta[@name="author"]', \
+            'content')
 
 
         # If article's URL is already stored, don't parse it again
-        if Article.objects.filter(url = data['url']).count() > 0:
+        if Article.objects.filter(url=data['url']).count() > 0:
             return {}
-        
-
-        # It is interesting to have the publication date as a `dateutil`
-        # object, so we can do whatever manipulation we want.
-        try:
-            data['date'] = dateutil.parser.parse(date)
-        except:
-            pass
 
 
         # Get the article's thumbnail
-        thumb_xpath = 'meta[@property="og:image"]'
-        thumb = self.get_text_or_attr(parsed, thumb_xpath, 'content')
+        thumb = self.get_text_or_attr(parsed, 'meta[@property="og:image"]', \
+            'content')
+
         if thumb:
             data['thumb'] = thumb
-        
+
 
         # Get the article's categories as a list
-        cats_xpath = 'meta[@name="keywords"]'
-        cats = self.get_text_or_attr(parsed, cats_xpath, 'content')
+        cats = self.get_text_or_attr(parsed, 'meta[@name="keywords"]', \
+            'content')
+
         if cats:
             data['categories'] = [filters.title(c) for c in cats.split(', ')]
 
@@ -120,18 +108,19 @@ class Mashable(WebScraper):
         }
 
         # Tries to find his/her profile page
-        page_xpath = 'span[@class="author_name"]/a'
-        page = self.get_text_or_attr(parsed, page_xpath, 'href')
+        page = self.get_text_or_attr(parsed, 'span[@class="author_name"]/a', \
+            'href')
 
+        prefix = 'http://mashable.com'
+
+        # By default, the author's url profile is given by his/her name
+        # slugified, but if his page is found at the parsed HTML, use it.
+        self.author_url = prefix + '/author/' + filters.slugify(author_name)
         if page:
-            page = 'http://mashable.com' + page
-        else:
-            page = 'http://mashable.com/author/' + filters.slugify(author_name)
+            self.author_url = prefix + page
 
         # Set his profile page as the url to be fetched by `get_author`
-        self.author_url = page
         author.update(self.get_author(author_name, 0))
-
 
 
         # Add author to the list
@@ -139,8 +128,7 @@ class Mashable(WebScraper):
 
 
         # Get article's content
-        xpath = './/section[@class="article-content blueprint"]/p'
-        items = parsed.xpath(xpath)
+        items = parsed.xpath('.//section[@class="article-content blueprint"]/p')
         data['content'] = self.clear_text(items)
 
 
@@ -179,20 +167,22 @@ class Mashable(WebScraper):
             # In case there is no pub_date in the article's page, use the pub
             # date of the twitter status itself.
             if 'date' not in article:
-                try:
-                    article['date'] = dateutil.parser.parse(status.created_at)
-                except:
+                date = self.parse_datetime_passing_errors(status.created_at)
+
+                if not date:
                     continue
+
+                article['date'] = date
 
 
             yield article
 
 
-    def extract_author(self, parsed, author_idx = 0):
+    def extract_author(self, parsed, author_idx=0):
         """
         This method extract all important informations about an author. These
         informations can be found by its xpath.
-        
+
         A simple way to find the xpath of a given element is using the browser's
         inspection mode. Chrome has a feature of copying the inspected element's
         xpath.
@@ -201,19 +191,18 @@ class Mashable(WebScraper):
         author = {}
 
         # Find all links with this xpath and tries to classify them
-        links_xpath = 'div[@class="profile-networks"]/a'
-        links = self.get_text_or_attr(parsed, links_xpath, 'href')
-        
-        if type(links) == str:
+        links = self.get_text_or_attr(parsed, \
+            'div[@class="profile-networks"]/a', 'href')
+
+        if isinstance(links, str):
             links = [links]
-        
+
         for social in self.classify_links(links):
             author[social[0]] = social[1]
 
 
         # Get description text provided by the author
-        xpath = './/div[@class="profile-about"]'
-        items = parsed.xpath(xpath)
+        items = parsed.xpath('.//div[@class="profile-about"]')
         author['about'] = self.clear_text(items)
 
 

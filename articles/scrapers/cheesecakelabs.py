@@ -1,9 +1,7 @@
-from django.template.defaultfilters import slugify
+import re
 
 from articles.scrapers.scraper import WebScraper
 from articles.models import Article
-
-import re, dateutil.parser
 
 class CheesecakeLabs(WebScraper):
     """
@@ -21,17 +19,15 @@ class CheesecakeLabs(WebScraper):
 
     3) Luckily, all the article's AND the author's information can be fetched
        from this source (article's page);
-
     """
 
     def __init__(self):
         """Some initial parameters for scraping articles and authors"""
-        self.outlet_name = 'Cheesecake Labs'
+        super(CheesecakeLabs, self).__init__('Cheesecake Labs')
+
         self.feed_url = self.get_feed_url()
         self.feed_type = 'json'
         self.article_page_type = 'html'
-
-        super(CheesecakeLabs, self).__init__(self.outlet_name)
 
 
     @staticmethod
@@ -56,7 +52,7 @@ class CheesecakeLabs(WebScraper):
         # If there is no title, it is possible that we're parsing the wrong
         # page (e.g. Youtube's)
         title = self.get_text_or_attr(parsed, 'h1[@class="entry__title"]')
-        
+
         if not title:
             return {}
 
@@ -66,7 +62,7 @@ class CheesecakeLabs(WebScraper):
         # Get the categories in which the article was posted
         xpath = 'div[@class="post-categories"]/a'
         data['categories'] = self.get_text_or_attr(parsed, xpath)
-        
+
 
         # Try to find a thumbnail for the article
         xpath = 'img[@class="cover-media"]'
@@ -75,17 +71,14 @@ class CheesecakeLabs(WebScraper):
 
         # Tries to parse date element
         pub_date = self.get_text_or_attr(parsed, 'time', 'datetime')
-        try:
-            data['date'] = dateutil.parser.parse(pub_date)
-        except:
-            pass
+        data['date'] = self.parse_datetime_passing_errors(pub_date)
 
 
         # Get article's contents
         content = parsed.xpath('/html/head')
         if content:
             og_description = 'meta[@property="og:description"]'
-            data['content'] = self.get_text_or_attr(content[0], 
+            data['content'] = self.get_text_or_attr(content[0], \
                 og_description, 'content').strip()
 
 
@@ -94,7 +87,7 @@ class CheesecakeLabs(WebScraper):
         authors = parsed.xpath('.//span[@class="author vcard"]')
         about_xpath = './/div[@class="author-description"]/p[2]'
         about = self.get_text_or_attr(parsed, about_xpath)
-        
+
         # For each found author, get his/her information
         for author in authors:
             data['authors'].append({
@@ -135,10 +128,10 @@ class CheesecakeLabs(WebScraper):
 
                 # If it is a note, tries to find a cheesecakelabs url in it
                 if item['object']['objectType'] == 'note':
-                    
-                    pattern = 'cheesecakelabs\.com[^"]{1,}'
+
+                    pattern = r'cheesecakelabs\.com[^"]{1,}'
                     urls = re.findall(pattern, item['object']['content'])
-                    
+
                     if urls:
                         url = 'http://' + urls[0]
 
@@ -149,18 +142,20 @@ class CheesecakeLabs(WebScraper):
             else:
 
                 # We just need a url
+                found_article = {}
                 for attach in item['object']['attachments']:
                     if attach['objectType'] == 'article':
+                        found_article = attach
                         break
 
-                if 'url' not in attach:
+                if 'url' not in found_article:
                     continue
 
-                url = self.remove_query(attach['url'])
+                url = self.remove_query(found_article['url'])
 
 
             # We don't want to add again an article, so we search for it
-            if Article.objects.filter(url = url).count() > 0:
+            if Article.objects.filter(url=url).count() > 0:
                 continue
 
 
@@ -178,11 +173,13 @@ class CheesecakeLabs(WebScraper):
 
             # If there's no pub_date on cheesecake post, try to use `published`
             # from Google
-            if 'date' not in article:
-                try:
-                    article['date'] = dateutil.parser.parse(item['published'])
-                except:
+            if not article['date']:
+                date = self.parse_datetime_passing_errors(item['published'])
+
+                if not date:
                     continue
+
+                article['date'] = date
 
 
             yield article

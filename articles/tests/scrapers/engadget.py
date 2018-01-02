@@ -1,33 +1,31 @@
+from mock import patch
+
 from django.test import TestCase
 
 from articles.scrapers.engadget import Engadget
 from articles.tests.utils import get_file, parse_mocked
-from articles.models import Author, Outlet
-
-from mock import patch
-from lxml import html, etree
-import os, json
+from articles.models import Outlet
 
 class EngadgetScraperTestCase(TestCase):
     """This class defines the test suite for the Engadget scraper."""
 
     def setUp(self):
         """Defines the test client and other test variables."""
-        Outlet.objects.create(name = 'Engadget')
-        self.ws = Engadget()
+        Outlet.objects.create(name='Engadget')
+        self.scraper = Engadget()
 
 
-    def test_engadget_extract_twitter_single(self):
+    def test_engadget_extract_twitter(self):
         """Tests twitter extraction for single author articles."""
         parsed = parse_mocked('engadget_single_author.html', 'html')
 
-        twitter = self.ws.extract_twitter(parsed)
+        twitter = self.scraper.extract_twitter(parsed)
         self.assertEqual(twitter, 'https://twitter.com/eightiethmnt')
 
 
     def test_engadget_get_authors_page(self):
         """Tests if author's url page is being correctly generated."""
-        url = self.ws.get_authors_page('Jon Snow')
+        url = self.scraper.get_authors_page('Jon Snow')
         self.assertEqual('http://www.engadget.com/about/editors/jon-snow', url)
 
 
@@ -36,7 +34,10 @@ class EngadgetScraperTestCase(TestCase):
         """Tests if an author's information can be found by his/her name."""
         mock_get.return_value.content = get_file('engadget_author.html')
 
-        result = self.ws.get_author('Christopher Trout')
+        self.scraper.author_url = 'example'
+        self.scraper.author_page_type = 'html'
+
+        result = self.scraper.get_author('Christopher Trout')
 
         expected = {
             'name': 'Christopher Trout',
@@ -59,10 +60,10 @@ class EngadgetScraperTestCase(TestCase):
 
         # Parses and extract information from Engadget Articles XML feed
         article_feed = parse_mocked('engadget_articles.xml', 'xml')
-        articles_extracted = list(self.ws.extract_articles(article_feed))
+        articles_extracted = list(self.scraper.extract_articles(article_feed))
 
         # This JSON mock has 20 articles
         self.assertEqual(len(articles_extracted), 25)
 
         # Check data integrity on the first article (mocking makes all equal)
-        self.assertEqual(self.ws.check_data(articles_extracted[0]), None)
+        self.assertEqual(self.scraper.check_data(articles_extracted[0]), None)

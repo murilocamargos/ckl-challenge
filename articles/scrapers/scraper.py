@@ -1,12 +1,18 @@
+import json
+import os
+import re
+import twitter
+import dateutil.parser
+import requests
+
+from lxml import etree, html
+
 from django.template.defaultfilters import slugify, title
 from django.utils.html import strip_tags
 
 from articles.models import Author, Category, Outlet, Article
 
-from lxml import etree, html
-import requests, json, twitter, os, re
-
-exceptions = {
+EXCEPTIONS = {
     'feed': 'You must set the articles\' feed configs (i.e. url and type).',
     'extract_method': 'Scraper must provide an `extract_articles` method.',
     'download': 'A parsing method was not implemented for this data type.',
@@ -17,15 +23,47 @@ exceptions = {
     'nsmap': 'The namespace must be a dictionary.',
     'author': 'You must set the authors\' page configs (i.e. url and type).',
     'extract_author': 'Scraper must provide an `extract_author` method.',
+    'get_authors_page': 'Scraper must provide an `get_authors_page` method.',
 }
 
 class WebScraper(object):
     """This class provides some helpful method to scraping web content."""
 
-    def __init__(self, name = None):
+    def __init__(self, name=None):
         # Find current outlet by given name
+
+        self.feed_url = None
+        self.feed_type = None
+        self.author_page_type = None
+        self.outlet = None
+        self.nsmap = None
+
         if name:
-            self.outlet = Outlet.objects.filter(name = name).first()
+            self.outlet = Outlet.objects.filter(name=name).first()
+
+
+    def extract_articles(self, data):
+        """
+        Any scraper derived from this class should implement a method called
+        extract_articles in order to parse the feed_url.
+        """
+        raise NotImplementedError(EXCEPTIONS['extract_method'])
+
+
+    def get_authors_page(self, author_name):
+        """
+        Any scraper derived from this class should implement a method called
+        get_authors_page to provide the author's page URL.
+        """
+        raise NotImplementedError(EXCEPTIONS['get_authors_page'])
+
+
+    def extract_author(self, data, author_idx=0):
+        """
+        Any scraper derived from this class should implement a method called
+        extract_author to provide the author's page URL.
+        """
+        raise NotImplementedError(EXCEPTIONS['get_authors_page'])
 
 
     def create_article(self, data):
@@ -36,10 +74,10 @@ class WebScraper(object):
         """
 
         if not hasattr(self, 'outlet'):
-            raise ValueError(exceptions['outlet'])
+            raise ValueError(EXCEPTIONS['outlet'])
 
         if not isinstance(self.outlet, Outlet):
-            raise ValueError(exceptions['outlet'])
+            raise ValueError(EXCEPTIONS['outlet'])
 
         self.check_data(data)
 
@@ -56,20 +94,20 @@ class WebScraper(object):
         if 'categories' in data:
             categories = data.pop('categories')
 
-            if type(categories) == str:
+            if isinstance(categories, str):
                 categories = [categories]
 
 
         # After removing the url and categories from data, we can parse the
         # dictionary for string values. Every string value should be an article
         # property.
-        article = {key: data[key] for key in data if type(data[key]) == str}
+        article = {key: data[key] for key in data if isinstance(data[key], str)}
         article['date'] = data.pop('date')
         article['outlet_id'] = self.outlet.id
 
-        article, created = Article.objects.get_or_create(
-            url = url,
-            defaults = article
+        article, _ = Article.objects.get_or_create(
+            url=url,
+            defaults=article
         )
 
 
@@ -79,10 +117,10 @@ class WebScraper(object):
             # Form a dictionary with all author's information but his/her name
             author = {k: author_info[k] for k in author_info if k != 'name'}
 
-            author, created = Author.objects.get_or_create(
-                name = author_info['name'],
-                outlet_id = self.outlet.id,
-                defaults = author
+            author, _ = Author.objects.get_or_create(
+                name=author_info['name'],
+                outlet_id=self.outlet.id,
+                defaults=author
             )
 
             article.authors.add(author)
@@ -90,9 +128,9 @@ class WebScraper(object):
 
         # Store non existing categories and assign them to the article
         for cat_name in categories:
-            category, created = Category.objects.get_or_create(
-                slug = slugify(cat_name),
-                defaults = {
+            category, _ = Category.objects.get_or_create(
+                slug=slugify(cat_name),
+                defaults={
                     'name': title(cat_name)
                 }
             )
@@ -110,19 +148,15 @@ class WebScraper(object):
         """
 
         # Verify if the class calling this method provides an articles' feed
-        # for fetching articles and an extraction method for filtering
-        # information
-        if not hasattr(self, 'feed_url') or not hasattr(self, 'feed_type'):
-            raise AttributeError(exceptions['feed'])
-
-        if not hasattr(self, 'extract_articles'):
-            raise AttributeError(exceptions['extract_method'])
+        # for fetching articles.
+        if not self.feed_url or not self.feed_type:
+            raise TypeError(EXCEPTIONS['feed'])
 
 
         # Download and parse the articles' feed
         parsed = self.parse(self.feed_url, self.feed_type)
         if parsed is None:
-            raise Exception(exceptions['not_parsed'])
+            raise TypeError(EXCEPTIONS['not_parsed'])
 
 
         # The parsed feed will be inputed to the article extractor who will
@@ -137,7 +171,7 @@ class WebScraper(object):
         return results
 
 
-    def get_author(self, author_name, author_idx = 0):
+    def get_author(self, author_name, author_idx=0):
         """
         This method fetches an author's information by his/her name. If this
         author is already stored, there is no necessity of looking its profile
@@ -146,26 +180,23 @@ class WebScraper(object):
 
         # Verify if the class calling this method provides the methods for
         # downloading, parsing and filtering the author's information.
-        if not hasattr(self, 'outlet'):
-            raise ValueError(exceptions['outlet'])
+        if not self.outlet:
+            raise TypeError(EXCEPTIONS['outlet'])
 
-        if not hasattr(self, 'get_authors_page') or not hasattr(self, 'author_page_type'):
-            raise AttributeError(exceptions['author'])
-
-        if not hasattr(self, 'extract_author'):
-            raise AttributeError(exceptions['extract_author'])
+        if not self.author_page_type:
+            raise TypeError(EXCEPTIONS['author'])
 
 
         search = Author.objects.filter(
-            name = author_name,
-            outlet_id = self.outlet.id
+            name=author_name,
+            outlet_id=self.outlet.id
         ).count()
 
 
         author = {
             'name': author_name,
         }
-        
+
 
         if search == 0:
             # Download and parse html author's page
@@ -179,7 +210,7 @@ class WebScraper(object):
         return author
 
 
-    def get_text_or_attr(self, item, key, attr = None):
+    def get_text_or_attr(self, item, key, attr=None):
         """
         This function returns a string or a list of strings containing
         the text inside or an attribute value of lxml Elements.
@@ -200,18 +231,20 @@ class WebScraper(object):
         }
 
         if hasattr(self, 'nsmap'):
-            if type(self.nsmap) != dict:
-                raise ValueError(exceptions['nsmap'])
+            if self.nsmap and not isinstance(self.nsmap, dict):
+                raise ValueError(EXCEPTIONS['nsmap'])
 
-            nsmap.update(self.nsmap)
+            if self.nsmap:
+                nsmap.update(self.nsmap)
 
 
         # Searches for a given key on parsed document's root
-        search = item.xpath('.//' + key, namespaces = nsmap)
+        search = item.xpath('.//' + key, namespaces=nsmap)
 
 
+        found = len(search)
         items = []
-        if len(search) > 0:
+        if found > 0:
             if attr:
                 items = [item.get(attr) for item in search]
             else:
@@ -235,15 +268,14 @@ class WebScraper(object):
     @staticmethod
     def remove_query(url):
         """This function removes anything after `?` from a string."""
-        if type(url) == str:
+        if isinstance(url, str):
             return url.split('?')[0]
 
 
     @staticmethod
-    def parse(url, content_type = 'xml'):
+    def parse(url, content_type='xml'):
         """This method downloads and parses a url with a given type."""
-        tree = None
-        
+
         if content_type == 'xml':
             response = requests.get(url)
             return etree.fromstring(response.content)
@@ -261,15 +293,15 @@ class WebScraper(object):
 
         elif content_type == 'twitter':
             api = twitter.Api(
-                consumer_key = os.environ.get('TWITTER_CONSUMER_KEY'),
-                consumer_secret = os.environ.get('TWITTER_CONSUMER_SECRET'),
-                access_token_key = os.environ.get('TWITTER_ACCESS_TOKEN_KEY'),
-                access_token_secret = os.environ.get('TWITTER_ACCESS_TOKEN_SECRET'),
+                consumer_key=os.environ.get('TWITTER_CONSUMER_KEY'),
+                consumer_secret=os.environ.get('TWITTER_CONSUMER_SECRET'),
+                access_token_key=os.environ.get('TWITTER_ACCESS_TOKEN_KEY'),
+                access_token_secret=os.environ.get('TWITTER_ACCESS_TOKEN_SECRET'),
             )
 
-            return api.GetUserTimeline(screen_name = url)
+            return api.GetUserTimeline(screen_name=url)
 
-        raise NotImplementedError(exceptions['parse'])
+        raise NotImplementedError(EXCEPTIONS['parse'])
 
 
     @staticmethod
@@ -311,7 +343,7 @@ class WebScraper(object):
 
         accepted = {
             'article': required['article'] + ['categories', 'thumb'],
-            'authors': required['authors'] + ['twitter', 'avatar', 'facebook',
+            'authors': required['authors'] + ['twitter', 'avatar', 'facebook',\
                 'linkedin', 'about', 'profile', 'website']
         }
 
@@ -321,13 +353,14 @@ class WebScraper(object):
 
         for key in data:
             if key not in accepted['article']:
-                raise ValueError(exceptions['unacceptable'])
+                raise ValueError(EXCEPTIONS['unacceptable'])
 
             if key in required['article']:
                 req.remove(key)
 
-        if len(req) > 0:
-            raise ValueError(exceptions['required'])
+        count_req = len(req)
+        if count_req > 0:
+            raise ValueError(EXCEPTIONS['required'])
 
 
         # Check second level dictionary keys (authors)
@@ -337,18 +370,20 @@ class WebScraper(object):
 
             for key in author:
                 if key not in accepted['authors']:
-                    raise ValueError(exceptions['unacceptable'])
+                    raise ValueError(EXCEPTIONS['unacceptable'])
 
                 if key in required['authors']:
                     req.remove(key)
 
-            if len(req) > 0:
-                raise ValueError(exceptions['required'])
+            count_req = len(req)
+            if count_req > 0:
+                raise ValueError(EXCEPTIONS['required'])
 
 
         # Check if there are any authors on data
-        if not 'authors' in data or len(data['authors']) == 0:
-            raise ValueError(exceptions['required'])
+        count_authors = len(data['authors'])
+        if not 'authors' in data or count_authors == 0:
+            raise ValueError(EXCEPTIONS['required'])
 
 
     @staticmethod
@@ -358,7 +393,7 @@ class WebScraper(object):
         from a given xpath items.
         """
 
-        if type(items) != list:
+        if not isinstance(items, list):
             items = [items]
 
         content = ''
@@ -383,3 +418,16 @@ class WebScraper(object):
         content = re.sub('[ ]{2,}', ' ', content).strip()
 
         return content
+
+
+    @staticmethod
+    def parse_datetime_passing_errors(date):
+        """Tries to parse a datetime without raising any error."""
+        try:
+            return dateutil.parser.parse(date)
+        except ValueError:
+            return None
+        except TypeError:
+            return None
+
+        return None

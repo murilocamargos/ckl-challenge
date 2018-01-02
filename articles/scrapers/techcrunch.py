@@ -3,8 +3,6 @@ from django.template.defaultfilters import slugify
 from articles.scrapers.scraper import WebScraper
 from articles.models import Article
 
-import re, dateutil.parser
-
 class TechCrunch(WebScraper):
     """
     This class provides the required methods to scrape an article from
@@ -32,23 +30,24 @@ class TechCrunch(WebScraper):
        written by them.
 
     """
-    
+
     def __init__(self):
         # Some initial parameters for scraping articles and authors
-        self.outlet_name = 'TechCrunch'
+        super(TechCrunch, self).__init__('TechCrunch')
+
         self.feed_url = 'http://feeds.feedburner.com/TechCrunch/'
         self.feed_type = 'xml'
         self.author_page_type = 'html'
         self.article_page_type = 'html'
+        self.article_url = None
 
-        super(TechCrunch, self).__init__(self.outlet_name)
 
-    
-    def get_authors_page(self, author_name):
+    @staticmethod
+    def get_authors_page(author_name):
         """This method provides the author's profile url."""
         return 'http://techcrunch.com/author/' + slugify(author_name)
 
-    
+
     def extract_articles(self, parsed_xml):
         """
         This method formats TechCrunch's articles, categories and authors to
@@ -60,7 +59,7 @@ class TechCrunch(WebScraper):
         for item in parsed_xml.xpath("//item"):
 
             article = {}
-            
+
 
             article['title'] = self.get_text_or_attr(item, 'title')
 
@@ -68,8 +67,8 @@ class TechCrunch(WebScraper):
             # The article's categories must be always a list, even if it has
             # only one element.
             categories = self.get_text_or_attr(item, 'category')
-            
-            if type(categories) == str:
+
+            if isinstance(categories, str):
                 categories = [categories]
 
             article['categories'] = categories
@@ -77,21 +76,19 @@ class TechCrunch(WebScraper):
 
             url = self.get_text_or_attr(item, 'feedburner:origLink')
             article['url'] = self.remove_query(url)
-            self.article_page = article['url']
+
+            self.article_url = article['url']
 
 
             # If article's URL is already stored, don't parse it again
-            if Article.objects.filter(url = article['url']).count() > 0:
+            if Article.objects.filter(url=article['url']).count() > 0:
                 continue
 
 
             # It is interesting to have the publication date as a `dateutil`
             # object, so we can do whatever manipulation we want.
             pub_date = self.get_text_or_attr(item, 'pubDate')
-            try:
-                article['date'] = dateutil.parser.parse(pub_date)
-            except:
-                article['date'] = ''
+            article['date'] = self.parse_datetime_passing_errors(pub_date)
 
 
             # Get the author attribute and tries to fetch informations about
@@ -99,9 +96,10 @@ class TechCrunch(WebScraper):
             # feed, they are separated by a comma.
             author_names = self.get_text_or_attr(item, 'dc:creator').split(',')
             article['authors'] = []
-            for i in range(len(author_names)):
-                article['authors'] += [self.get_author(author_names[i], i)]
-            
+
+            for i, name in enumerate(author_names):
+                article['authors'] += [self.get_author(name, i)]
+
 
             # Tries to find the article's thumbnail url
             thumb = self.get_text_or_attr(item, 'media:thumbnail', 'url')
@@ -119,8 +117,8 @@ class TechCrunch(WebScraper):
 
             yield article
 
-    
-    def extract_author_from_page(self, parsed, author_idx = 0):
+
+    def extract_author_from_page(self, parsed, author_idx=0):
         """
         This method goes back in the article's page and tries to find at the
         author's profile page and twitter handle. This happens because there
@@ -134,7 +132,7 @@ class TechCrunch(WebScraper):
         if author_url and len(author_url) > author_idx:
             author['profile'] = 'https://techcrunch.com'
             author['profile'] += author_url[author_idx].get('href')
-        
+
 
         # Find the twitter handle associated with the i-th author
         twitter_handle = parsed.xpath('//span[@class="twitter-handle"]/a')
@@ -153,18 +151,17 @@ class TechCrunch(WebScraper):
         return self.extract_author(parsed, author_idx, author)
 
 
-    
-    def extract_author(self, parsed_html, author_idx = 0, author = {}):
+    def extract_author(self, parsed_html, author_idx=0, author=None):
         """
         This method extract all important informations about an author. These
         informations can be found by its xpath.
-        
+
         A simple way to find the xpath of a given element is using the browser's
         inspection mode. Chrome has a feature of copying the inspected element's
         xpath.
         """
 
-        if not 'flag' in author:
+        if not author:
             author = {}
 
 
@@ -172,9 +169,9 @@ class TechCrunch(WebScraper):
         links = []
         xpath = '//div[@class="profile cf"]/div/ul/li/a'
 
-        for a in parsed_html.xpath(xpath):
-            links += [a.get('href')]
-        
+        for url in parsed_html.xpath(xpath):
+            links += [url.get('href')]
+
         for social in self.classify_links(links):
             author[social[0]] = social[1]
 
@@ -213,7 +210,7 @@ class TechCrunch(WebScraper):
 
         if 'twitter' not in author and 'flag' not in author:
 
-            parsed = self.parse(self.article_page, self.article_page_type)
+            parsed = self.parse(self.article_url, self.article_page_type)
             return self.extract_author_from_page(parsed, author_idx)
 
 

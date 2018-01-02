@@ -1,9 +1,9 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "This is a web scraping tool, written in Django, that constantly scrapes the articles of a major technology blogs and stores it in a PostgreSQL database.\n\nThese are the relevant data being stored:\n- Outlet name and metadata (Title, website and description);\n- Authors (name, outlet, profile page, about, avatar and social networks);\n- Published articles and metadata (title, publication date, author, content, thumbnail, url, outlet, authors, categories);\n- Categories' tags\n\nCurrently we're scraping content from:\n- [TechCrunch](https://techcrunch.com/)\n- [Cheesecake Labs](https://cheesecakelabs.com/)\n- [Mashable](https://mashable.com/)\n- [Engadget](https://engadget.com/)\n\nThis rest API, provides access to all these informations.",
+    "description": "This is a web scraping tool, written in Django, that constantly scrapes the articles of major technology blogs and stores it in a PostgreSQL database.\n\nThese are the relevant data being stored:\n- Outlet name and metadata (Title, website and description);\n- Authors (name, outlet, profile page, about, avatar and social networks);\n- Published articles and metadata (title, publication date, author, content, thumbnail, url, outlet, authors, categories);\n- Categories' tags\n\nCurrently we're scraping content from:\n- [TechCrunch](https://techcrunch.com/)\n- [Cheesecake Labs](https://cheesecakelabs.com/)\n- [Mashable](https://mashable.com/)\n- [Engadget](https://engadget.com/)\n\nThis rest API, provides access to all these informations. If you are **admin**, you'll have access to `PUT`, `PATCH`, `POST` and `DELETE` methods as well.",
     "version": "1.0.0",
-    "title": "CKLabs"
+    "title": "CKL Challenge"
   },
   "host": "cheesecake-challenge.herokuapp.com",
   "basePath": "/",

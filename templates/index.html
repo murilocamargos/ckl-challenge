@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CKLabs | API Reference</title>
+    <title>CKL Challenge | API Reference</title>
     <link rel="stylesheet" href="{% static 'css/foundation.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/spectacle.min.css' %}" />
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -17,7 +17,7 @@
           <span aria-hidden="true">×</span>
         </button>
         <div id="logo">
-          <img src="{% static 'images/logo.png' %}" title="CKLabs" /> </div>
+          <img src="{% static 'images/logo.png' %}" title="CKL Challenge" /> </div>
         <nav id="nav" role="navigation">
           <h5>API Reference</h5>
           <a href="#introduction">Introduction</a>
@@ -128,12 +128,12 @@
         <div class="example-box doc-content"></div>
         <article>
           <div id="introduction" data-traverse-target="introduction">
-            <h1 class="doc-title">CKLabs
+            <h1 class="doc-title">CKL Challenge
               <span>API Reference</span>
             </h1>
             <div class="doc-row">
               <div class="doc-copy">
-                <p>This is a web scraping tool, written in Django, that constantly scrapes the articles of a major technology blogs and stores it in a PostgreSQL database.</p>
+                <p>This is a web scraping tool, written in Django, that constantly scrapes the articles of major technology blogs and stores it in a PostgreSQL database.</p>
                 <p>These are the relevant data being stored:</p>
                 <ul>
                   <li>Outlet name and metadata (Title, website and description);</li>
@@ -156,7 +156,8 @@
                     <a href="https://engadget.com/">Engadget</a>
                   </li>
                 </ul>
-                <p>This rest API, provides access to all these informations.</p>
+                <p>This rest API, provides access to all these informations. If you are
+                  <strong>admin</strong>, you&#39;ll have access to <code>PUT</code>, <code>PATCH</code>, <code>POST</code> and <code>DELETE</code> methods as well.</p>
               </div>
               <div class="doc-examples">
                 <section>
