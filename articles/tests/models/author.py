@@ -7,7 +7,7 @@ class AuthorModelTestCase(TestCase):
     def setUp(self):
         """Defines the test client and other test variables."""
         self.name = "Donald Knuth"
-        self.author = Author(name = self.name)
+        self.author = Author(name=self.name)
 
 
     def test_author_can_create(self):
@@ -18,7 +18,7 @@ class AuthorModelTestCase(TestCase):
         self.assertNotEqual(old_count, new_count)
 
 
-    def test_author_string_representation(self):
+    def test_author_string_repr(self):
         """Tests if the author is correctly represented."""
         self.assertEqual(str(self.author), self.name)
 
@@ -30,7 +30,7 @@ class AuthorModelTestCase(TestCase):
         self.author.linkedin = 'http://linkedin.com/donald'
         self.author.save()
 
-        search = Author.objects.filter(linkedin__contains = 'donald').count()
+        search = Author.objects.filter(linkedin__contains='donald').count()
         self.assertEqual(search, 1)
 
 
@@ -38,5 +38,5 @@ class AuthorModelTestCase(TestCase):
         """Tests if an author can be deleted."""
         self.author.save()
         self.author.delete()
-        search = Author.objects.filter(name = self.name).count()
+        search = Author.objects.filter(name=self.name).count()
         self.assertEqual(search, 0)

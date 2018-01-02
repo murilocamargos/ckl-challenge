@@ -15,19 +15,19 @@ class AuthorViewTestCase(TestCase):
         """Define the test client and other test variables."""
         self.client = APIClient()
 
-        self.user = User.objects.create(username = 'nerd', is_staff = True)
-        self.author = Author.objects.create(name = 'Dennis Ritchie')
+        self.user = User.objects.create(username='nerd', is_staff=True)
+        self.author = Author.objects.create(name='Dennis Ritchie')
 
-        self.epoint = reverse('author', kwargs = {'pk': 1})
+        self.epoint = reverse('author', kwargs={'pk': 1})
 
-    
-    def test_api_delete_author_unlogged(self):
+
+    def test_delete_author_unlogged(self):
         """Test if an unlogged user can delete an author."""
         request = self.client.delete(self.epoint)
         self.assertEqual(request.status_code, status.HTTP_403_FORBIDDEN)
 
-    
-    def test_api_add_author_unlogged(self):
+
+    def test_add_author_unlogged(self):
         """Test if an unlogged user can add an author."""
         data = {
             'name': 'Linus Torvalds'
@@ -37,8 +37,8 @@ class AuthorViewTestCase(TestCase):
 
         self.assertEqual(request.status_code, status.HTTP_403_FORBIDDEN)
 
-    
-    def test_api_update_author_unlogged(self):
+
+    def test_update_author_unlogged(self):
         """Test if an unlogged user can delete an author."""
         data = {'name': 'Ken Thompson'}
 
@@ -46,17 +46,17 @@ class AuthorViewTestCase(TestCase):
 
         self.assertEqual(request.status_code, status.HTTP_403_FORBIDDEN)
 
-    
-    def test_api_retrieve_author_unlogged(self):
+
+    def test_retrieve_author_unlogged(self):
         """Test if an unlogged user can retrieve an author."""
         request = self.client.get(self.epoint)
 
         self.assertEqual(request.status_code, status.HTTP_200_OK)
 
-    
-    def test_api_update_author_logged(self):
+
+    def test_update_author_logged(self):
         """Test if an logged user can delete an author."""
-        self.client.force_authenticate(user = self.user)
+        self.client.force_authenticate(user=self.user)
 
         data = {'name': 'Ken Thompson'}
 
@@ -64,18 +64,18 @@ class AuthorViewTestCase(TestCase):
 
         self.assertEqual(request.status_code, status.HTTP_200_OK)
 
-    
-    def test_api_delete_author_logged(self):
+
+    def test_delete_author_logged(self):
         """Test if an logged user can delete an author."""
-        self.client.force_authenticate(user = self.user)
+        self.client.force_authenticate(user=self.user)
 
         request = self.client.delete(self.epoint)
         self.assertEqual(request.status_code, status.HTTP_204_NO_CONTENT)
 
-    
-    def test_api_add_author_logged(self):
+
+    def test_add_author_logged(self):
         """Test if an logged user can add an author."""
-        self.client.force_authenticate(user = self.user)
+        self.client.force_authenticate(user=self.user)
 
         data = {
             'name': 'Donald Knuth',

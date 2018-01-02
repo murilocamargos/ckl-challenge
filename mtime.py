@@ -1,4 +1,8 @@
-import sys, os, django
+import sys
+import os
+import django
+
+from articles.models import Outlet, Article
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
@@ -13,13 +17,11 @@ each outlet. This way we can infer the periodicity of celery tasks for each one
 of them.
 """
 
-from articles.models import Outlet, Article
-
-all_deltas = []
+ALL_DELTAS = []
 
 for outlet in Outlet.objects.all():
 
-    articles = Article.objects.filter(outlet_id = outlet.id)\
+    articles = Article.objects.filter(outlet_id=outlet.id)\
         .values('date')\
         .order_by('date')
 
@@ -30,11 +32,11 @@ for outlet in Outlet.objects.all():
         deltas += [delta.seconds]
 
 
-    all_deltas += deltas
+    ALL_DELTAS += deltas
 
 
-    hours = (sum(deltas)/len(deltas))/60/60
-    print(outlet.name + ': ' + str(hours))
+    HOURS = (sum(deltas)/len(deltas))/60/60
+    print(outlet.name + ': ' + str(HOURS))
 
-hours = (sum(all_deltas)/len(all_deltas))/60/60
-print('Total: ' + str(hours))
+HOURS = (sum(ALL_DELTAS)/len(ALL_DELTAS))/60/60
+print('Total: ' + str(HOURS))

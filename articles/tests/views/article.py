@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from rest_framework.test import APIClient
 from rest_framework import status
 
-from articles.models import Author, Outlet, Category, Article
+from articles.models import Outlet, Article
 
 
 class ArticleViewTestCase(TestCase):
@@ -16,23 +16,23 @@ class ArticleViewTestCase(TestCase):
         """Define the test client and other test variables."""
         self.client = APIClient()
 
-        self.user = User.objects.create(username = 'nerd', is_staff = True)
+        self.user = User.objects.create(username='nerd', is_staff=True)
 
-        self.outlet = Outlet.objects.create(name = 'TechCrunch')
-        self.article = Article.objects.create(title = 'Article',
-            date = str(timezone.now()), url = 'Link', content = 'Article',
-            outlet_id = self.outlet.id),
+        self.outlet = Outlet.objects.create(name='TechCrunch')
+        self.article = Article.objects.create(title='Article', \
+            date=str(timezone.now()), url='Link', content='Article', \
+            outlet_id=self.outlet.id),
 
-        self.epoint = reverse('article', kwargs = {'pk': 1})
+        self.epoint = reverse('article', kwargs={'pk': 1})
 
 
-    def test_api_delete_article_unlogged(self):
+    def test_delete_article_unlogged(self):
         """Test if an unlogged user can delete an article."""
         request = self.client.delete(self.epoint)
         self.assertEqual(request.status_code, status.HTTP_403_FORBIDDEN)
 
 
-    def test_api_add_article_unlogged(self):
+    def test_add_article_unlogged(self):
         """Test if an unlogged user can add an article."""
         data = {
             'title': 'Article\'s title',
@@ -47,7 +47,7 @@ class ArticleViewTestCase(TestCase):
         self.assertEqual(request.status_code, status.HTTP_403_FORBIDDEN)
 
 
-    def test_api_update_article_unlogged(self):
+    def test_update_article_unlogged(self):
         """Test if an unlogged user can delete an article."""
         data = {'title': 'Changed title'}
 
@@ -56,16 +56,16 @@ class ArticleViewTestCase(TestCase):
         self.assertEqual(request.status_code, status.HTTP_403_FORBIDDEN)
 
 
-    def test_api_retrieve_article_unlogged(self):
+    def test_retrieve_article_unlogged(self):
         """Test if an unlogged user can retrieve an article."""
         request = self.client.get(self.epoint)
 
         self.assertEqual(request.status_code, status.HTTP_200_OK)
 
 
-    def test_api_update_article_logged(self):
+    def test_update_article_logged(self):
         """Test if an logged user can delete an article."""
-        self.client.force_authenticate(user = self.user)
+        self.client.force_authenticate(user=self.user)
 
         data = {'name': 'Changed title'}
 
@@ -74,17 +74,17 @@ class ArticleViewTestCase(TestCase):
         self.assertEqual(request.status_code, status.HTTP_200_OK)
 
 
-    def test_api_delete_article_logged(self):
+    def test_delete_article_logged(self):
         """Test if an logged user can delete an article."""
-        self.client.force_authenticate(user = self.user)
+        self.client.force_authenticate(user=self.user)
 
         request = self.client.delete(self.epoint)
         self.assertEqual(request.status_code, status.HTTP_204_NO_CONTENT)
 
 
-    def test_api_add_article_logged(self):
+    def test_add_article_logged(self):
         """Test if an logged user can add an article."""
-        self.client.force_authenticate(user = self.user)
+        self.client.force_authenticate(user=self.user)
 
         data = {
             'title': 'Article\'s title',

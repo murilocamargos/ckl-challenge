@@ -7,7 +7,7 @@ class OutletModelTestCase(TestCase):
     def setUp(self):
         """Defines the test client and other test variables."""
         self.name = "Tech Crunch"
-        self.outlet = Outlet(name = self.name)
+        self.outlet = Outlet(name=self.name)
 
 
     def test_outlet_can_create(self):
@@ -18,7 +18,7 @@ class OutletModelTestCase(TestCase):
         self.assertNotEqual(old_count, new_count)
 
 
-    def test_outlet_string_representation(self):
+    def test_outlet_string_repr(self):
         """Tests if the outlet is correctly represented."""
         self.assertEqual(str(self.outlet), self.name)
 
@@ -30,7 +30,7 @@ class OutletModelTestCase(TestCase):
         self.outlet.website = 'tcrunch.com'
         self.outlet.save()
 
-        search = Outlet.objects.filter(website = 'tcrunch.com').count()
+        search = Outlet.objects.filter(website='tcrunch.com').count()
         self.assertEqual(search, 1)
 
 
@@ -38,6 +38,6 @@ class OutletModelTestCase(TestCase):
         """Tests if an outlet can be hard deleted."""
         self.outlet.save()
         self.outlet.delete()
-        search = Outlet.objects.filter(name = self.name)
+        search = Outlet.objects.filter(name=self.name)
         self.assertEqual(search.count(), 1)
         self.assertEqual(search.first().active, False)

@@ -8,8 +8,8 @@ class CategoryModelTestCase(TestCase):
         """Defines the test client and other test variables."""
         self.name = "CKL Rocks"
         self.category = Category(
-            name = self.name,
-            slug = 'ckl-rocks'
+            name=self.name,
+            slug='ckl-rocks'
         )
 
 
@@ -21,19 +21,19 @@ class CategoryModelTestCase(TestCase):
         self.assertNotEqual(old_count, new_count)
 
 
-    def test_category_string_representation(self):
+    def test_category_string_repr(self):
         """Tests if the category is correctly represented."""
         self.assertEqual(str(self.category), self.name)
 
 
-    def test_category_can_update_patched(self):
+    def test_category_can_update_patch(self):
         """Tests if a category can be updated or patched."""
         self.category.save()
 
         self.category.slug = 'ckl'
         self.category.save()
 
-        search = Category.objects.filter(slug = 'ckl').count()
+        search = Category.objects.filter(slug='ckl').count()
         self.assertEqual(search, 1)
 
 
@@ -41,5 +41,5 @@ class CategoryModelTestCase(TestCase):
         """Tests if a category can be deleted."""
         self.category.save()
         self.category.delete()
-        search = Category.objects.filter(name = self.name).count()
+        search = Category.objects.filter(name=self.name).count()
         self.assertEqual(search, 0)

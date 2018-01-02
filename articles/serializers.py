@@ -6,6 +6,7 @@ from articles.models import Author, Outlet, Category, Article
 class MyJSONRenderer(JSONRenderer):
     """Overloads default JSONRederer to force pretty print."""
     def get_indent(self, accepted_media_type, renderer_context):
+        """Gives indentation size for pretty print JSON."""
         return renderer_context.get('indent', 4)
 
 
@@ -44,26 +45,26 @@ class ArticleSerializer(serializers.ModelSerializer):
     """Serializer to map the Article instance into JSON format."""
 
     categories = serializers.PrimaryKeyRelatedField(
-        many = True,
-        queryset = Category.objects.all(),
-        required = False,
+        many=True,
+        queryset=Category.objects.all(),
+        required=False,
     )
 
     authors = serializers.PrimaryKeyRelatedField(
-        many = True,
-        queryset = Author.objects.all(),
-        required = False
+        many=True,
+        queryset=Author.objects.all(),
+        required=False
     )
 
     outlet = serializers.PrimaryKeyRelatedField(
-        many = False,
-        queryset = Outlet.objects.all()
+        many=False,
+        queryset=Outlet.objects.all()
     )
 
     class Meta:
         """Meta class to map serializer's fields with the model fields."""
         model = Article
-        fields = ('id', 'title', 'date', 'url', 'thumb', 'content', 'authors',
+        fields = ('id', 'title', 'date', 'url', 'thumb', 'content', 'authors',\
             'outlet', 'categories')
 
 
@@ -74,12 +75,12 @@ class ArticleRetrieveSerializer(serializers.ModelSerializer):
     nested information of outlet, authors and categories along the article's.
     """
 
-    categories = CategorySerializer(many = True)
-    authors = AuthorSerializer(many = True)
-    outlet = OutletSerializer(many = False)
+    categories = CategorySerializer(many=True)
+    authors = AuthorSerializer(many=True)
+    outlet = OutletSerializer(many=False)
 
     class Meta:
         """Meta class to map serializer's fields with the model fields."""
         model = Article
-        fields = ('id', 'title', 'date', 'url', 'thumb', 'content', 'authors',
+        fields = ('id', 'title', 'date', 'url', 'thumb', 'content', 'authors',\
             'outlet', 'categories')

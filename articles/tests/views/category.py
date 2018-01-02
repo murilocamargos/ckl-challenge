@@ -15,19 +15,19 @@ class CategoryViewTestCase(TestCase):
         """Define the test client and other test variables."""
         self.client = APIClient()
 
-        self.user = User.objects.create(username = 'nerd', is_staff = True)
-        self.category = Category.objects.create(name = 'Linux')
+        self.user = User.objects.create(username='nerd', is_staff=True)
+        self.category = Category.objects.create(name='Linux')
 
-        self.epoint = reverse('category', kwargs = {'pk': 1})
+        self.epoint = reverse('category', kwargs={'pk': 1})
 
-    
-    def test_api_delete_category_unlogged(self):
+
+    def test_delete_category_unlogged(self):
         """Test if an unlogged user can delete a category."""
         request = self.client.delete(self.epoint)
         self.assertEqual(request.status_code, status.HTTP_403_FORBIDDEN)
 
-    
-    def test_api_add_category_unlogged(self):
+
+    def test_add_category_unlogged(self):
         """Test if an unlogged user can add a category."""
         data = {
             'name': 'Windows',
@@ -38,8 +38,8 @@ class CategoryViewTestCase(TestCase):
 
         self.assertEqual(request.status_code, status.HTTP_403_FORBIDDEN)
 
-    
-    def test_api_update_category_unlogged(self):
+
+    def test_update_category_unlogged(self):
         """Test if an unlogged user can delete a category."""
         data = {'name': 'Nginx'}
 
@@ -47,17 +47,17 @@ class CategoryViewTestCase(TestCase):
 
         self.assertEqual(request.status_code, status.HTTP_403_FORBIDDEN)
 
-    
-    def test_api_retrieve_category_unlogged(self):
+
+    def test_retrieve_category_unlogged(self):
         """Test if an unlogged user can retrieve a category."""
         request = self.client.get(self.epoint)
 
         self.assertEqual(request.status_code, status.HTTP_200_OK)
 
-    
-    def test_api_update_category_logged(self):
+
+    def test_update_category_logged(self):
         """Test if an logged user can delete a category."""
-        self.client.force_authenticate(user = self.user)
+        self.client.force_authenticate(user=self.user)
 
         data = {'name': 'AWS'}
 
@@ -65,18 +65,18 @@ class CategoryViewTestCase(TestCase):
 
         self.assertEqual(request.status_code, status.HTTP_200_OK)
 
-    
-    def test_api_delete_category_logged(self):
+
+    def test_delete_category_logged(self):
         """Test if an logged user can delete a category."""
-        self.client.force_authenticate(user = self.user)
+        self.client.force_authenticate(user=self.user)
 
         request = self.client.delete(self.epoint)
         self.assertEqual(request.status_code, status.HTTP_204_NO_CONTENT)
 
-    
-    def test_api_add_category_logged(self):
+
+    def test_add_category_logged(self):
         """Test if an logged user can add a category."""
-        self.client.force_authenticate(user = self.user)
+        self.client.force_authenticate(user=self.user)
 
         data = {
             'name': 'Redis',

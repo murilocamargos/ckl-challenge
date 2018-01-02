@@ -2,14 +2,18 @@ from django.shortcuts import render
 
 from rest_framework import generics, permissions
 
-from articles.serializers import *
-from articles.models import *
-from articles.filters import *
+from articles.serializers import ArticleRetrieveSerializer, AuthorSerializer, \
+    CategorySerializer, OutletSerializer, ArticleSerializer
+
+from articles.models import Article, Author, Category, Outlet
+
+from articles.filters import ArticleFilter, AuthorFilter, CategoryFilter, \
+    OutletFilter
+
 
 def api(request):
     """Renders the api docs."""
     return render(request, 'index.html')
-
 
 
 class ArticlesRetrieveView(generics.ListAPIView):
@@ -45,6 +49,7 @@ class IsAdminForUpdateAndDelete(permissions.BasePermission):
     """Custom permission class to allow non-admin users to retrieve an item."""
 
     def has_object_permission(self, request, view, obj):
+        """Returns object permission."""
         return request.user.is_staff or request.method == 'GET'
 
 

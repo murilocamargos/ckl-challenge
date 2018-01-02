@@ -6,13 +6,13 @@ class ArticleFilter(filters.FilterSet):
     """Adds filtering to articles."""
     date = filters.DateTimeFromToRangeFilter()
     authors = filters.ModelMultipleChoiceFilter(
-        queryset = Author.objects.all()
+        queryset=Author.objects.all()
     )
     outlet = filters.ModelMultipleChoiceFilter(
-        queryset = Outlet.objects.all()
+        queryset=Outlet.objects.all()
     )
     categories = filters.ModelMultipleChoiceFilter(
-        queryset = Category.objects.all()
+        queryset=Category.objects.all()
     )
 
     class Meta:
@@ -29,7 +29,7 @@ class ArticleFilter(filters.FilterSet):
 class AuthorFilter(filters.FilterSet):
     """Adds filtering to authors."""
     outlet = filters.ModelMultipleChoiceFilter(
-        queryset = Outlet.objects.all()
+        queryset=Outlet.objects.all()
     )
 
     class Meta:

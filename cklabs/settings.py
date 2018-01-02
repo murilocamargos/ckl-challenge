@@ -5,7 +5,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '2c!#os$$5&dw8xzelk)ta&$8uf$f4lucquzrpqw&6ez93(^c_f')
+DEV_KEY = '2c!#os$$5&dw8xzelk)ta&$8uf$f4lucquzrpqw&6ez93(^c_f'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', DEV_KEY)
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -140,9 +141,9 @@ if not DEBUG:
             'PORT': '',
         }
     }
-    
-    db_from_env = dj_database_url.config(conn_max_age=500)
-    DATABASES['default'].update(db_from_env)
+
+    DB_FROM_ENV = dj_database_url.config(conn_max_age=500)
+    DATABASES['default'].update(DB_FROM_ENV)
 
 
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

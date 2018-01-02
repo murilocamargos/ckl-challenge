@@ -19,36 +19,33 @@ from kombu.async import Hub, set_event_loop
 
 set_event_loop(Hub())
 
-logger = get_task_logger(__name__)
+LOGGER = get_task_logger(__name__)
 
 
 
 @periodic_task(
-    run_every=(crontab(minute=0,hour='0,6,8,10,12,14,16,18,20,22')),
+    run_every=(crontab(minute=0, hour='0,6,8,10,12,14,16,18,20,22')),
     name="fetch_articles",
     ignore_result=True
 )
 def fetch_articles():
-    ws = TechCrunch()
-    if ws.outlet.active:
-        logger.info("TechCrunch download just started.")
-        ws.get_articles()
-        logger.info("TechCrunch download finished.")
+    """This function fetches articles from 4 different sources periodically."""
+    scraper = TechCrunch()
+    if scraper.outlet.active:
+        LOGGER.info("TechCrunch download just started.")
+        scraper.get_articles()
 
-    ws = CheesecakeLabs()
-    if ws.outlet.active:
-        logger.info("CheesecaekLabs download just started.")
-        ws.get_articles()
-        logger.info("CheesecakeLabs download finished.")
+    scraper = CheesecakeLabs()
+    if scraper.outlet.active:
+        LOGGER.info("CheesecaekLabs download just started.")
+        scraper.get_articles()
 
-    ws = Mashable()
-    if ws.outlet.active:
-        logger.info("Mashable download just started.")
-        ws.get_articles()
-        logger.info("Mashable download finished.")
+    scraper = Mashable()
+    if scraper.outlet.active:
+        LOGGER.info("Mashable download just started.")
+        scraper.get_articles()
 
-    ws = Engadget()
-    if ws.outlet.active:
-        logger.info("Engadget download just started.")
-        ws.get_articles()
-        logger.info("Engadget download finished.")
+    scraper = Engadget()
+    if scraper.outlet.active:
+        LOGGER.info("Engadget download just started.")
+        scraper.get_articles()
