@@ -1,6 +1,7 @@
 Cheesecake Labs Challenge
 =========================
 
+
 The main goal of this challenge is to analyze the skills and knowledge the applicant presents related to backend architecture, programming and its latest trends, as well as his/her ability to write code, comments and meaningful git commits.
 
 The applicant must create a web app that provides an API according to the REST architecture. Here are the MVP and extra tasks that will be evaluated.
