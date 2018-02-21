@@ -1,6 +1,25 @@
 Cheesecake Labs Challenge
 =========================
 
+This is an API created with Django Rest Framework to serve articles from major blogs. The API is currently fetching articles from:
+
+* TechCrunch
+* Cheesecake Labs
+* Engadget
+* Mashable
+
+Each blog has it own scraper specialized in fetching data from that specific blog. Some gathers information from twitter statuses, some from google plus feeds and others from the good old RSS system. To do this, the **cool GitHub libraries** were listed in a requirements file for **dependency management**.
+
+On behalf of simplicity, the code was deployed on Heroku via CodeShip. This was done so after a push on this repo, CodeShip would be hooked to start the **automatic tests and deployment** setting a **continuously integrated** environment for our app. The API docs can be found [here](https://cheesecake-challenge.herokuapp.com) and it provides methods for **querying/filtering the stored articles**, it also describes the use of `POST`, `PUT`, `PATCH` and `DELETE` HTTP methods for admin users *(admin:admin123)*.
+
+A simplified scheme on how the app works is given in the figure below:
+
+![Untitled Diagram.png](https://i.imgur.com/Ct27gDh.png)
+
+
+The Challenge
+=============
+
 
 The main goal of this challenge is to analyze the skills and knowledge the applicant presents related to backend architecture, programming and its latest trends, as well as his/her ability to write code, comments and meaningful git commits.
 
